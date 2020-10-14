@@ -1,0 +1,103 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#logimg {
+  width: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: logo;
+}
+
+#login-holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 4fr 0.3fr 0.5fr 0.3fr 0.5fr 0.3fr 0.4fr;
+      grid-template-rows: 4fr 0.3fr 0.5fr 0.3fr 0.5fr 0.3fr 0.4fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: ". . logo logo logo . ." ". . . . . . ." ". user user user user user ." ". . . . . . ." ". pass pass pass pass pass ." ". . . . . . ." ". . . button . . .";
+}
+
+.email-input {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: user;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.password-input {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: pass;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Login {
+  -ms-grid-row: 7;
+  -ms-grid-column: 4;
+  grid-area: button;
+  border: none;
+  background-color: #662483;
+  color: white;
+  font-weight: 700;
+  font-size: 110%;
+}
+
+#login-email {
+  width: 100%;
+  padding-left: 1%;
+  border: solid 1px black;
+}
+
+#login-email::-webkit-input-placeholder {
+  color: black;
+}
+
+#login-email:-ms-input-placeholder {
+  color: black;
+}
+
+#login-email::-ms-input-placeholder {
+  color: black;
+}
+
+#login-email::placeholder {
+  color: black;
+}
+
+#login-password {
+  width: 100%;
+  padding-left: 1%;
+  border: solid 1px black;
+}
+
+#login-password::-webkit-input-placeholder {
+  color: black;
+}
+
+#login-password:-ms-input-placeholder {
+  color: black;
+}
+
+#login-password::-ms-input-placeholder {
+  color: black;
+}
+
+#login-password::placeholder {
+  color: black;
+}
+/*# sourceMappingURL=login.css.map */

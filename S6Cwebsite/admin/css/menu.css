@@ -1,0 +1,103 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#layout {
+  margin-top: 7%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr;
+      grid-template-rows: 4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr;
+      grid-template-areas: ". . logo . ." ". . . . ." ". home home home ." ". . . . ." ". info info info ." ". . . . ." ". course course course ." ". . . . ." ". study study study .";
+  font-size: 120%;
+}
+
+#home {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: home;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+#information {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: info;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+#courses {
+  -ms-grid-row: 7;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: course;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+#study {
+  -ms-grid-row: 9;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: study;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+#logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: logo;
+  width: 100%;
+}
+/*# sourceMappingURL=menu.css.map */
