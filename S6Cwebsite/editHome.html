@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <script src="admin/js/auth.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="admin/css/home.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="title">
+    <div id="back"></div>
+    <p id="title"></p>
+  </div>
+  <div id="carousel">
+    <p>Carousel</p>
+
+  </div>
+  <div id="news">
+    <h3 id="ntitle">News updates</h3>
+    <input type="text" id="editnews">
+  </div>
+  <div id="links">
+    <h3 id="social">Social media links</h3>
+  </div>
+  <div id="bottom">
+    <div id="save">Save changes</div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+
+  <script src="admin/js/firebase.js"></script>
+  <script src="admin/js/home.js"></script>
+  <script src="admin/js/auth.js"></script>
+</body>
+
 </html>
