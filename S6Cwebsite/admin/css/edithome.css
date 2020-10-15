@@ -1,0 +1,53 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 2fr 4fr 3fr;
+      grid-template-columns: 1fr 2fr 4fr 3fr;
+      grid-template-areas: "arrow . title .";
+}
+
+#mtitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: title;
+  border: 1px solid black;
+  padding: 5%;
+  text-align: center;
+}
+
+#back {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: arrow;
+  margin-top: 2%;
+}
+
+#layout {
+  width: 90%;
+  margin: auto;
+}
+
+#editnews {
+  padding-bottom: 30%;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+#save {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  background-color: rebeccapurple;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+/*# sourceMappingURL=edithome.css.map */
