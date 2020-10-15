@@ -3,6 +3,6 @@ firebase.auth().onAuthStateChanged(function (user) {
         // User is signed in.
 
     } else {
-        window.location.replace("admin.html");
+        window.location.replace("adminLogin.html");
     }
 });
