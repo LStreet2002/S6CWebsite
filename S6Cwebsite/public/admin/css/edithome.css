@@ -14,11 +14,12 @@
 
 #mtitle {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 1;
   grid-area: title;
   border: 1px solid black;
   padding: 5%;
   text-align: center;
+  font-size: 2vw;
 }
 
 #back {
@@ -26,6 +27,8 @@
   -ms-grid-column: 1;
   grid-area: arrow;
   margin-top: 2%;
+  font-size: 9vw;
+  color: black;
 }
 
 #layout {
@@ -47,7 +50,91 @@ textarea {
   margin: auto;
   text-align: center;
   background-color: rebeccapurple;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+  font-size: 120%;
+}
+
+.caropic {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+      grid-template-areas: "image upload";
+}
+
+.file {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+  border: 1px solid black;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.upload {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: upload;
+  background-color: rebeccapurple;
+  color: white;
+  text-align: center;
+}
+
+#links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.5fr 0.3fr 5fr;
+      grid-template-columns: 1.5fr 0.3fr 5fr;
+  -ms-grid-rows: 0.5fr 1fr 0.2fr 1fr 0.2fr 1fr;
+      grid-template-rows: 0.5fr 1fr 0.2fr 1fr 0.2fr 1fr;
+      grid-template-areas: "title . ." "tlabel . tlink" ". . ." "flabel . flink" ". . ." "ilabel . ilink";
+  margin-bottom: 5%;
+}
+
+#tlabel {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: tlabel;
+}
+
+#tlink {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: tlink;
+}
+
+#flabel {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: flabel;
+}
+
+#flink {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: flink;
+}
+
+#ilabel {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: ilabel;
+}
+
+#ilink {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  grid-area: ilink;
+}
+
+#social {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
 }
 /*# sourceMappingURL=edithome.css.map */
