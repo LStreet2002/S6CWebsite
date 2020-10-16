@@ -1,0 +1,20 @@
+*
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#title {
+  
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr 2fr 4fr 3fr;
+    grid-template-areas:
+    "arrow . title ."
+}
+
+#mtitle {
+    grid-area:title;
+    border:1px solid black;
+    padding:5%;
+    text-align:center;
+}
