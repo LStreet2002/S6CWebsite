@@ -8,5 +8,4 @@ function addTab() {
       file: text,
     })
   );
-  location.reload();
 }

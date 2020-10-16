@@ -5,25 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="css/menu.css" />
-  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/info.css" />
+  <title>Edit: Information</title>
 </head>
 
 <body>
-  <div id="layout">
-    <img id="logo" src="admin/pic/S6C Salisbury 6th Form Final.jpg" />
-    <a id="home" href="edit-home">
-      <div>Home Page</div>
-    </a>
-    <a id="information" href="edit-info">
-      <div>Information Page</div>
-    </a>
-    <a id="courses" href="edit-courses">
-      <div>Courses Page</div>
-    </a>
-    <a id="study" href="edit-study">
-      <div>Study with us Page</div>
-    </a>
+  <div id="title">
+    <h1>Information</h1>
+  </div>
+  <div id="addTab">
+    <p>Add new tab:</p>
+    <input type="text" class="addTabInput"></input>
+    <button class="addTabInputAdd" onclick="addTab()">Add</button>
   </div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -37,6 +30,7 @@
 
   <script src="js/fireBase.js"></script>
   <script src="js/auth.js"></script>
+  <script src="js/info.js"></script>
 </body>
 
 </html>
