@@ -4,26 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="css/edithome.css" />
+  <link rel="stylesheet" type="text/css" href="admin/css/edithome.css" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Edit: Home</title>
 </head>
 
 <body>
   <div id="layout">
     <div id="title">
-      <span id="back" class="material-icons">
-        keyboard_arrow_left
-      </span>
+      <div id="back">Back</div>
       <p id="mtitle">Home Page</p>
     </div>
     <div id="carousel">
       <p>Carousel</p>
-      <div class="caropic">
-        <p class="file">Carouselimg.png</p>
-        <div class="upload">upload</div>
-      </div>
     </div>
     <div id="news">
       <h3 id="ntitle">News updates</h3>
@@ -31,9 +24,6 @@
     </div>
     <div id="links">
       <h3 id="social">Social media links</h3>
-      <p id="tlabel">Twitter</p><input id="tlink" type="text" />
-      <p id="flabel">Facebook</p><input id="flink" type="text" />
-      <p id="ilabel">Instagram</p><input id="ilink" type="text" />
     </div>
     <div id="bottom">
       <div id="save">Save changes</div>
@@ -48,9 +38,9 @@
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
 
-  <script src="js/firebase.js"></script>
-  <script src="js/home.js"></script>
-  <script src="js/auth.js"></script>
+  <script src="admin/js/firebase.js"></script>
+  <script src="admin/js/home.js"></script>
+  <script src="admin/js/auth.js"></script>
 </body>
 
 </html>
