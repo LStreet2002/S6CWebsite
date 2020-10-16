@@ -5,6 +5,10 @@ const port = 3000;
 var fs = require("fs");
 app.use(express.static("admin"));
 app.use(bodyParser.json());
+const engines = require('consolidate');
+app.engine('hbs', engines.handlebars);
+app.set('views', './views');
+app.set('view engine', 'hbs');
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/adminLogin.html");
@@ -24,7 +28,7 @@ app.get("/edit-info", (req, res) => {
     fileList.push(file);
   });
   console.log(fileList);
-  res.sendFile(__dirname + "/editInfo.html");
+  res.render(__dirname + "/editInfo.hbs", { file: fileList });
 });
 
 app.post("/", (req, res) => {
