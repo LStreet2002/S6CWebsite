@@ -57,6 +57,10 @@ textarea {
   font-size: 120%;
 }
 
+#save:hover {
+  cursor: pointer;
+}
+
 .caropic {
   display: -ms-grid;
   display: grid;
@@ -84,6 +88,10 @@ textarea {
   background-color: rebeccapurple;
   color: white;
   text-align: center;
+}
+
+.upload:hover {
+  cursor: pointer;
 }
 
 #links {

@@ -45,6 +45,9 @@ textarea {
     color:white;
     font-size:120%;
 }
+#save:hover {
+    cursor:pointer;
+}
 .caropic {
 display:grid;
 grid-template-rows: 1fr;
@@ -64,6 +67,9 @@ grid-template-areas:
     background-color: rebeccapurple;
     color:white;
     text-align:center;
+}
+.upload:hover {
+    cursor:pointer;
 }
 #links {
     display:grid;
