@@ -78,7 +78,7 @@ async function news() {
 }
 
 async function save() {
-    var storage = firebase.storage();
+    var storage = await firebase.storage();
 
     // Create a storage reference from our storage service
     var storageRef = storage.ref();
