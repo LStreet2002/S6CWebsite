@@ -2,7 +2,7 @@ var carouse = []
 var lonk = []
 var newt = []
 
-document.addEventListener("DOMContentLoaded", function init() {
+document.addEventListener("DOMContentLoaded", async function init() {
     carousels()
     links()
     news()
@@ -72,6 +72,7 @@ async function news() {
 
             })
             document.querySelector("#editnews").value = newt[0].name
+            document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + "/350 Characters"
         }
         )
 }
@@ -133,3 +134,7 @@ function getting(x) {
     })
 
 }
+
+document.getElementById('editnews').onkeyup = function () {
+    document.getElementById('characters').innerHTML = this.value.length + "/350 Characters";
+};

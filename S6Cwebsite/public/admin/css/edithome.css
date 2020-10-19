@@ -69,6 +69,7 @@ textarea {
   -ms-grid-columns: 4fr 1fr;
       grid-template-columns: 4fr 1fr;
       grid-template-areas: "image upload";
+  margin-bottom: 2%;
 }
 
 .file {
@@ -85,7 +86,7 @@ textarea {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: upload;
-  background-color: rebeccapurple;
+  background-color: #663399;
   color: white;
   text-align: center;
 }
