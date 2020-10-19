@@ -30,7 +30,7 @@ async function carousels() {
                 name.id = "link" + (i + 1)
                 var upl = document.createElement("div")
                 upl.classList.add("upload")
-                upl.innerText = "upload"
+                upl.innerText = "Upload"
                 upl.setAttribute("onclick", "getting(this)")
                 var image = document.createElement("input")
                 image.classList.add("unknown")

@@ -89,6 +89,8 @@ textarea {
   background-color: #663399;
   color: white;
   text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 .upload:hover {
