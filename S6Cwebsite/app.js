@@ -24,6 +24,9 @@ app.get("/edit-info", (req, res) => {
 app.get("/edit-study", (req, res) => {
   res.sendFile(__dirname + "/editStudy.html");
 });
+app.get("/edit-PB", (req, res) => {
+  res.sendFile(__dirname + "/editPB.html");
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
