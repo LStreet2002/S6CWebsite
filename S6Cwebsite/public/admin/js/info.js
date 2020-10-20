@@ -1,11 +1,14 @@
 var newt = []
-function addTab() {
+async function addTab() {
     var input = document.getElementsByClassName("addTabInput")[0].value
     console.log(input)
-    db.collection("infoTabs").doc(input).set({
+    await db.collection("infoTabs").doc(input).set({
         pageName: input
     })
+    location.reload();
 }
+
+
 
 async function getDatabase() {
     await db.collection("infoTabs")
