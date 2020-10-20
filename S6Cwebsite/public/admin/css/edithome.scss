@@ -28,8 +28,9 @@
     margin:auto;
 }
 #editnews {
-    padding-bottom:30%;
-    width:100%
+    padding-bottom:5vw;
+    width:100%;
+    font-size:1.2rem;
 }
 textarea {
     resize:none;
@@ -44,12 +45,16 @@ textarea {
     color:white;
     font-size:120%;
 }
+#save:hover {
+    cursor:pointer;
+}
 .caropic {
 display:grid;
 grid-template-rows: 1fr;
 grid-template-columns:4fr 1fr;
 grid-template-areas:
 "image upload";
+margin-bottom:2%;
 }
 .file {
     grid-area:image;
@@ -60,9 +65,14 @@ grid-template-areas:
 }
 .upload {
     grid-area:upload;
-    background-color: rebeccapurple;
+    background-color: #663399;
     color:white;
     text-align:center;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+.upload:hover {
+    cursor:pointer;
 }
 #links {
     display:grid;
