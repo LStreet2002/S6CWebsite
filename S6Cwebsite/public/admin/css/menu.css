@@ -8,9 +8,9 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr;
-      grid-template-rows: 4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr;
-      grid-template-areas: ". . logo . ." ". . . . ." ". home home home ." ". . . . ." ". info info info ." ". . . . ." ". course course course ." ". . . . ." ". study study study .";
+  -ms-grid-rows: 4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr;
+      grid-template-rows: 4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr;
+      grid-template-areas: ". . logo . ." ". . . . ." ". home home home ." ". . . . ." ". info info info ." ". . . . ." ". course course course ." ". . . . ." ". study study study ." ". . . . ." ". principal principal principal .";
   font-size: 120%;
 }
 
@@ -99,5 +99,25 @@
   -ms-grid-column: 3;
   grid-area: logo;
   width: 100%;
+}
+
+#prince {
+  -ms-grid-row: 11;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: principal;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  text-decoration: none;
 }
 /*# sourceMappingURL=menu.css.map */
