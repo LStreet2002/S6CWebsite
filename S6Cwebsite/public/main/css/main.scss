@@ -49,8 +49,8 @@ html {
 .otherPosts {
   display: flex;
   justify-content: space-between;
-  h3{
-      margin-bottom: 10%;
+  h3 {
+    margin-bottom: 10%;
   }
   .next {
     .nextPost {
@@ -64,4 +64,8 @@ html {
       font-weight: bold;
     }
   }
+}
+.footer {
+  margin-left: 1em;
+  margin-right: 1em;
 }
