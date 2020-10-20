@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async function init() {
 }
 )
 async function old() {
-    await db.collection("Firth")
+    await db.collection("Firth").orderBy("date", "desc")
         .get()
         .then(async function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -19,7 +19,7 @@ async function old() {
         hold.classList.add("post")
         hold.id = decay[i].title
         var time = document.createElement("h2")
-        time.innerText = decay[i].date
+        time.innerText = decay[i].date + " " + decay[i].title2
         var edit = document.createElement("span")
         edit.classList.add("edit", "material-icons")
         edit.innerText = "edit"
@@ -79,7 +79,7 @@ async function make() {
     hold.classList.add("post")
     hold.id = tut.value
     var time = document.createElement("h2")
-    time.innerText = det.value
+    time.innerText = det.value + " " + tut.value
     var edit = document.createElement("span")
     edit.classList.add("edit", "material-icons")
     edit.innerText = "edit"
@@ -105,7 +105,8 @@ async function make() {
     hold.appendChild(desc)
     hold.appendChild(hr)
 
-    document.querySelector("#postlist").appendChild(hold)
+    var prev = document.getElementsByClassName("post")
+    document.querySelector("#postlist").insertBefore(hold, prev[0])
     tut.value = ""
     dec.value = ""
     det.value = ""
