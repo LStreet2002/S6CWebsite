@@ -11,9 +11,6 @@ app.use(express.static("public"));
 app.get("*", (req, res) => {
   res.sendFile(__dirname + "/" + req.url.split(".")[0] + ".html");
 });
-app.get("/edit-PB", (req, res) => {
-  res.sendFile(__dirname + "/editPB.html");
-});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
