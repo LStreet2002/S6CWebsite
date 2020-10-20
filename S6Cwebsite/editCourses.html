@@ -5,28 +5,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="admin/css/editc.css" />
+  <link rel="stylesheet" type="text/css" href="admin/css/editCourses.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Edit: Courses</title>
 </head>
 
 <body>
 
-  <div class="nav">
-    <i class="material-icons">arrow_back_ios</i>
-    <h1>Courses Page</h1>
-  </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <body>
+    <div id="layout">
+      <div id="title">
+        <a href="menu"><span id="back" class="material-icons">
+            keyboard_arrow_left
+          </span></a>
+        <p id="mtitle">Courses Page</p>
+      </div>
+      <h2>Add New Course</h2>
+      <div id="newCourse">
+        <input id="addCourse" type="text"></input>
+        <button id="button" onclick="addCourse()">Add</button>
+      </div>
+      <div id="courselist">
+        <div id="course">
+          <h2>Course1</h2><span id="edit" class="material-icons">
+            edit
+          </span>
+          <span id="delete" class="material-icons">
+            delete
+          </span>
+          <hr>
+        </div>
+        <div id="course"></div>
+        <div id="course"></div>
+        <div id="course"></div>
+      </div>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
 
-  <script src="js/fireBase.js"></script>
-  <script src="js/auth.js"></script>
-</body>
+    <script src="js/fireBase.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
 
 </html>

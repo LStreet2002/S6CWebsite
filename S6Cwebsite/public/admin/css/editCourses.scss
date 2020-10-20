@@ -17,4 +17,61 @@
     border:1px solid black;
     padding:5%;
     text-align:center;
+    font-size:2vw;
+}
+
+
+#back {
+    grid-area:arrow;
+    margin-top:2%;
+    font-size:9vw;
+    color:black;
+}
+
+#layout {
+    width:90%;
+    margin:auto;
+}
+
+textarea {
+    resize:none;
+}
+
+#courses {
+    width: 100%;
+}
+
+#newCourse {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 2vw;
+        #addCourse {
+        width: 80vw;
+        font-size: 2vw;
+        padding: 0.5vw;
+    }
+    
+      #button {
+        width: 15vw;
+        padding: 0.5vw;
+        font-size: 2vw;
+    }
+}
+
+
+
+#save {
+    width:30%;
+    margin:auto;
+    text-align:center;
+    background-color:rebeccapurple;
+    padding-top:1%;
+    padding-bottom:1%;
+    color:white;
+    font-size:120%;
+}
+
+#save:hover {
+    cursor:pointer;
 }
