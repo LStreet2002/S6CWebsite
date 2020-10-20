@@ -1,6 +1,6 @@
 * {
   font-family: "Ubuntu";
-  font-size: 22px;
+  font-size: 18px;
 }
 
 * body,
@@ -73,7 +73,54 @@ html {
 }
 
 .footer {
+  color: white;
+  width: 100%;
+  margin: 0;
+}
+
+.footer .topFooter {
+  background-color: #022b3a;
+}
+
+.footer .topFooter .contact {
   margin-left: 1em;
-  margin-right: 1em;
+}
+
+.footer .topFooter .media {
+  margin-left: 1em;
+}
+
+.footer .topFooter .links {
+  margin-left: 1em;
+}
+
+.footer .bottomFooter {
+  background-color: #0e71b8;
+}
+
+.footer .bottomFooter .copyright {
+  margin-left: 1em;
+  font-size: 75%;
+}
+
+@media only screen and (min-width: 600px) {
+  .footer .topFooter {
+    position: absolute;
+  }
+  .footer .topFooter .contact {
+    float: left;
+    width: 33.33%;
+  }
+  .footer .topFooter .media {
+    float: left;
+    width: 33.33%;
+  }
+  .footer .topFooter .links {
+    float: left;
+    width: 33.33%;
+  }
+  .footer .topFooter .links img {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
