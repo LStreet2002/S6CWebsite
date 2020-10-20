@@ -1,0 +1,86 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 2fr 4fr 3fr;
+      grid-template-columns: 1fr 2fr 4fr 3fr;
+      grid-template-areas: "arrow . title .";
+}
+
+#mtitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: title;
+  border: 1px solid black;
+  padding: 5%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+#back {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: arrow;
+  margin-top: 2%;
+  font-size: 9vw;
+  color: black;
+}
+
+#layout {
+  width: 90%;
+  margin: auto;
+}
+
+textarea {
+  resize: none;
+}
+
+#courses {
+  width: 100%;
+}
+
+#newCourse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 2vw;
+}
+
+#newCourse #addCourse {
+  width: 80vw;
+  font-size: 2vw;
+  padding: 0.5vw;
+}
+
+#newCourse #button {
+  width: 15vw;
+  padding: 0.5vw;
+  font-size: 2vw;
+}
+
+#save {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  background-color: rebeccapurple;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+  font-size: 120%;
+}
+
+#save:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=editCourses.css.map */
