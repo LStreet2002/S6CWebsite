@@ -1,38 +1,67 @@
 @import "./variables";
 
-*{
-    font-family: "Ubuntu";
-    body, html{
-        height: 100%;
-    }
-}
-header{
-    background-color: aqua;
-}
-body, html{
+* {
+  font-family: "Ubuntu";
+  font-size: 22px;
+  body,
+  html {
     height: 100%;
+  }
+}
+header {
+  background-color: aqua;
+}
+body,
+html {
+  height: 100%;
 }
 /* The hero image */
 .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://drive.google.com/drive/folders/1NZlfpbUYIRqCJ9SEoNf6tPpEESD1q1cs");
-  
-    /* Set a specific height */
-    height: 50%;
-  
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),
+    url("/S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
+
+  /* Set a specific height */
+  height: 75%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: $imageBanner;
+  width: 100%;
+}
+.main {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.otherPosts {
+  display: flex;
+  justify-content: space-between;
+  h3{
+      margin-bottom: 10%;
   }
-  
-  /* Place text in the middle of the image */
-  .hero-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+  .next {
+    .nextPost {
+      color: $courseColour;
+      font-weight: bold;
+    }
   }
+  .last {
+    .lastPost {
+      color: $courseColour;
+      font-weight: bold;
+    }
+  }
+}
