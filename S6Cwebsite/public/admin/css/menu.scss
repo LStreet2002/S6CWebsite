@@ -5,7 +5,7 @@
     margin-top:7%;
     display:grid;
     grid-template-columns:1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr ;
+    grid-template-rows:4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr ;
     grid-template-areas: 
     ". . logo . ."
     ". . . . ."
@@ -15,7 +15,9 @@
     ". . . . ."
     ". course course course ."
     ". . . . ."
-    ". study study study .";
+    ". study study study ."
+    ". . . . ."
+    ". principal principal principal .";
     font-size:120%;
 }
 #home {
@@ -61,4 +63,14 @@
 #logo {
     grid-area:logo;
     width:100%;
+}
+#prince {
+    grid-area:principal;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    border:1px solid black;
+    align-items:center;
+    color:black;
+    text-decoration: none;
 }
