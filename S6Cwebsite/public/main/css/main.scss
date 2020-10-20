@@ -2,7 +2,7 @@
 
 * {
   font-family: "Ubuntu";
-  font-size: 22px;
+  font-size: 18px;
   body,
   html {
     height: 100%;
@@ -66,6 +66,50 @@ html {
   }
 }
 .footer {
-  margin-left: 1em;
-  margin-right: 1em;
+  color: white;
+  width: 100%;
+  margin: 0;
+  .topFooter {
+    background-color: $footer1;
+    .contact {
+      margin-left: 1em;
+    }
+    .media {
+      margin-left: 1em;
+    }
+    .links {
+      margin-left: 1em;
+    }
+  }
+  .bottomFooter {
+    background-color: $footer2;
+    .copyright {
+      margin-left: 1em;
+      font-size: 75%;
+    }
+  }
+}
+@media only screen and (min-width: 600px) {
+  .footer {
+    .topFooter {
+      position: absolute;
+      .contact {
+        float: left;
+        width: 33.33%;
+      }
+      .media {
+        float: left;
+        width: 33.33%;
+      }
+      .links {
+        float: left;
+        width: 33.33%;
+        img {
+          width: 50%;
+        }
+      }
+    }
+    .bottomFooter {
+    }
+  }
 }
