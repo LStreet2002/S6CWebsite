@@ -45,20 +45,40 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    height: 2vw;
+    height: 2.2vw;
         #addCourse {
         width: 80vw;
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding: 0.5vw;
     }
     
       #button {
         width: 15vw;
-        padding: 0.5vw;
-        font-size: 2vw;
+        font-size: 1.4vw;
+        text-align: center;
+        color: white;
+        background-color: #663399;
+        border: none;
     }
 }
 
+#courselist {
+    display: flex;
+    flex-direction: column;
+
+    #course {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #edit {
+            font-size: 2.5vw;
+        }
+        #delete {
+            font-size: 2.5vw;
+        }
+    }
+}
 
 
 #save {
