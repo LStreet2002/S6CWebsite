@@ -35,49 +35,44 @@
 
 textarea {
     resize:none;
+    font-size:1.4vw;
 }
 
 #courses {
     width: 100%;
 }
 
-#newCourse {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    height: 2.2vw;
-        #addCourse {
-        width: 80vw;
-        font-size: 1.5vw;
+
+
+#newPost {
+    
+    #addDate {
+        width: 100%;
+        font-size: 2vw;
+        padding: 0.5vw;
+    }
+        #addPost {
+        width: 100%;
+        font-size: 2vw;
         padding: 0.5vw;
     }
     
       #button {
-        width: 15vw;
+        width: 30%;
         font-size: 1.4vw;
-        text-align: center;
-        color: white;
-        background-color: #663399;
-        border: none;
+        text-align:center;
+        color:white;
+        background-color:#663399;
+        border:none;
+        margin-top:2%;
+    margin-left:35%;
     }
 }
-
-#courselist {
-    display: flex;
-    flex-direction: column;
-
-    #course {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        #edit {
-            font-size: 2.5vw;
-        }
-        #delete {
-            font-size: 2.5vw;
-        }
-    }
+#addContent {
+    width:101%;
+    overflow-y:scroll;
+    padding-bottom:20%;
+    margin-top:2%;
 }
 
 
@@ -90,6 +85,24 @@ textarea {
     padding-bottom:1%;
     color:white;
     font-size:120%;
+}
+.postit {
+    width:100%;
+    font-size:2vw;
+    display:none;
+}
+.postesc {
+    width:100%;
+    padding-bottom:20%;
+    overflow-y:scroll;
+    font-size:1.6vw;
+    display:none;
+}
+.edit:hover {
+    cursor:pointer;
+}
+.delete:hover {
+    cursor:pointer;
 }
 
 #save:hover {
