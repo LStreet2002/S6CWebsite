@@ -6,19 +6,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: Ubuntu;
-    font-size: large;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: blue;
     color: white;
 }
 
 .brand-title {
-    max-width: 20px;
     font-size: 1.5rem;
     margin: .5rem;
 }
@@ -31,6 +29,7 @@ body {
 
 .navbar-links li {
     list-style: none;
+    text-align: center;
 }
 
 .navbar-links li a {
@@ -42,7 +41,6 @@ body {
 
 .navbar-links li:hover {
     background-color: #555;
-
 }
 
 .toggle-button {
@@ -53,7 +51,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 25px;
+    height: 21px;
 }
 
 .toggle-button .bar {
@@ -69,7 +67,7 @@ body {
     }
 
     .navbar-links {
-      /* display: none; */
+      display: none;
     }
 
     .navbar {
@@ -84,6 +82,7 @@ body {
 
     .navbar-links li {
         text-align: center;
+        width: 100%;
     }
 
     .navbar-links li a {
@@ -93,14 +92,4 @@ body {
     .navbar-links.active {
         display: flex;
     }
-}
-
-.bar {
-    color: #662483;
-}
-
-.button {
-    background-color: #0E71B8;
-    color: white;
-    border-radius: 10px;
 }
