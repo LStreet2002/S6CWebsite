@@ -57,11 +57,17 @@ html {
       color: $courseColour;
       font-weight: bold;
     }
+    .nextPost:hover {
+      cursor:pointer
+    }
   }
   .last {
     .lastPost {
       color: $courseColour;
       font-weight: bold;
+    }
+    .lastPost:hover {
+      cursor:pointer
     }
   }
 }
@@ -89,13 +95,18 @@ html {
     }
   }
 }
+
+#c0 {
+  display:block;
+}
+.item {
+  display:none;
+}
 @media only screen and (min-width: 600px) {
   .footer {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
-    grid-template-areas: 
-    ;
     .topFooter {
       display: grid;
       grid-row: 1 / 2;
@@ -119,3 +130,4 @@ html {
     }
   }
 }
+

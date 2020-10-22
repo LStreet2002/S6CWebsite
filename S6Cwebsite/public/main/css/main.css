@@ -67,9 +67,17 @@ html {
   font-weight: bold;
 }
 
+.otherPosts .next .nextPost:hover {
+  cursor: pointer;
+}
+
 .otherPosts .last .lastPost {
   color: #662483;
   font-weight: bold;
+}
+
+.otherPosts .last .lastPost:hover {
+  cursor: pointer;
 }
 
 .footer {
@@ -103,6 +111,14 @@ html {
   font-size: 75%;
 }
 
+#c0 {
+  display: block;
+}
+
+.item {
+  display: none;
+}
+
 @media only screen and (min-width: 600px) {
   .footer {
     display: -ms-grid;
@@ -111,7 +127,6 @@ html {
         grid-template-columns: auto auto auto;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
-        grid-template-areas: none;
   }
   .footer .topFooter {
     display: -ms-grid;

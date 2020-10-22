@@ -22,7 +22,7 @@
     </div>
   </banner>
   <main class="main">
-    <section class="intro">
+    <!--<section class="intro">
       <h1 class="title">Hello, I’m Simon Firth, Principal of S6C. I’ll update this blog with a combination of news,
         celebrations and information about life at S6C and the wider community.</h1>
     </section>
@@ -38,7 +38,7 @@
         <h3 class="posts">LAST POST</h3>
         <div class="lastPost">Placeholder</div>
       </div>
-    </section>
+    </section>-->
   </main>
   <footer class="footer">
     <div class="topFooter">
@@ -54,12 +54,9 @@
       </div>
       <div class="media">
         <h3>SOCIAL MEDIA</h3>
-        <a href="https://www.instagram.com/salisbury6thform/"><img alt="Instagram" src="main/images/InstaW.png"
-            width="50" height="50"></a>
-        <a href="https://www.facebook.com/SalisburySixthFormCollege/"><img alt="Facebook" src="main/images/FaceW.png"
-            width="50" height="50"></a>
-        <a href="https://twitter.com/salisbury6form"><img alt="Twitter" src="main/images/TwitterW.png" width="50"
-            height="50"></a>
+        <a id="instagram"><img alt="Instagram" src="main/images/InstaW.png" width="50" height="50"></a>
+        <a id="facebook"><img alt="Facebook" src="main/images/FaceW.png" width="50" height="50"></a>
+        <a id="twitter"><img alt="Twitter" src="main/images/TwitterW.png" width="50" height="50"></a>
       </div>
       <div class="links">
         <h3>S6C</h3>
@@ -76,29 +73,16 @@
   </footer>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/7.23.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="/__/firebase/7.23.0/firebase-analytics.js"></script>
+   https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+  <script src="admin/js/firebase.js"></script>
+  <script src="main/js/PB.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyCc8zsZTqGGjDDFmDeuPxIA-nkX4cVv6W0",
-      authDomain: "s6c-website.firebaseapp.com",
-      databaseURL: "https://s6c-website.firebaseio.com",
-      projectId: "s6c-website",
-      storageBucket: "s6c-website.appspot.com",
-      messagingSenderId: "213972385786",
-      appId: "1:213972385786:web:a492fa817b5baba5a9ee43",
-      measurementId: "G-63HJCES972",
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
 </body>
 
 </html>
