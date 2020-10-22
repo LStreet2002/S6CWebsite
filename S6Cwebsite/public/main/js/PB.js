@@ -33,10 +33,13 @@ async function carousels() {
                 car.id = "c" + i
                 var dat = document.createElement("h2")
                 dat.innerText = bloggit[i].date
+                dat.classList.add("blogDate")
                 var til = document.createElement("h2")
                 til.innerText = bloggit[i].title2
+                til.classList.add("blogTitle")
                 var full = document.createElement("p")
                 full.innerText = bloggit[i].desc
+                full.classList.add("full")
                 if (i == 0) {
                 } else {
                     var next = document.createElement("div")
