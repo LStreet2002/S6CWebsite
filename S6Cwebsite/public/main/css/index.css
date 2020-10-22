@@ -12,8 +12,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
-    color: white;
+    background-color: white;
+    color: turquoise;
+    width: 100%;
 }
 
 .brand-title {
@@ -24,23 +25,30 @@ body {
 .navbar-links ul {
     margin: 0;
     padding: 0;
+    width: absolute;
     display: flex;
+    background-color: white;
 }
 
 .navbar-links li {
     list-style: none;
-    text-align: center;
+    width: 100%;
 }
 
 .navbar-links li a {
     text-decoration: none;
-    color: white;
-    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #662483;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .5rem;
     display: block;
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    background-color: rgba(139, 138, 138, 0.384);
 }
 
 .toggle-button {
@@ -68,6 +76,7 @@ body {
 
     .navbar-links {
       display: none;
+      width: 100%;
     }
 
     .navbar {
@@ -78,6 +87,7 @@ body {
     .navbar-links ul {
         width: 100%;
         flex-direction: column;
+        background-color:  rgba(14, 113, 184, 0.8);;
     }
 
     .navbar-links li {
@@ -86,10 +96,16 @@ body {
     }
 
     .navbar-links li a {
+        color: white;
         padding: .5rem 1rem;
     }
 
     .navbar-links.active {
         display: flex;
     }
+}
+
+.apply-button {
+    margin: 0;
+    padding: 0;
 }

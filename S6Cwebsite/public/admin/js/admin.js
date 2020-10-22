@@ -16,7 +16,7 @@ firebase
           .signInWithEmailAndPassword(email, password)
           .then((cred) => {
             document.querySelector("#login-email").style.border =
-              "solid 2px green";
+              "solid 1px green";
             window.location.replace("menu");
           })
           .catch(
