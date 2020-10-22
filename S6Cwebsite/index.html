@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="main/css/index.css"/>
-    <title>S6C Website</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="brand-title"><img src="public/main/images/logo.jp"/></div> <!-- Add image once css is done -->
-      <button>Apply Now</button>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-      <text><center>We firmly believe that S6C offers you the ideal college environment to embark on the next stage of your education. With a vibrant and friendly atmosphere, where positive relationships are promoted at all times, you will find that S6C is an exciting place to develop and one in which you will thrive both academically and socially.</center></text>
-    </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 
-    <script>
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      var firebaseConfig = {
-        apiKey: "AIzaSyCc8zsZTqGGjDDFmDeuPxIA-nkX4cVv6W0",
-        authDomain: "s6c-website.firebaseapp.com",
-        databaseURL: "https://s6c-website.firebaseio.com",
-        projectId: "s6c-website",
-        storageBucket: "s6c-website.appspot.com",
-        messagingSenderId: "213972385786",
-        appId: "1:213972385786:web:a492fa817b5baba5a9ee43",
-        measurementId: "G-63HJCES972",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-    </script>
-    <script src="main/js/index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main/css/index.css" />
+  <title>S6C Website</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="brand-title"><img src="public/main/images/logo.jp" /></div> <!-- Add image once css is done -->
+    <button>Apply Now</button>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <text>
+    <center>We firmly believe that S6C offers you the ideal college environment to embark on the next stage of your
+      education. With a vibrant and friendly atmosphere, where positive relationships are promoted at all times, you
+      will find that S6C is an exciting place to develop and one in which you will thrive both academically and
+      socially.</center>
+  </text>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyCc8zsZTqGGjDDFmDeuPxIA-nkX4cVv6W0",
+      authDomain: "s6c-website.firebaseapp.com",
+      databaseURL: "https://s6c-website.firebaseio.com",
+      projectId: "s6c-website",
+      storageBucket: "s6c-website.appspot.com",
+      messagingSenderId: "213972385786",
+      appId: "1:213972385786:web:a492fa817b5baba5a9ee43",
+      measurementId: "G-63HJCES972",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="main/js/index.js"></script>
+</body>
+
 </html>
