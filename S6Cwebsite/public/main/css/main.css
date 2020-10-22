@@ -20,8 +20,8 @@ html {
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("/S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("/S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
   /* Set a specific height */
   height: 75%;
   /* Position and center the image to scale nicely on all screens */
@@ -104,8 +104,21 @@ html {
 }
 
 @media only screen and (min-width: 600px) {
+  .footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: none;
+  }
   .footer .topFooter {
-    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
   }
   .footer .topFooter .contact {
     float: left;
