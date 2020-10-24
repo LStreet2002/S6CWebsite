@@ -14,11 +14,23 @@
     <h1>Information</h1>
   </div>
   <div id="addTab">
-    <p>Add new tab:</p>
+    <p>Add new page to information tab:</p>
     <input type="text" class="addTabInput"></input>
     <button onclick=addTab()>Add</button>
   </div>
+  <hr>
 <div class="body">
+</div>
+<hr>
+<div class="edit">
+  <p>Page name</p>
+  <input type="text" class="pageNameInput">
+  <p>Header</p>
+  <input type="text" class="headerInput">
+  <p>Content</p>
+  <textarea type="text" class="contentInput"></textarea>
+  <button class="updateButton" onclick="updatePage()">Update</button>
+  <button class="deleteButton" onclick="deletePage()">Delete</button>
 </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>

@@ -29,10 +29,7 @@ const db = admin.firestore();
 async function getDoc(url) {
   const docRef = db.collection("infoTabs").doc(url);
   const doc = await docRef.get();
-  if (!doc.exists) {
-    console.log("No such document!");
-  } else {
-    console.log("its there");
+  if (doc.exists) {
     return doc.data();
   }
 }
