@@ -22,22 +22,24 @@ async function getDatabase() {
       var bodyDiv = document.getElementsByClassName("body")[0];
       for (i = 0; i < newt.length; i++) {
         // List item
-        var listItem = document.createElement("li");
+        var listItem = document.createElement("h2");
         listItem.innerHTML = newt[i]["pageName"];
         // div
         var child = document.createElement("div");
         child.className = "listItem";
         // Edit button
-        var editButton = document.createElement("button");
-        editButton.className = newt[i]["pageName"];
-        editButton.innerHTML = "Edit";
+        var editButton = document.createElement("span");
+        editButton.name = newt[i]["pageName"];
+        editButton.classList.add("editor", "material-icons")
+        editButton.innerHTML = "edit";
         editButton.addEventListener("click", async function () {
-          doc = await getDoc(this.className);
+          doc = await getDoc(this.name);
           pageNameInput.value = doc.pageName;
           headerInput.value = doc.header;
           contentInput.value = doc.main;
           updateButton.innerHTML = "Update page:" + doc.pageName;
           updateButton.className = "updateButton " + doc.pageName;
+          document.querySelector(".edit").style.display = "block"
         });
         // Add to div
         child.appendChild(listItem);

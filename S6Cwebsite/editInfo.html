@@ -5,33 +5,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="admin/css/info.css" />
   <title>Edit: Information</title>
 </head>
 
 <body>
   <div id="title">
-    <h1>Information</h1>
+    <a href="menu"><span id="back" class="material-icons">
+        keyboard_arrow_left
+      </span></a>
+    <p id="mtitle">Information Pages</p>
   </div>
-  <div id="addTab">
-    <p>Add new page to information tab:</p>
-    <input type="text" class="addTabInput"></input>
-    <button onclick=addTab()>Add</button>
+  <div id="layout">
+    <div id="addTab">
+      <h2>Add New Tab</h2>
+      <div class="lino"> <input type="text" class="addTabInput"></input>
+        <div class="add" onclick=addTab()>Add</div>
+      </div>
+    </div>
+    <hr>
+    <div class="body">
+    </div>
+    <hr>
+    <div class="edit">
+      <p class="small">Page name</p>
+      <input type="text" class="pageNameInput postit">
+      <p class="small">Header</p>
+      <input type="text" class="postit headerInput">
+      <p class="small">Content</p>
+      <textarea type="text" class="contentInput"></textarea>
+      <div id="bluttons">
+        <button class="updateButton" onclick="updatePage()">Update</button>
+        <button class="deleteButton" onclick="deletePage()">Delete</button>
+      </div>
+    </div>
   </div>
-  <hr>
-<div class="body">
-</div>
-<hr>
-<div class="edit">
-  <p>Page name</p>
-  <input type="text" class="pageNameInput">
-  <p>Header</p>
-  <input type="text" class="headerInput">
-  <p>Content</p>
-  <textarea type="text" class="contentInput"></textarea>
-  <button class="updateButton" onclick="updatePage()">Update</button>
-  <button class="deleteButton" onclick="deletePage()">Delete</button>
-</div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 

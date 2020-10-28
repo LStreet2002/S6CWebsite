@@ -1,0 +1,111 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+#title {
+  
+    display:grid;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr 2fr 4fr 3fr;
+    grid-template-areas:
+    "arrow . title ."
+}
+#mtitle {
+    grid-area:title;
+    border:1px solid black;
+    padding:5%;
+    text-align:center;
+    font-size:2vw;
+}
+#back {
+    grid-area:arrow;
+    margin-top:2%;
+    font-size:9vw;
+    color:black;
+}
+.listItem {
+    display: flex;
+    justify-content: space-between;
+}
+h2 {
+    margin:0px;
+}
+.material-icons:hover {
+    cursor: pointer;
+}
+.contentInput {
+    width:99%;
+    padding-bottom:20%;
+    overflow-y:scroll;
+    font-size:1vw;
+}
+.postit {
+    width:99%;
+    font-size:1.3vw;
+}
+textarea {
+    resize: none;
+}
+.small {
+    font-weight:bold;
+    font-size:1.1rem;
+}
+.updateButton {
+border:none;
+background-color: rebeccapurple;
+color:white;
+text-align:center;
+font-size:1.6rem;
+padding-left:1rem;
+padding-right:1rem;
+margin-top:2%;
+margin-bottom:2%;
+grid-area:update;
+}
+.deleteButton {
+    border:none;
+    background-color: red;
+    color:white;
+text-align:center;
+font-size:1.6rem;
+padding-left:1rem;
+padding-right:1rem;
+margin-top:2%;
+margin-bottom:2%;
+grid-area:delete;
+}
+.edit {
+    display:none;
+}
+#bluttons {
+    display:grid;
+    grid-template-columns:1fr 3fr 1fr 2fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    ". update . delete ." ;
+}
+.add {
+    background-color: #663399;
+    color:white;
+    text-align:center;
+    border:none;
+    grid-area:butt;
+    font-size:1.6rem;
+}
+.lino {
+    display:grid;
+    grid-template-areas:"inpo butt" ;
+    grid-template-columns:6fr 1fr ;
+    grid-template-rows: 1fr;
+}
+.addTabInput {
+    grid-area:inpo;
+    height:1.6rem;
+    font-size:1.6rem;
+}
+hr {
+    color:black;
+}
+#layout {
+    width:90%;
+    margin-left:5%;
+}

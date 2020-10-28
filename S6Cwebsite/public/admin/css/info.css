@@ -1,3 +1,153 @@
-.listItem {
-  display: flex;
+* {
+  font-family: 'Ubuntu', sans-serif;
 }
+
+#title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 2fr 4fr 3fr;
+      grid-template-columns: 1fr 2fr 4fr 3fr;
+      grid-template-areas: "arrow . title .";
+}
+
+#mtitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: title;
+  border: 1px solid black;
+  padding: 5%;
+  text-align: center;
+  font-size: 2vw;
+}
+
+#back {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: arrow;
+  margin-top: 2%;
+  font-size: 9vw;
+  color: black;
+}
+
+.listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+h2 {
+  margin: 0px;
+}
+
+.material-icons:hover {
+  cursor: pointer;
+}
+
+.contentInput {
+  width: 99%;
+  padding-bottom: 20%;
+  overflow-y: scroll;
+  font-size: 1vw;
+}
+
+.postit {
+  width: 99%;
+  font-size: 1.3vw;
+}
+
+textarea {
+  resize: none;
+}
+
+.small {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.updateButton {
+  border: none;
+  background-color: rebeccapurple;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: update;
+}
+
+.deleteButton {
+  border: none;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: delete;
+}
+
+.edit {
+  display: none;
+}
+
+#bluttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr 2fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr 2fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: ". update . delete .";
+}
+
+.add {
+  background-color: #663399;
+  color: white;
+  text-align: center;
+  border: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: butt;
+  font-size: 1.6rem;
+}
+
+.lino {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "inpo butt";
+  -ms-grid-columns: 6fr 1fr;
+      grid-template-columns: 6fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.addTabInput {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: inpo;
+  height: 1.6rem;
+  font-size: 1.6rem;
+}
+
+hr {
+  color: black;
+}
+
+#layout {
+  width: 90%;
+  margin-left: 5%;
+}
+/*# sourceMappingURL=info.css.map */
