@@ -27,9 +27,7 @@ html {
 
 /* The hero image */
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
+  background-image: url("fp_s6c_sfirth2.jpg");
   /* Set a specific height */
   height: 75%;
   /* Position and center the image to scale nicely on all screens */
