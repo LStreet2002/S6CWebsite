@@ -23,9 +23,7 @@ html {
 }
 /* The hero image */
 .hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),
-    url("S6Cwebsite/S6Cwebsite/public/main/images/fp_s6c_sfirth2.jpg");
+  background-image: url("fp_s6c_sfirth2.jpg");
 
   /* Set a specific height */
   height: 75%;
@@ -64,7 +62,7 @@ html {
       font-weight: bold;
     }
     .nextPost:hover {
-      cursor:pointer
+      cursor: pointer;
     }
   }
   .last {
@@ -73,7 +71,7 @@ html {
       font-weight: bold;
     }
     .lastPost:hover {
-      cursor:pointer
+      cursor: pointer;
     }
   }
 }
@@ -103,27 +101,32 @@ html {
 }
 
 #c0 {
-  display:block;
+  display: block;
 }
 .item {
-  display:none;
+  display: none;
 }
 @media only screen and (min-width: 600px) {
   .footer {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "topFooter topFooter topFooter"
       "bottomFooter bottomFooter bottomFooter";
     .topFooter {
       grid-area: topFooter;
       display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "contact media links";
       .contact {
+        grid-area: contact;
       }
       .media {
+        grid-area: media;
       }
       .links {
+        grid-area: links;
         img {
           width: 50%;
         }
@@ -134,4 +137,3 @@ html {
     }
   }
 }
-
