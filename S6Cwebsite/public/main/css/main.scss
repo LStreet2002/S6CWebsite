@@ -111,19 +111,25 @@ html {
 @media only screen and (min-width: 600px) {
   .footer {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "topFooter topFooter topFooter"
       "bottomFooter bottomFooter bottomFooter";
     .topFooter {
       grid-area: topFooter;
       display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+        "contact media links";
       .contact {
+        grid-area: contact;
       }
       .media {
+        grid-area: media;
       }
       .links {
+        grid-area: links;
         img {
           width: 50%;
         }
