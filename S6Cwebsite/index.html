@@ -7,32 +7,28 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="main/css/index.css"/>
     <title>S6C Website</title>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="brand-title">Brand Name</div> <!-- Add image once css is done -->
-      <div class="apply-button"><button>Apply Now</button></div>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">S6C</label>
+      <button>Apply Now</button>
+      <ul>
+          <li><a class="active" href="#">Home</a></li>
           <li><a href="#">Information</a></li>
           <li><a href="#">Courses</a></li>
           <li><a href="#">Study With Us</a></li>
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="main/css/index.css" />
-  <title>S6C Website</title>
-</head>
+      </ul>
+  </nav>
+  <section>
+      <text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deserunt quisquam laborum architecto sapiente ea laudantium possimus pariatur minus soluta dolorem fuga vel, voluptas repellendus cupiditate vero commodi aliquid Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ducimus in iste molestiae. Nostrum explicabo, sit beatae mollitia consequatur officia? Perferendis illo, veniam porro odio vero earum quod! Dolorem, a!</text>
+  </section>
   </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
@@ -54,7 +50,6 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
-  <script src="main/js/index.js"></script>
 </body>
 
 </html>
