@@ -5,7 +5,8 @@ var contentInput = document.getElementsByClassName("contentInput")[0];
 var updateButton = document.getElementsByClassName("updateButton")[0];
 async function addTab() {
   var input = document.getElementsByClassName("addTabInput")[0].value;
-  await db.collection("infoTabs").doc(input).set({
+  var titl = input.toLowerCase()
+  await db.collection("infoTabs").doc(titl).set({
     pageName: input,
   });
   location.reload();
@@ -33,9 +34,8 @@ async function getDatabase() {
         editButton.classList.add("editor", "material-icons")
         editButton.innerHTML = "edit";
         editButton.addEventListener("click", async function () {
-          doc = await getDoc(this.name);
-          pageNameInput.value = doc.pageName;
-          headerInput.value = doc.header;
+          doc = await getDoc(this.name.toLowerCase());
+          pageNameInput.innerText = doc.pageName;
           contentInput.value = doc.main;
           updateButton.innerHTML = "Update page:" + doc.pageName;
           updateButton.className = "updateButton " + doc.pageName;
@@ -53,15 +53,15 @@ async function getDatabase() {
 async function updatePage() {
   await db
     .collection("infoTabs")
-    .doc(updateButton.classList[1])
+    .doc(pageNameInput.innerText.toLowerCase())
     .delete()
     .then(async function () {
-      await db.collection("infoTabs").doc(pageNameInput.value).set({
-        pageName: pageNameInput.value,
-        header: headerInput.value,
+      await db.collection("infoTabs").doc(pageNameInput.innerText.toLowerCase()).set({
+        pageName: pageNameInput.innerText,
         main: contentInput.value,
-      });
+      })
     })
+
     .catch(function (error) {
       console.error("Error removing document: ", error);
     });
@@ -83,4 +83,24 @@ async function getDoc(url) {
 
 window.addEventListener("DOMContentLoaded", function () {
   getDatabase();
+});
+
+function createBr(e) {
+
+  if (e.keyCode == 13) {
+    if (document.querySelector(".contentInput") === document.activeElement) {
+      document.querySelector(".contentInput").innerText = document.querySelector(".contentInput").value + "<br>"
+    }
+  }
+
+
+}
+input = document.querySelector(".contentInput")
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.querySelector(".contentInput").value = document.querySelector(".contentInput").value + "<br><br>"
+  }
 });
