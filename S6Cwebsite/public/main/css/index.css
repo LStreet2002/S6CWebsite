@@ -1,111 +1,116 @@
 * {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Ubuntu;
+    font-family: ubuntu;
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    color: turquoise;
+nav {
+    background: white;
+    height: 80px;
     width: 100%;
 }
-
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
-}
-
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
-    width: absolute;
-    display: flex;
-    background-color: white;
-}
-
-.navbar-links li {
-    list-style: none;
-    width: 100%;
-}
-
-.navbar-links li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
+label.logo {
     color: #662483;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: .5rem;
-    display: block;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
 }
-
-.navbar-links li:hover {
-    background-color: rgba(139, 138, 138, 0.384);
+button{
+    font-family: ubuntu;
+    padding: 9px 25px;
+    background-color: #0E71B8;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
+button:hover {
     background-color: #662483;
-    border-radius: 10px;
 }
-
-@media (max-width: 400px) {
-    .toggle-button {
-        display: flex;
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a {
+    color:  #662483;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover {
+    background: rgba(87, 85, 85, 0.24);
+    transition: .5s;
+}
+.checkbtn {
+    font-size: 30px;
+    color: #662483;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media (max-width; 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
     }
-
-    .navbar-links {
-      display: none;
-      width: 100%;
+    button {
+        font-size: 24px;
+        padding: 40px;
     }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+    nav ul li a {
+        font-size: 16px;
     }
-
-    .navbar-links ul {
+}
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
         width: 100%;
-        flex-direction: column;
-        background-color:  rgba(14, 113, 184, 0.8);;
-    }
-
-    .navbar-links li {
+        height: 100vh;
+        background: rgba(14, 113, 184, 0.8);;
+        top: 80px;
+        left: -100%;
         text-align: center;
-        width: 100%;
+        transition: all .5s;
     }
-
-    .navbar-links li a {
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
         color: white;
-        padding: .5rem 1rem;
+        font-size: 20px;
     }
-
-    .navbar-links.active {
-        display: flex;
+    a:hover,a.active {
+        background: none;
+        color: rgba(255, 255, 255, 0.596);
+    }
+    #check:checked ~ ul{
+        left: 0;
     }
 }
-
-.apply-button {
-    margin: 0;
-    padding: 0;
+section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
 }
