@@ -3,6 +3,15 @@
   border: 0px;
   margin: 0px;
   font-family: "Ubuntu";
+  font-size: 18px;
+}
+
+* h1 {
+  font-size: 200%;
+}
+
+* h3 {
+  font-size: 125%;
 }
 
 .banner {
@@ -13,6 +22,14 @@
   -ms-grid-column: 1;
   grid-area: mid;
   font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(102, 36, 131, 0.5);
+  width: 100%;
 }
 
 #topper {
@@ -28,6 +45,16 @@
   height: 80vh;
   margin: 0px;
   padding: 0px;
-  background-image: url("/main/images/Tables.jpg");
+  background-image: url("/main/images/study.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.block {
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 /*# sourceMappingURL=information.css.map */
