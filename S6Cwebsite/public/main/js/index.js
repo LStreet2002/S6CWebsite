@@ -5,6 +5,6 @@ toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
 function chang(e) {
-    document.querySelector("#something").value = "bursary"
-    document.querySelector("#submit").click()
+    document.querySelector("#page").value = "bursary"
+    document.querySelector("#form").submit()
 }

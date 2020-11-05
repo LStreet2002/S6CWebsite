@@ -3,7 +3,7 @@ var newt = []
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
-const product = urlParams.get("something")
+const product = urlParams.get("page")
 console.log(product);
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -53,6 +53,6 @@ async function getDoc(url) {
         })
 }*/
 function chang(e) {
-    document.querySelector("#something").value = e.innerText
+    document.querySelector("#page").value = e.innerText
     document.querySelector("#submit").click()
 }
