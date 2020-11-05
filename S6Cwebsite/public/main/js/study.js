@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function () {
 })
 async function getDatabase() {
     await db
-        .collection("infoTabs")
+        .collection("studyTabs")
         .get()
         .then(
             doc = await getDoc(product),
@@ -26,7 +26,7 @@ async function getDatabase() {
 
 }
 async function getDoc(url) {
-    const docRef = db.collection("infoTabs").doc(url);
+    const docRef = db.collection("studyTabs").doc(url);
     const doc = await docRef.get();
     if (doc.exists) {
         return doc.data();
