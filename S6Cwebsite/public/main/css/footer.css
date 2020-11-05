@@ -1,0 +1,80 @@
+.footer {
+  color: white;
+  width: 100%;
+  margin: 0;
+}
+
+.footer .topFooter {
+  background-color: #022b3a;
+}
+
+.footer .topFooter .contact {
+  margin-left: 1em;
+}
+
+.footer .topFooter .media {
+  margin-left: 1em;
+}
+
+.footer .topFooter .links {
+  margin-left: 1em;
+}
+
+.footer .bottomFooter {
+  background-color: #0e71b8;
+}
+
+.footer .bottomFooter .copyright {
+  margin-left: 1em;
+  font-size: 75%;
+}
+
+@media only screen and (min-width: 600px) {
+  .footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "topFooter topFooter topFooter"
+      "bottomFooter bottomFooter bottomFooter";
+  }
+  .footer .topFooter {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: topFooter;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "contact media links";
+  }
+  .footer .topFooter .contact {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: contact;
+  }
+  .footer .topFooter .media {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: media;
+  }
+  .footer .topFooter .links {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: links;
+  }
+  .footer .topFooter .links img {
+    width: 50%;
+  }
+  .footer .bottomFooter {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: bottomFooter;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
