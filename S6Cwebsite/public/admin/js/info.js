@@ -99,3 +99,8 @@ function typeInTextarea(newText, el = document.activeElement) {
 document.querySelector(".contentInput").onkeydown = e => {
   if (e.key === "Enter") typeInTextarea("<br>");
 }
+document.querySelector(".bold").addEventListener("click", function () {
+  console.log("work")
+  document.querySelector(".contentInput").focus()
+  typeInTextarea("<b>Bold text here</b>")
+})
