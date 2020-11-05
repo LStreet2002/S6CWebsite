@@ -111,4 +111,12 @@ textarea {
 #save:hover {
   cursor: pointer;
 }
+
+.instru {
+  display: none;
+}
+
+.bold {
+  display: none;
+}
 /*# sourceMappingURL=editPB.css.map */

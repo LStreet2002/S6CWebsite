@@ -32,8 +32,16 @@ async function old() {
         title.classList.add("postit")
         title.setAttribute("type", "text")
         title.setAttribute("value", decay[i].title2)
+        var ent = document.createElement("p")
+        ent.innerText = "Press enter to drop a line,press enter twice to miss a line"
+        ent.classList.add("instru")
+        var bolt = document.createElement("button")
+        bolt.classList.add("bold")
+        bolt.setAttribute("onclick", "bolden(this)")
+        bolt.innerText = "Bold"
         var desc = document.createElement("textarea")
         desc.classList.add("postesc")
+        desc.setAttribute("onclick", "drolp(this)")
         desc.setAttribute("type", "text")
         desc.innerText = decay[i].desc
         var hr = document.createElement("hr")
@@ -42,6 +50,8 @@ async function old() {
         hold.appendChild(edit)
         hold.appendChild(del)
         hold.appendChild(title)
+        hold.appendChild(ent)
+        hold.appendChild(bolt)
         hold.appendChild(desc)
         hold.appendChild(hr)
 
@@ -57,10 +67,14 @@ function edit(e) {
     if (e.parentNode.querySelector(".postit").style.display == "none") {
         e.parentNode.querySelector(".postit").style.display = "block"
         e.parentNode.querySelector(".postesc").style.display = "block"
+        e.parentNode.querySelector(".instru").style.display = "block"
+        e.parentNode.querySelector(".bold").style.display = "block"
     }
     else {
         e.parentNode.querySelector(".postit").style.display = "none"
         e.parentNode.querySelector(".postesc").style.display = "none"
+        e.parentNode.querySelector(".instru").style.display = "none"
+        e.parentNode.querySelector(".bold").style.display = "none"
     }
 }
 
@@ -92,8 +106,16 @@ async function make() {
     title.classList.add("postit")
     title.setAttribute("type", "text")
     title.setAttribute("value", tut.value)
+    var ent = document.createElement("p")
+    ent.innerText = "Press enter to drop a line,press enter twice to miss a line"
+    ent.classList.add("instru")
+    var bolt = document.createElement("button")
+    bolt.classList.add("bold")
+    bolt.setAttribute("onclick", "bolden(this)")
+    bolt.innerText = "Bold"
     var desc = document.createElement("textarea")
     desc.classList.add("postesc")
+    desc.setAttribute("onclick", "drolp(this)")
     desc.setAttribute("type", "text")
     desc.innerText = dec.value
     var hr = document.createElement("hr")
@@ -102,6 +124,8 @@ async function make() {
     hold.appendChild(edit)
     hold.appendChild(del)
     hold.appendChild(title)
+    hold.appendChild(ent)
+    hold.appendChild(bolt)
     hold.appendChild(desc)
     hold.appendChild(hr)
 
@@ -121,3 +145,30 @@ async function save() {
         })
     }
 }
+function typeInTextarea(newText, el = document.activeElement) {
+    const start = el.selectionStart
+    const end = el.selectionEnd
+    const text = el.value
+    const before = text.substring(0, start)
+    const after = text.substring(end, text.length)
+    el.value = (before + newText + after)
+    el.selectionStart = el.selectionEnd = start + newText.length
+    el.focus()
+}
+function drolp(x) {
+    x.onkeydown = e => {
+        if (e.key === "Enter") typeInTextarea("<br>");
+    }
+}
+function bolden(y) {
+    y.parentNode.querySelector(".postesc").focus()
+    typeInTextarea("<b>Bold text here</b>")
+}
+document.querySelector("#addContent").onkeydown = e => {
+    if (e.key === "Enter") typeInTextarea("<br>");
+}
+document.querySelector(".boldit").addEventListener("click", function () {
+    console.log("work")
+    document.querySelector("#addContent").focus()
+    typeInTextarea("<b>Bold text here</b>")
+})
