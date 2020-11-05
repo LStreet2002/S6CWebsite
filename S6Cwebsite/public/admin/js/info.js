@@ -85,13 +85,17 @@ window.addEventListener("DOMContentLoaded", function () {
   getDatabase();
 });
 
+function typeInTextarea(newText, el = document.activeElement) {
+  const start = el.selectionStart
+  const end = el.selectionEnd
+  const text = el.value
+  const before = text.substring(0, start)
+  const after = text.substring(end, text.length)
+  el.value = (before + newText + after)
+  el.selectionStart = el.selectionEnd = start + newText.length
+  el.focus()
+}
 
-input = document.querySelector(".contentInput")
-input.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13) {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.querySelector(".contentInput").value = document.querySelector(".contentInput").value + "<br>"
-  }
-});
+document.querySelector(".contentInput").onkeydown = e => {
+  if (e.key === "Enter") typeInTextarea("<br>");
+}
