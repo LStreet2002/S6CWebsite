@@ -19,7 +19,7 @@ async function footer() {
         })
 }
 async function carousels() {
-    await db.collection("Firth").orderBy("date", "desc")
+    await db.collection("Firth").orderBy("timestamp", "desc")
         .get()
         .then(async function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -38,7 +38,7 @@ async function carousels() {
                 til.innerText = bloggit[i].title2
                 til.classList.add("blogTitle")
                 var full = document.createElement("p")
-                full.innerText = bloggit[i].desc
+                full.innerHTML = bloggit[i].desc
                 full.classList.add("full")
                 if (i == 0) {
                 } else {

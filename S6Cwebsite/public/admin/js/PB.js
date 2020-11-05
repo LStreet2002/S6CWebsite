@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async function init() {
 }
 )
 async function old() {
-    await db.collection("Firth").orderBy("date", "desc")
+    await db.collection("Firth").orderBy("timestamp", "desc")
         .get()
         .then(async function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -86,7 +86,8 @@ async function make() {
         title: tut.value,
         desc: dec.value,
         title2: tut.value,
-        date: det.value
+        date: det.value,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
     })
 
     var hold = document.createElement("div")
