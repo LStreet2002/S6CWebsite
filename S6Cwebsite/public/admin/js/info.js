@@ -92,13 +92,13 @@ window.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".contentInput").focus();
         switch (this.classList[1]) {
           case "1":
-            typeInTextarea("<b></b>\n");
+            typeInTextarea("<b></b>");
             break;
           case "2":
             typeInTextarea("<br>\n");
             break;
           case "3":
-            typeInTextarea("<h2></h2>\n");
+            typeInTextarea("<h2></h2>");
             break;
         }
       });
