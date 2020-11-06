@@ -101,7 +101,10 @@ document.querySelector(".contentInput").onkeydown = e => {
     if (e.key === "Enter") typeInTextarea("<br>");
 }
 document.querySelector(".bold").addEventListener("click", function () {
-    console.log("work")
     document.querySelector(".contentInput").focus()
     typeInTextarea("<b>Bold text here</b>")
+})
+document.querySelector(".header").addEventListener("click", function () {
+    document.querySelector(".contentInput").focus()
+    typeInTextarea("<h2>Header text here</h2>")
 })
