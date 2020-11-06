@@ -39,6 +39,10 @@ async function old() {
         bolt.classList.add("bold")
         bolt.setAttribute("onclick", "bolden(this)")
         bolt.innerText = "Bold"
+        var head = document.createElement("button")
+        head.classList.add("header")
+        head.setAttribute("onclick", "headen(this)")
+        head.innerText = "Header"
         var desc = document.createElement("textarea")
         desc.classList.add("postesc")
         desc.setAttribute("onclick", "drolp(this)")
@@ -52,6 +56,7 @@ async function old() {
         hold.appendChild(title)
         hold.appendChild(ent)
         hold.appendChild(bolt)
+        hold.appendChild(head)
         hold.appendChild(desc)
         hold.appendChild(hr)
 
@@ -69,12 +74,14 @@ function edit(e) {
         e.parentNode.querySelector(".postesc").style.display = "block"
         e.parentNode.querySelector(".instru").style.display = "block"
         e.parentNode.querySelector(".bold").style.display = "block"
+        e.parentNode.querySelector(".header").style.display = "block"
     }
     else {
         e.parentNode.querySelector(".postit").style.display = "none"
         e.parentNode.querySelector(".postesc").style.display = "none"
         e.parentNode.querySelector(".instru").style.display = "none"
         e.parentNode.querySelector(".bold").style.display = "none"
+        e.parentNode.querySelector(".header").style.display = "none"
     }
 }
 
@@ -114,6 +121,10 @@ async function make() {
     bolt.classList.add("bold")
     bolt.setAttribute("onclick", "bolden(this)")
     bolt.innerText = "Bold"
+    var head = document.createElement("button")
+    head.classList.add("header")
+    head.setAttribute("onclick", "headen(this)")
+    head.innerText = "Header"
     var desc = document.createElement("textarea")
     desc.classList.add("postesc")
     desc.setAttribute("onclick", "drolp(this)")
@@ -127,6 +138,7 @@ async function make() {
     hold.appendChild(title)
     hold.appendChild(ent)
     hold.appendChild(bolt)
+    hold.appendChild(head)
     hold.appendChild(desc)
     hold.appendChild(hr)
 
@@ -168,8 +180,16 @@ function bolden(y) {
 document.querySelector("#addContent").onkeydown = e => {
     if (e.key === "Enter") typeInTextarea("<br>");
 }
+
+function headen(y) {
+    y.parentNode.querySelector(".postesc").focus()
+    typeInTextarea("<h2>Header here</h2>")
+}
 document.querySelector(".boldit").addEventListener("click", function () {
-    console.log("work")
     document.querySelector("#addContent").focus()
     typeInTextarea("<b>Bold text here</b>")
+})
+document.querySelector(".headit").addEventListener("click", function () {
+    document.querySelector("#addContent").focus()
+    typeInTextarea("<h2>Header text here</h2>")
 })

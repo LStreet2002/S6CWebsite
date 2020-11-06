@@ -97,6 +97,9 @@ window.addEventListener("DOMContentLoaded", function () {
           case "2":
             typeInTextarea("<br>\n");
             break;
+          case "3":
+            typeInTextarea("<h2></h2>\n");
+            break;
         }
       });
   }
