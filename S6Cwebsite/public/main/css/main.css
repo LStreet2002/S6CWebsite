@@ -125,6 +125,10 @@ html {
   display: block;
 }
 
+#c0 .otherPosts {
+  float: right;
+}
+
 .item {
   display: none;
 }

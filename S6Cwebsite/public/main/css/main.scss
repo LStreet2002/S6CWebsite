@@ -69,6 +69,7 @@ html {
     }
   }
   .last {
+    
     .lastPost {
       color: $courseColour;
       font-weight: bold;
@@ -105,6 +106,9 @@ html {
 
 #c0 {
   display: block;
+  .otherPosts{
+    float: right;
+  }
 }
 .item {
   display: none;
