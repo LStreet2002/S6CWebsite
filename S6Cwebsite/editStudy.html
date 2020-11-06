@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="admin/css/info.css" />
-  <title>Edit: Information</title>
+  <title class="studyTabs">Edit: Study</title>
 </head>
 
 <body>
@@ -33,7 +33,9 @@
       <h1 type="text" class="pageNameInput postit"></h1>
       <p class="small">Content</p>
       <p>Press enter to drop a line,press enter twice to miss a line</p>
-      <button class="bold">Bold</button>
+      <button class="buttons 1">Bold</button>
+      <button class="buttons 2">Line break</button>
+      <button class="buttons 3">Heading</button>
       <textarea type="text" class="contentInput"></textarea>
       <div id="bluttons">
         <button class="updateButton" onclick="updatePage()">Update</button>
@@ -52,7 +54,7 @@
 
   <script src="admin/js/fireBase.js"></script>
   <script src="admin/js/auth.js"></script>
-  <script src="admin/js/study.js"></script>
+  <script src="admin/js/info.js"></script>
 </body>
 
 </html>

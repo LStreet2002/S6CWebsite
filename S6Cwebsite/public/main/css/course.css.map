@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,GAAG;EACX,WAAW,EAAE,QAAQ;EACrB,SAAS,EAAE,IAAI;CAUhB;;AAfD,AAME,CAND,CAMC,EAAE,CAAC;EACD,SAAS,EAAE,IAAI;CAChB;;AARH,AASE,CATD,CASC,EAAE,CAAA;EACA,SAAS,EAAE,IAAI;CAChB;;AAXH,AAYE,CAZD,CAYC,EAAE,CAAC;EACD,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "course.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "course.css"
+}
