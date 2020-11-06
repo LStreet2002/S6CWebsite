@@ -43,9 +43,12 @@ async function old() {
         head.classList.add("header")
         head.setAttribute("onclick", "headen(this)")
         head.innerText = "Header"
+        var brok = document.createElement("button")
+        brok.classList.add("breaker")
+        brok.innerText = "Line drop"
+        brok.setAttribute("onclick", "drolp(this)")
         var desc = document.createElement("textarea")
         desc.classList.add("postesc")
-        desc.setAttribute("onclick", "drolp(this)")
         desc.setAttribute("type", "text")
         desc.innerText = decay[i].desc
         var hr = document.createElement("hr")
@@ -57,6 +60,7 @@ async function old() {
         hold.appendChild(ent)
         hold.appendChild(bolt)
         hold.appendChild(head)
+        hold.appendChild(brok)
         hold.appendChild(desc)
         hold.appendChild(hr)
 
@@ -69,12 +73,13 @@ function delet(e) {
     e.parentNode.style.display = "none"
 }
 function edit(e) {
-    if (e.parentNode.querySelector(".postit").style.display == "none") {
+    if (getComputedStyle(e.parentNode.querySelector(".postit")).display === "none") {
         e.parentNode.querySelector(".postit").style.display = "block"
         e.parentNode.querySelector(".postesc").style.display = "block"
         e.parentNode.querySelector(".instru").style.display = "block"
-        e.parentNode.querySelector(".bold").style.display = "block"
-        e.parentNode.querySelector(".header").style.display = "block"
+        e.parentNode.querySelector(".bold").style.display = "inline"
+        e.parentNode.querySelector(".header").style.display = "inline"
+        e.parentNode.querySelector(".breaker").style.display = "inline"
     }
     else {
         e.parentNode.querySelector(".postit").style.display = "none"
@@ -82,6 +87,7 @@ function edit(e) {
         e.parentNode.querySelector(".instru").style.display = "none"
         e.parentNode.querySelector(".bold").style.display = "none"
         e.parentNode.querySelector(".header").style.display = "none"
+        e.parentNode.querySelector(".breaker").style.display = "none"
     }
 }
 
@@ -125,6 +131,10 @@ async function make() {
     head.classList.add("header")
     head.setAttribute("onclick", "headen(this)")
     head.innerText = "Header"
+    var brok = document.createElement("button")
+    brok.classList.add("breaker")
+    brok.innerText = "Line drop"
+    brok.setAttribute("onclick", "drolp(this)")
     var desc = document.createElement("textarea")
     desc.classList.add("postesc")
     desc.setAttribute("onclick", "drolp(this)")
@@ -139,6 +149,7 @@ async function make() {
     hold.appendChild(ent)
     hold.appendChild(bolt)
     hold.appendChild(head)
+    hold.appendChild(brok)
     hold.appendChild(desc)
     hold.appendChild(hr)
 
@@ -168,19 +179,14 @@ function typeInTextarea(newText, el = document.activeElement) {
     el.selectionStart = el.selectionEnd = start + newText.length
     el.focus()
 }
-function drolp(x) {
-    x.onkeydown = e => {
-        if (e.key === "Enter") typeInTextarea("<br>");
-    }
+function drolp(y) {
+    y.parentNode.querySelector(".postesc").focus()
+    typeInTextarea("<br>")
 }
 function bolden(y) {
     y.parentNode.querySelector(".postesc").focus()
     typeInTextarea("<b>Bold text here</b>")
 }
-document.querySelector("#addContent").onkeydown = e => {
-    if (e.key === "Enter") typeInTextarea("<br>");
-}
-
 function headen(y) {
     y.parentNode.querySelector(".postesc").focus()
     typeInTextarea("<h2>Header here</h2>")
@@ -192,4 +198,8 @@ document.querySelector(".boldit").addEventListener("click", function () {
 document.querySelector(".headit").addEventListener("click", function () {
     document.querySelector("#addContent").focus()
     typeInTextarea("<h2>Header text here</h2>")
+})
+document.querySelector(".breakit").addEventListener("click", function () {
+    document.querySelector("#addContent").focus()
+    typeInTextarea("<br>")
 })
