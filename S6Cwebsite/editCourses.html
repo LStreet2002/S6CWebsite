@@ -27,17 +27,24 @@
       </div>
       <br>
       <br>
-      <div id="courselist">
-        <div id="course">
-          <h2>Course 1</h2>
-          <div>
-            <a href="editCourse.html"><span id="edit" class="material-icons">
-                edit
-              </span></a>
-            <span id="delete" class="material-icons">
-              delete
-            </span>
-          </div>
+      <div class="courselist" id="courselist">
+      </div>
+      <hr>
+      <div class="editcourse">
+        <h1 type="text" class="coursename"></h1>
+        <p class="editSubhead">Titleimage</p>
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+        <p class="subhead">Type of qualification</p>
+        <input type="radio">
+        <p class="subhead">Exam Board</p>
+        <p class="editSubhead">Entry Requirements</p>
+        <textarea class="inputBox"></textarea>
+        <div id="bluttons">
+          <button class="updateButton" onclick="updatePage()">Update</button>
+          <button class="deleteButton" onclick="deletePage()">Delete</button>
         </div>
       </div>
 
