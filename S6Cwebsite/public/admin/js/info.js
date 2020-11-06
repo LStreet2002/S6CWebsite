@@ -3,10 +3,11 @@ var pageNameInput = document.getElementsByClassName("pageNameInput")[0];
 var headerInput = document.getElementsByClassName("headerInput")[0];
 var contentInput = document.getElementsByClassName("contentInput")[0];
 var updateButton = document.getElementsByClassName("updateButton")[0];
+var page = document.getElementsByTagName("title")[0].className;
 async function addTab() {
   var input = document.getElementsByClassName("addTabInput")[0].value;
   var titl = input.toLowerCase();
-  await db.collection("infoTabs").doc(titl).set({
+  await db.collection(page).doc(titl).set({
     pageName: input,
   });
   location.reload();
@@ -14,7 +15,7 @@ async function addTab() {
 
 async function getDatabase() {
   await db
-    .collection("infoTabs")
+    .collection(page)
     .get()
     .then(async function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
@@ -51,17 +52,14 @@ async function getDatabase() {
 
 async function updatePage() {
   await db
-    .collection("infoTabs")
+    .collection(page)
     .doc(pageNameInput.innerText.toLowerCase())
     .delete()
     .then(async function () {
-      await db
-        .collection("infoTabs")
-        .doc(pageNameInput.innerText.toLowerCase())
-        .set({
-          pageName: pageNameInput.innerText,
-          main: contentInput.value,
-        });
+      await db.collection(page).doc(pageNameInput.innerText.toLowerCase()).set({
+        pageName: pageNameInput.innerText,
+        main: contentInput.value,
+      });
     })
 
     .catch(function (error) {
@@ -71,12 +69,12 @@ async function updatePage() {
 }
 
 async function deletePage() {
-  await db.collection("infoTabs").doc(pageNameInput.innerHTML).delete();
+  await db.collection(page).doc(pageNameInput.innerHTML).delete();
   location.reload();
 }
 
 async function getDoc(url) {
-  const docRef = db.collection("infoTabs").doc(url);
+  const docRef = db.collection(page).doc(url);
   const doc = await docRef.get();
   if (doc.exists) {
     return doc.data();
