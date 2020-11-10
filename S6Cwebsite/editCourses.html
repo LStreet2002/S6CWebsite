@@ -22,8 +22,8 @@
       </div>
       <h2>Add New Course</h2>
       <div id="newCourse">
-        <input id="addCourse" type="text"></input>
-        <button id="button" onclick="addCourse()">Add</button>
+        <input class="addCourse" type="text"></input>
+        <button class="add" onclick="addCourse()">Add</button>
       </div>
       <br>
       <br>
@@ -31,17 +31,45 @@
       </div>
       <hr>
       <div class="editcourse">
-        <h1 type="text" class="coursename"></h1>
+        <h1 type="text" class="pageNameInput"></h1>
         <p class="editSubhead">Titleimage</p>
         <form action="/action_page.php">
           <input type="file" id="myFile" name="filename">
-          <input type="submit">
         </form>
-        <p class="subhead">Type of qualification</p>
-        <input type="radio">
-        <p class="subhead">Exam Board</p>
+
+        <div>
+          <p class="subhead">Type of qualification</p>
+          <input type="radio" id="aLevel" name="qualification" value="aLevel">
+          <label for="aLevel">A Level</label><br>
+          <input type="radio" id="BTEC" name="qualification" value="BTEC">
+          <label for="BTEC">BTEC</label><br>
+          <input type="radio" id="CTEC" name="qualification" value="CTEC">
+          <label for="CTEC">CTEC</label><br>
+          <input type="radio" id="level3" name="qualification" value="level3">
+          <label for="level3">Level 3</label><br>
+        </div>
+
+        <div>
+          <p class="subhead">Exam Board</p>
+          <input type="radio" id="ocr" name="examBoard" value="ocr">
+          <label for="ocr">OCR</label><br>
+          <input type="radio" id="aqa" name="examBoard" value="aqa">
+          <label for="aqa">AQA</label><br>
+          <input type="radio" id="edexcel" name="examBoard" value="edexcel">
+          <label for="edexcel">Edexcel</label><br>
+          <input type="radio" id="pearson" name="examBoard" value="pearson">
+          <label for="pearson">Pearson</label><br>
+        </div>
+
         <p class="editSubhead">Entry Requirements</p>
         <textarea class="inputBox"></textarea>
+
+        <p class="editSubhead">Assessments</p>
+        <textarea class="inputBox"></textarea>
+
+        <p class="editSubhead">Course Description</p>
+        <textarea class="inputBox"></textarea>
+
         <div id="bluttons">
           <button class="updateButton" onclick="updatePage()">Update</button>
           <button class="deleteButton" onclick="deletePage()">Delete</button>
