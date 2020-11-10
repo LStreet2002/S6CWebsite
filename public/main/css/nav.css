@@ -11,6 +11,9 @@
    
     background: white;
   }
+  nav .active{
+    background: rgba(156, 152, 152, 0.466);
+  }
   nav .wrapper{
     position: relative;
     max-width: 1300px;
