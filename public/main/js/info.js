@@ -33,8 +33,3 @@ async function getDoc(url) {
         return doc.data();
     }
 }
-
-function chang(e) {
-    document.querySelector("#page").value = e.innerText
-    document.querySelector("#submit").click()
-}

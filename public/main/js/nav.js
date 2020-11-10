@@ -2,14 +2,12 @@ var tabs = ["infoTabs", "studyTabs"]
 async function getPages() {
     pages = []
     for (i = 0; i < 2; i++) {
-        console.log(i)
         const collection = db.collection(tabs[i]);
         const snapshot = await collection.get();
         snapshot.forEach(doc => {
             pages.push([doc.data().pageName, tabs[i]]);
             newListItem = document.createElement("li")
             newListItem.innerText = doc.data().pageName;
-            console.log(document.getElementById(tabs[i]))
             document.getElementsByClassName("page")[i]
             newListItem.collection = tabs[i]
             newListItem.addEventListener("click", function () {
