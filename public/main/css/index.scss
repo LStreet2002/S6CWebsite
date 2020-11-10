@@ -1,0 +1,25 @@
+@import "./variables";
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-family: "Ubuntu";
+    font-size: 18px;
+    h1 {
+      font-size: 200%;
+    }
+    h2{
+      font-size: 160%;
+    }
+    h3 {
+      font-size: 125%;
+    }
+  }
+.aboutMini{
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.blogMini{
+    margin-left: 3em;
+    margin-right: 3em;
+}  
