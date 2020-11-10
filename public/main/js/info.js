@@ -4,14 +4,15 @@ const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
 const product = urlParams.get("page")
-console.log(product);
+const collection = urlParams.get("collection")
+console.log(product, collection);
 
 window.addEventListener("DOMContentLoaded", function () {
     getDatabase()
 })
 async function getDatabase() {
     await db
-        .collection("infoTabs")
+        .collection(collection)
         .get()
         .then(
             doc = await getDoc(product),
@@ -23,17 +24,12 @@ async function getDatabase() {
     tex.classList.add("subext")
 
     document.querySelector(".block").appendChild(tex)
-
+    document.body.style.opacity = "100";
 }
 async function getDoc(url) {
-    const docRef = db.collection("infoTabs").doc(url);
+    const docRef = db.collection(collection).doc(url);
     const doc = await docRef.get();
     if (doc.exists) {
         return doc.data();
     }
-}
-
-function chang(e) {
-    document.querySelector("#page").value = e.innerText
-    document.querySelector("#submit").click()
 }
