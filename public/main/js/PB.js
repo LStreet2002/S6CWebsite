@@ -14,20 +14,20 @@ async function carousels() {
                 bloggit.push(doc.data())
 
             })
-            for (i = 0; i < bloggit.length; i++) {
+            for (y = 0; y < bloggit.length; y++) {
                 var car = document.createElement("div")
                 car.classList.add("item")
-                car.id = "c" + i
+                car.id = "c" + y
                 var dat = document.createElement("h2")
-                dat.innerText = bloggit[i].date
+                dat.innerText = bloggit[y].date
                 dat.classList.add("blogDate")
                 var til = document.createElement("h2")
-                til.innerText = bloggit[i].title2
+                til.innerText = bloggit[y].title2
                 til.classList.add("blogTitle")
                 var full = document.createElement("p")
-                full.innerHTML = bloggit[i].desc
+                full.innerHTML = bloggit[y].desc
                 full.classList.add("full")
-                if (i == 0) {
+                if (y == 0) {
                 } else {
                     var next = document.createElement("div")
                     next.classList.add("next")
@@ -36,10 +36,10 @@ async function carousels() {
                     nexth.innerText = "Next post"
                     var nextl = document.createElement("div")
                     nextl.classList.add("nextPost")
-                    nextl.innerText = bloggit[(i - 1)].title2
+                    nextl.innerText = bloggit[(y - 1)].title2
                     nextl.setAttribute("onclick", "backward(this)")
                 }
-                if (i == (bloggit.length - 1)) { }
+                if (y == (bloggit.length - 1)) { }
                 else {
                     var last = document.createElement("div")
                     last.classList.add("last")
@@ -48,7 +48,7 @@ async function carousels() {
                     lasth.innerText = "Previous post"
                     var lastl = document.createElement("div")
                     lastl.classList.add("lastPost")
-                    lastl.innerText = bloggit[(i + 1)].title2
+                    lastl.innerText = bloggit[(y + 1)].title2
                     lastl.setAttribute("onclick", "forward(this)")
                 }
                 var other = document.createElement("section")
@@ -57,13 +57,13 @@ async function carousels() {
                 car.appendChild(dat)
                 car.appendChild(til)
                 car.appendChild(full)
-                if (i == 0) {
+                if (y == 0) {
                 } else {
                     next.appendChild(nexth)
                     next.appendChild(nextl)
                     other.appendChild(next)
                 }
-                if (i == (bloggit.length - 1)) { }
+                if (y == (bloggit.length - 1)) { }
                 else {
                     last.appendChild(lasth)
                     last.appendChild(lastl)

@@ -18,7 +18,6 @@ async function getPages() {
         });
 
     }
-    console.log(pages)
 }
 
 window.addEventListener("DOMContentLoaded", function () {
