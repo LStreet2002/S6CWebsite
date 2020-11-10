@@ -15,9 +15,19 @@
       font-size: 125%;
     }
   }
+.notice{
+    background-color: $news;
+    color: white;
+    padding-left: 3em;
+    padding-right: 3em;
+}  
 .aboutMini{
     margin-left: 3em;
     margin-right: 3em;
+}
+.findCourse{
+    padding-left: 3em;
+    padding-right: 3em;
 }
 .blogMini{
     margin-left: 3em;
