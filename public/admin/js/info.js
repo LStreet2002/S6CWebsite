@@ -4,6 +4,7 @@ var headerInput = document.getElementsByClassName("headerInput")[0];
 var contentInput = document.getElementsByClassName("contentInput")[0];
 var updateButton = document.getElementsByClassName("updateButton")[0];
 var page = document.getElementsByTagName("title")[0].className;
+document.body.style.opacity = "0";
 async function addTab() {
   var input = document.getElementsByClassName("addTabInput")[0].value;
   var titl = input.toLowerCase();
@@ -48,6 +49,7 @@ async function getDatabase() {
         console.log(newt[i]["pageName"]);
       }
     });
+  document.body.style.opacity = "100";
 }
 
 async function updatePage() {
