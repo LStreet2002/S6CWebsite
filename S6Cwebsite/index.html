@@ -1,54 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="main/css/index.css" />
-  <title>S6C Website</title>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <link rel="stylesheet" href="main/css/footer.css" />
+ <link rel="stylesheet" href="main/css/nav.css"/>
+ <title>S6C Website</title>
 </head>
-
+ 
 <body>
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo">S6C</label>
-    <button>Apply Now</button>
-    <ul>
-      <li><a class="active" href="#">Home</a></li>
-      <form id="form" style="display:none" action="information.html" method="GET">
-        <input type="text" id="page" name="page">
-      </form>
-      <form id="form2" style="display:none" action="study.html" method="GET">
-        <input type="text" id="page2" name="page">
-      </form>
-      <li><a href="#" onclick=chang(this)>Information</a></li>
-      <li><a href="#">Courses</a></li>
-      <li><a href="#" onclick=changs(this)>Study With Us</a></li>
-    </ul>
-  </nav>
-  <section>
-    <text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero deserunt quisquam laborum architecto sapiente
-      ea laudantium possimus pariatur minus soluta dolorem fuga vel, voluptas repellendus cupiditate vero commodi
-      aliquid Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus ducimus in iste molestiae. Nostrum
-      explicabo, sit beatae mollitia consequatur officia? Perferendis illo, veniam porro odio vero earum quod! Dolorem,
-      a!</text>
-  </section>
-  </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
-
-  <script src="main/js/index.js"></script>
-  <script src="admin/js/firebase.js"></script>
-  <script src="main/js/footer.js"></script>
-
-</body>
-
-</html>
+ <nav>
+   <div class="wrapper">
+     <div class="logo"><a href="#">S6C</a></div>
+     <input type="radio" name="slider" id="menu-btn">
+     <input type="radio" name="slider" id="close-btn">
+     <ul class="nav-links">
+       <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+       <li><a href="#" class="active">Home</a></li>
+       <li>
+         <a href="#" class="desktop-item">Information</a>
+         <input type="checkbox" id="showDrop">
+         <label for="showDrop" class="mobile-item">Information</label>
+         <ul class="drop-menu">
+           <li><a href="#">About S6C</a></li>
+           <li><a href="#">Polcies</a></li>
+           <li><a href="#">Opening Times</a></li>
+           <li><a href="#">Location</a></li>
+           <li><a href="#">Bursary</a></li>
+           <li><a href="#">Past Results</a></li>
+           <li><a href="#">Term Dates</a></li>
+         </ul>
+       </li>
+       <li><a href="#">About</a></li>
+       <li>
+         <a href="#" class="desktop-item">Study With Us</a>
+         <input type="checkbox" id="showMega">
+         <label for="showMega" class="mobile-item">Study With Us</label>
+         <div class="mega-box">
+           <div class="content">
+             <div class="row">
+               <img src="public/main/images/">
+             </div>
+             <div class="row">
+               <header>Placeholder Title</header>
+               <ul class="mega-links">
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+               </ul>
+             </div>
+             <div class="row">
+               <header>Placeholder Title</header>
+               <ul class="mega-links">
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+               </ul>
+             </div>
+             <div class="row">
+               <header>Placeholder Title</header>
+               <ul class="mega-links">
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+                 <li><a href="#">Placeholder</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </li>
+     </ul>
+     <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+   </div>
+ </nav>
