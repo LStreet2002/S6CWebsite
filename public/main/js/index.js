@@ -1,8 +1,11 @@
 var hold = []
 var thecount = 0
+var slideIndex = 0;
+
 
 window.addEventListener("DOMContentLoaded", async function () {
   await carouses()
+  showSlides();
 })
 async function carouses() {
   var storageRef = storage.ref('carousel');
@@ -21,12 +24,22 @@ async function carouses() {
       var item = document.createElement("img")
       item.src = url
       item.id = ["c" + y]
-      item.classList.add("carosimg")
+      item.classList.add("carosimg", "fade")
       document.querySelector(".imgCar").appendChild(item)
     })
   }
 
 }
-
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("carosimg");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 6000); // Change image every 2 seconds
+}
 
 
