@@ -12,6 +12,12 @@
 </head>
 
 <body>
+  <form style="display: none" action="information.html" method="GET">
+    <input type="text" class="page" name="page" />
+  </form>
+  <form style="display: none" action="study.html" method="GET">
+    <input type="text" class="page" name="page" />
+</form>
   <nav>
     <div class="wrapper">
       <div class="logo"><a href="#">S6C</a></div>
@@ -24,14 +30,8 @@
           <a href="#" class="desktop-item">Information</a>
           <input type="checkbox" id="showDrop">
           <label for="showDrop" class="mobile-item">Information</label>
-          <ul id="infoList" class="drop-menu">
-            <li><a href="#">About S6C</a></li>
-            <li><a href="#">Polcies</a></li>
-            <li><a href="#">Opening Times</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Bursary</a></li>
-            <li><a href="#">Past Results</a></li>
-            <li><a href="#">Term Dates</a></li>
+          <ul id="infoTabs" class="drop-menu">
+            
           </ul>
         </li>
         <li><a href="#">About</a></li>
@@ -39,14 +39,8 @@
           <a href="#" class="desktop-item">Study with us</a>
           <input type="checkbox" id="showDrop">
           <label for="showDrop" class="mobile-item">Study with us</label>
-          <ul id="studyList" class="drop-menu">
-            <li><a href="#">About S6C</a></li>
-            <li><a href="#">Polcies</a></li>
-            <li><a href="#">Opening Times</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Bursary</a></li>
-            <li><a href="#">Past Results</a></li>
-            <li><a href="#">Term Dates</a></li>
+          <ul id="studyTabs" class="drop-menu">
+         
           </ul>
         </li>
         <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
@@ -129,5 +123,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="admin/js/firebase.js"></script>
     <script src="main/js/footer.js"></script>
+    <script src="main/js/nav.js"></script>
   </body>
 </html>
