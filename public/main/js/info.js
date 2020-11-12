@@ -23,7 +23,6 @@ async function getDatabase() {
   tex.classList.add("subext");
 
   document.querySelector(".block").appendChild(tex);
-  document.body.style.opacity = "100";
 }
 async function getDoc(url) {
   const docRef = db.collection(collection).doc(url);

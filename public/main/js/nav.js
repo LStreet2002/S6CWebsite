@@ -18,9 +18,7 @@ async function getPages() {
         });
 
     }
+    document.body.style.opacity = "100";
 }
 
-window.addEventListener("DOMContentLoaded", function () {
-    getPages()
-})
 
