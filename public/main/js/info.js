@@ -9,7 +9,8 @@ console.log(product, collection);
 document.body.style.opacity = "0";
 
 window.addEventListener("DOMContentLoaded", function () {
-  getDatabase();
+  getDatabase()
+  getPages();
 });
 async function getDatabase() {
   await db
