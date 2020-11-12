@@ -17,6 +17,8 @@ const db = admin.firestore();
 app.get("*", (req, res) => {
   if (req.url == "/") {
     res.sendFile(__dirname + "/index.html");
+  } else if (req.url.split("?")[0] == "/information") {
+    res.sendFile(__dirname + "/information.html", req.url.split("?")[1]);
   } else {
     res.sendFile(__dirname + "/" + req.url.split(".")[0] + ".html");
   }

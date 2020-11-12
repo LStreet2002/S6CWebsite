@@ -11,7 +11,7 @@ async function getPages() {
             document.getElementsByClassName("page")[i]
             newListItem.collection = tabs[i]
             newListItem.addEventListener("click", function () {
-                window.location = "information.html?page=" + this.innerText.toLowerCase() + "&collection=" + this.collection
+                window.location = "information?page=" + this.innerText.toLowerCase() + "&collection=" + this.collection
             });
             newListItem.style.cursor = "pointer"
             document.getElementById(tabs[i]).appendChild(newListItem)
