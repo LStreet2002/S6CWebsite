@@ -13,9 +13,34 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="main/css/nav.css" />
   </head>
 
   <body>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">S6C</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="/" class="active">Home</a></li>
+          <li>
+            <a href="#" class="desktop-item">Information</a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Information</label>
+            <ul id="infoTabs" class="drop-menu"></ul>
+          </li>
+          <li><a href="courses">Courses</a></li>
+          <li>
+            <a href="#" class="desktop-item">Study with us</a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Study with us</label>
+            <ul id="studyTabs" class="drop-menu"></ul>
+          </li>
+          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav>
     <div id="topper">
       <div class="banner">ABOUT US</div>
     </div>
@@ -100,7 +125,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
-
+    <script src="main/js/nav.js"></script>
     <script src="main/js/info.js"></script>
     <script src="admin/js/firebase.js"></script>
     <script src="main/js/footer.js"></script>
