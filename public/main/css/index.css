@@ -51,6 +51,14 @@
   z-index: 0;
 }
 
+.cartext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 5s;
