@@ -2,6 +2,7 @@ var bloggit = []
 var hold = []
 var thecount = 0
 var slideIndex = 0;
+var cartext = ["1", "2", "3", "4", "5"]
 
 
 window.addEventListener("DOMContentLoaded", async function () {
@@ -30,7 +31,11 @@ async function carouses() {
       item.src = url
       item.id = ["c" + y]
       item.classList.add("carosimg", "fade")
+      var texlc = document.createElement("p")
+      texlc.innerText = cartext[y]
+      texlc.classList.add("cartext")
       document.querySelector(".imgCar").appendChild(item)
+      document.querySelector(".imgCar").appendChild(texlc)
     })
   }
 
