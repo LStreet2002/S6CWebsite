@@ -2,7 +2,13 @@ var bloggit = []
 var hold = []
 var thecount = 0
 var slideIndex = 0;
-var cartext = ["1", "2", "3", "4", "5"]
+var cartext = [
+  "ITS ALL ABOUT YOU", 
+  "ITS ALL ABOUT YOU", 
+  "ITS ALL ABOUT YOU", 
+  "ITS ALL ABOUT YOU", 
+  "ITS ALL ABOUT YOU"
+]
 
 
 window.addEventListener("DOMContentLoaded", async function () {
@@ -30,7 +36,7 @@ async function carouses() {
       item.src = url
       item.id = ["c" + y]
       item.classList.add("carosimg", "fade")
-      var texlc = document.createElement("p")
+      var texlc = document.createElement("h3")
       texlc.innerText = cartext[y]
       texlc.classList.add("cartext", "fade")
       document.querySelector(".imgCar").appendChild(item)
