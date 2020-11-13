@@ -6,7 +6,6 @@ const urlParams = new URLSearchParams(queryString);
 const product = urlParams.get("page");
 const collection = urlParams.get("collection");
 console.log(product, collection);
-document.body.style.opacity = "0";
 
 window.addEventListener("DOMContentLoaded", function () {
   getDatabase()
