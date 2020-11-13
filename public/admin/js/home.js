@@ -72,7 +72,7 @@ async function news() {
 
             })
             document.querySelector("#editnews").value = newt[0].name
-            document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + "/100 Characters"
+            document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters"
         }
         )
 }
@@ -136,5 +136,30 @@ function getting(x) {
 }
 
 document.getElementById('editnews').onkeyup = function () {
-    document.getElementById('characters').innerHTML = this.value.length + "/100 Characters";
+    document.getElementById('characters').innerHTML = this.value.length + " Characters";
 };
+function typeInTextarea(newText, el = document.activeElement) {
+    const start = el.selectionStart
+    const end = el.selectionEnd
+    const text = el.value
+    const before = text.substring(0, start)
+    const after = text.substring(end, text.length)
+    el.value = (before + newText + after)
+    el.selectionStart = el.selectionEnd = start + newText.length
+    el.focus()
+}
+document.querySelector(".boldit").addEventListener("click", function () {
+    document.querySelector("#editnews").focus()
+    typeInTextarea("<b>Bold text here</b>")
+    document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
+})
+document.querySelector(".headit").addEventListener("click", function () {
+    document.querySelector("#editnews").focus()
+    typeInTextarea("<h2>Header text here</h2>")
+    document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
+})
+document.querySelector(".breakit").addEventListener("click", function () {
+    document.querySelector("#editnews").focus()
+    typeInTextarea("<br>")
+    document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
+})

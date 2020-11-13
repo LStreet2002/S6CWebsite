@@ -23,6 +23,8 @@ async function getDatabase() {
   tex.classList.add("subext");
 
   document.querySelector(".block").appendChild(tex);
+  document.getElementsByTagName("TITLE")[0].innerText = doc.pageName
+  document.querySelector("#" + collection + "t").classList.add("active")
 }
 async function getDoc(url) {
   const docRef = db.collection(collection).doc(url);

@@ -33,7 +33,7 @@ async function carouses() {
       item.classList.add("carosimg", "fade")
       var texlc = document.createElement("p")
       texlc.innerText = cartext[y]
-      texlc.classList.add("cartext")
+      texlc.classList.add("cartext", "fade")
       document.querySelector(".imgCar").appendChild(item)
       document.querySelector(".imgCar").appendChild(texlc)
     })
@@ -43,12 +43,15 @@ async function carouses() {
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("carosimg");
+  var texas = document.getElementsByClassName("cartext")
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    texas[i].style.display = "none"
   }
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
   slides[slideIndex - 1].style.display = "block";
+  texas[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 6000); // Change image every 2 seconds
 }
 async function newce() {

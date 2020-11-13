@@ -32,9 +32,6 @@ async function old() {
         title.classList.add("postit")
         title.setAttribute("type", "text")
         title.setAttribute("value", decay[i].title2)
-        var ent = document.createElement("p")
-        ent.innerText = "Press enter to drop a line,press enter twice to miss a line"
-        ent.classList.add("instru")
         var bolt = document.createElement("button")
         bolt.classList.add("bold")
         bolt.setAttribute("onclick", "bolden(this)")
@@ -57,7 +54,6 @@ async function old() {
         hold.appendChild(edit)
         hold.appendChild(del)
         hold.appendChild(title)
-        hold.appendChild(ent)
         hold.appendChild(bolt)
         hold.appendChild(head)
         hold.appendChild(brok)
@@ -76,7 +72,6 @@ function edit(e) {
     if (getComputedStyle(e.parentNode.querySelector(".postit")).display === "none") {
         e.parentNode.querySelector(".postit").style.display = "block"
         e.parentNode.querySelector(".postesc").style.display = "block"
-        e.parentNode.querySelector(".instru").style.display = "block"
         e.parentNode.querySelector(".bold").style.display = "inline"
         e.parentNode.querySelector(".header").style.display = "inline"
         e.parentNode.querySelector(".breaker").style.display = "inline"
@@ -84,7 +79,6 @@ function edit(e) {
     else {
         e.parentNode.querySelector(".postit").style.display = "none"
         e.parentNode.querySelector(".postesc").style.display = "none"
-        e.parentNode.querySelector(".instru").style.display = "none"
         e.parentNode.querySelector(".bold").style.display = "none"
         e.parentNode.querySelector(".header").style.display = "none"
         e.parentNode.querySelector(".breaker").style.display = "none"
@@ -120,9 +114,6 @@ async function make() {
     title.classList.add("postit")
     title.setAttribute("type", "text")
     title.setAttribute("value", tut.value)
-    var ent = document.createElement("p")
-    ent.innerText = "Press enter to drop a line,press enter twice to miss a line"
-    ent.classList.add("instru")
     var bolt = document.createElement("button")
     bolt.classList.add("bold")
     bolt.setAttribute("onclick", "bolden(this)")
@@ -146,7 +137,6 @@ async function make() {
     hold.appendChild(edit)
     hold.appendChild(del)
     hold.appendChild(title)
-    hold.appendChild(ent)
     hold.appendChild(bolt)
     hold.appendChild(head)
     hold.appendChild(brok)
