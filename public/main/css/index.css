@@ -41,6 +41,9 @@
 }
 
 .imgCar {
+  position: relative;
+  text-align: center;
+  color: #F6F7FB;
   height: 49.3vw;
   overflow: hidden;
 }
@@ -52,11 +55,14 @@
 }
 
 .cartext {
+  font-weight: bold;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  color: #F6F7FB;
+  z-index: 4;
 }
 
 .fade {
