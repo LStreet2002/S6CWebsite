@@ -1,6 +1,1 @@
-node app.js
-if errorlevel 1 (
-   cls
-   npm install express firebase-admin && node app.js
-) 
-
+call cmd.exe /k "cls & node app.js & if errorlevel 1 (cls & npm install express firebase-admin & cls & node app.js)"
