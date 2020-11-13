@@ -9,9 +9,8 @@ window.addEventListener("DOMContentLoaded", async function () {
   await carouses()
   showSlides();
   newce()
-  getPages()
   blosh()
-
+  getPages() //this function must be called last
 })
 async function carouses() {
   var storageRef = storage.ref('carousel');
