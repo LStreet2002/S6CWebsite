@@ -31,7 +31,7 @@ firebase
         });
     });
   });
-async function postToBack(idToken) {
+function postToBack(idToken) {
   console.log(idToken);
   fetch("/adminLogin", {
     headers: {
