@@ -14,7 +14,12 @@ firebase
         .then(() => {
           document.querySelector("#login-email").style.border =
             "solid 1px green";
-          window.location.replace("menu");
+          return firebase
+            .auth()
+            .currentUser.getIdToken()
+            .then((idToken) => {
+              postToBack(idToken);
+            });
         })
         .catch(function (error) {
           // Handle Errors here.
@@ -26,3 +31,16 @@ firebase
         });
     });
   });
+async function postToBack(idToken) {
+  console.log(idToken);
+  fetch("/adminLogin", {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({ idToken: idToken }),
+  }).then((res) => {
+    console.log("Request complete! response:", res);
+    window.location.replace("menu");
+  });
+}
