@@ -1,122 +1,114 @@
-*
-{
-    font-family: 'Ubuntu', sans-serif;
+* {
+  font-family: "Ubuntu", sans-serif;
 }
 
 #title {
-  
-    display:grid;
-    grid-template-rows:1fr;
-    grid-template-columns:1fr 2fr 4fr 3fr;
-    grid-template-areas:
-    "arrow . title ."
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr 4fr 3fr;
+  grid-template-areas: "arrow . title .";
 }
 
 #mtitle {
-    grid-area:title;
-    border:1px solid black;
-    padding:5%;
-    text-align:center;
-    font-size:2vw;
+  grid-area: title;
+  border: 1px solid black;
+  padding: 5%;
+  text-align: center;
+  font-size: 2vw;
 }
 
-
 #back {
-    grid-area:arrow;
-    margin-top:2%;
-    font-size:9vw;
-    color:black;
+  grid-area: arrow;
+  margin-top: 2%;
+  font-size: 9vw;
+  color: black;
 }
 
 #layout {
-    width:90%;
-    margin:auto;
+  width: 90%;
+  margin: auto;
 }
 
 textarea {
-    resize:none;
-    font-size:1.4vw;
+  resize: none;
+  font-size: 1.4vw;
 }
 
 #courses {
-    width: 100%;
+  width: 100%;
 }
-
-
 
 #newPost {
-    
-    #addDate {
-        width: 100%;
-        font-size: 2vw;
-        padding: 0.5vw;
-    }
-        #addPost {
-        width: 100%;
-        font-size: 2vw;
-        padding: 0.5vw;
-    }
-    
-      #button {
-        width: 30%;
-        font-size: 1.4vw;
-        text-align:center;
-        color:white;
-        background-color:#663399;
-        border:none;
-        margin-top:2%;
-    margin-left:35%;
-    }
+  #addDate {
+    width: 100%;
+    font-size: 2vw;
+    padding: 0.5vw;
+  }
+  #addPost {
+    width: 100%;
+    font-size: 2vw;
+    padding: 0.5vw;
+  }
+
+  #button {
+    width: 30%;
+    font-size: 1.4vw;
+    text-align: center;
+    color: white;
+    background-color: #663399;
+    border: none;
+    margin-top: 2%;
+    margin-left: 35%;
+  }
 }
 #addContent {
-    width:101%;
-    overflow-y:scroll;
-    padding-bottom:20%;
-    margin-top:2%;
+  width: 101%;
+  overflow-y: scroll;
+  padding-bottom: 20%;
+  margin-top: 2%;
 }
-
 
 #save {
-    width:30%;
-    margin:auto;
-    text-align:center;
-    background-color:rebeccapurple;
-    padding-top:1%;
-    padding-bottom:1%;
-    color:white;
-    font-size:120%;
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  background-color: rebeccapurple;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+  font-size: 120%;
 }
 .postit {
-    width:100%;
-    font-size:2vw;
-    display:none;
+  width: 100%;
+  font-size: 2vw;
+  display: none;
 }
 .postesc {
-    width:100%;
-    padding-bottom:20%;
-    overflow-y:scroll;
-    font-size:1.6vw;
-    display:none;
+  width: 100%;
+  padding-bottom: 20%;
+  overflow-y: scroll;
+  font-size: 1.6vw;
+  display: none;
 }
 .edit:hover {
-    cursor:pointer;
+  cursor: pointer;
 }
 .delete:hover {
-    cursor:pointer;
+  cursor: pointer;
 }
 
 #save:hover {
-    cursor:pointer;
+  cursor: pointer;
 }
 .instru {
-    display:none;
+  display: none;
 }
 .bold {
-    display:none;
+  display: none;
 }
 .header {
-    display:none;
+  display: none;
 }
 .breaker {
-    display:none
+  display: none;
 }

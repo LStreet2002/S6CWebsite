@@ -1,5 +1,5 @@
 * {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 #title {
@@ -86,7 +86,7 @@ textarea {
 
 .deleteButton {
   border: none;
-  background-color: red;
+  background-color: #b12e2e;
   color: white;
   text-align: center;
   font-size: 1.6rem;

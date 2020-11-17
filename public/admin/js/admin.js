@@ -1,6 +1,6 @@
 firebase
   .auth()
-  .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+  .setPersistence(firebase.auth.Auth.Persistence.NONE)
   .then(function () {
     const loginHolder = document.querySelector("#login-holder");
     loginHolder.addEventListener("submit", (e) => {
