@@ -3,6 +3,7 @@ var bloggit = []
 var thecount = 0
 window.addEventListener("DOMContentLoaded", function () {
     carousels()
+    getPages()
 })
 
 async function carousels() {

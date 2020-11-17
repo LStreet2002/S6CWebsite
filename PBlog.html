@@ -6,12 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="main/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="main/css/nav.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <body style="opacity: 0";>
+
+<body style="opacity: 0" ;>
   <header class="header">
-    <div class="nav">
-      <h1>Placeholder!!</h1>
-    </div>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="#">S6C</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="/">Home</a></li>
+          <li><a href="/PBlog" class="active">Blog</a></li>
+          <li>
+            <a href="#" class="desktop-item">Information</a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Information</label>
+            <ul id="infoTabs" class="drop-menu"></ul>
+          </li>
+          <li><a href="courses">Courses</a></li>
+          <li>
+            <a href="#" class="desktop-item">Study with us</a>
+            <input type="checkbox" id="showDrop">
+            <label for="showDrop" class="mobile-item">Study with us</label>
+            <ul id="studyTabs" class="drop-menu"></ul>
+          </li>
+          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+      </div>
+    </nav>
   </header>
   <banner class="banner">
     <div class="hero-image">
@@ -21,23 +45,6 @@
     </div>
   </banner>
   <main class="main">
-    <!--<section class="intro">
-      <h1 class="title">Hello, I’m Simon Firth, Principal of S6C. I’ll update this blog with a combination of news,
-        celebrations and information about life at S6C and the wider community.</h1>
-    </section>
-    <section class="content">
-      <div class="blogContent">Placeholder</div>
-    </section>
-    <section class="otherPosts">
-      <div class="next">
-        <h3 class="posts">NEXT POST</h3>
-        <div class="nextPost">Placeholder</div>
-      </div>
-      <div class="last">
-        <h3 class="posts">LAST POST</h3>
-        <div class="lastPost">Placeholder</div>
-      </div>
-    </section>-->
   </main>
   <footer class="footer">
     <div class="topFooter">
@@ -82,6 +89,7 @@
   <script src="admin/js/firebase.js"></script>
   <script src="main/js/PB.js"></script>
   <script src="main/js/footer.js"></script>
+  <script src="main/js/nav.js"></script>
 
 </body>
 
