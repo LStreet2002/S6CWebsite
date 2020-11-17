@@ -100,6 +100,9 @@ window.addEventListener("DOMContentLoaded", function () {
         case "3":
           typeInTextarea("<h3></h3>");
           break;
+        case "4":
+          typeInTextarea("<a href=" + '"Link URL"' + ">Text to click</a>");
+          break;
       }
     });
   }

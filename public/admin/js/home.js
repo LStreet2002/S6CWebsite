@@ -163,3 +163,8 @@ document.querySelector(".breakit").addEventListener("click", function () {
     typeInTextarea("<br>")
     document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
 })
+document.querySelector(".linkit").addEventListener("click", function () {
+    document.querySelector("#editnews").focus()
+    typeInTextarea("<a href=" + '"Link URL"' + ">Text to click</a>")
+    document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
+})

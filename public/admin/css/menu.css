@@ -3,9 +3,9 @@
 }
 
 #layout {
-  margin-top: 7%;
   display: -ms-grid;
   display: grid;
+  height: 97vh;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 4fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 0.7fr 0.9fr 1.4fr 0.9fr;
