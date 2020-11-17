@@ -13,13 +13,11 @@ app.use(
   })
 );
 app.use(cookieParser());
+app.set('trust proxy', 1)
 app.use(
   cookieSession({
     name: "session",
     keys: ["hiiii"],
-
-    // Cookie Options
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
   })
 );
 
@@ -33,6 +31,10 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
+app.get("/logout", (req, res) => {
+  res.clearCookie("session")
+  res.redirect("/")
+});
 app.post("/adminLogin", (req, res) => {
   var idToken = req.body.idToken;
   admin
@@ -42,7 +44,7 @@ app.post("/adminLogin", (req, res) => {
       let uid = decodedToken.uid;
       var idToken = req.body.idToken.toString();
       // Set session expiration to 5 days.
-      const expiresIn = 60 * 60 * 24 * 5 * 1000;
+      const expiresIn = 60 * 60 * 1000;
       // Create the session cookie. This will also verify the ID token in the process.
       // The session cookie will have the same claims as the ID token.
       // To only allow session cookie setting on recent sign-in, auth_time in ID token
@@ -62,7 +64,7 @@ app.post("/adminLogin", (req, res) => {
             res.send(JSON.stringify({ status: "success" }));
           },
           (error) => {
-            res.status(401).send("UNAUTHORIZED REQUEST!");
+            res.sendFile(__dirname + "/adminLogin.html")
           }
         );
     })
@@ -81,7 +83,7 @@ var pages = [
 app.get(pages, (req, res) => {
   var sessionCookie = req.cookies.session || " ";
   if (!req.cookies.session) {
-    res.status(401).send("UNAUTHORIZED REQUEST!");
+    res.sendFile(__dirname + "/adminLogin.html")
     return;
   }
   // Verify the session cookie. In this case an additional check is added to detect
@@ -94,6 +96,7 @@ app.get(pages, (req, res) => {
     })
     .catch((error) => {
       // Session cookie is unavailable or invalid. Force user to login.
+      res.sendFile(__dirname + "/adminLogin.html")
       console.log(error);
     });
 });

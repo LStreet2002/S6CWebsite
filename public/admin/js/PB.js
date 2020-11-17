@@ -157,6 +157,13 @@ async function save() {
             title2: blogs[i].querySelector(".postit").value,
             desc: blogs[i].querySelector(".postesc").value,
         })
+        var saver = document.querySelector("#save")
+        saver.style.backgroundColor = "green"
+        saver.innerHTML = "SAVED!"
+        setTimeout(() => {
+            saver.style.backgroundColor = "#663399"
+            saver.innerHTML = "Save changes"
+        }, 2500);
     }
 }
 function typeInTextarea(newText, el = document.activeElement) {
@@ -179,7 +186,7 @@ function bolden(y) {
 }
 function headen(y) {
     y.parentNode.querySelector(".postesc").focus()
-    typeInTextarea("<h2>Header here</h2>")
+    typeInTextarea("<h3>Header here</h3>")
 }
 document.querySelector(".boldit").addEventListener("click", function () {
     document.querySelector("#addContent").focus()
@@ -187,7 +194,7 @@ document.querySelector(".boldit").addEventListener("click", function () {
 })
 document.querySelector(".headit").addEventListener("click", function () {
     document.querySelector("#addContent").focus()
-    typeInTextarea("<h2>Header text here</h2>")
+    typeInTextarea("<h3>Header text here</h3>")
 })
 document.querySelector(".breakit").addEventListener("click", function () {
     document.querySelector("#addContent").focus()
