@@ -3,10 +3,10 @@ var hold = []
 var thecount = 0
 var slideIndex = 0;
 var cartext = [
-  "ITS ALL ABOUT YOU", 
-  "ITS ALL ABOUT YOU", 
-  "ITS ALL ABOUT YOU", 
-  "ITS ALL ABOUT YOU", 
+  "ITS ALL ABOUT YOU",
+  "ITS ALL ABOUT YOU",
+  "ITS ALL ABOUT YOU",
+  "ITS ALL ABOUT YOU",
   "ITS ALL ABOUT YOU"
 ]
 
@@ -93,12 +93,17 @@ async function blosh() {
         var full = document.createElement("p")
         full.innerHTML = bloggit[f].desc
         full.classList.add("full")
+        var moar = document.createElement("a")
+        moar.href = "PBlog"
+        moar.classList.add("moar")
+        moar.innerHTML = "Read More"
 
 
 
         car.appendChild(dat)
         car.appendChild(til)
         car.appendChild(full)
+        car.appendChild(moar)
 
         document.querySelector(".blogMini").appendChild(car)
       }

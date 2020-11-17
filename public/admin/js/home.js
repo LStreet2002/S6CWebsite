@@ -155,7 +155,7 @@ document.querySelector(".boldit").addEventListener("click", function () {
 })
 document.querySelector(".headit").addEventListener("click", function () {
     document.querySelector("#editnews").focus()
-    typeInTextarea("<h2>Header text here</h2>")
+    typeInTextarea("<h3>Header text here</h3>")
     document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
 })
 document.querySelector(".breakit").addEventListener("click", function () {
