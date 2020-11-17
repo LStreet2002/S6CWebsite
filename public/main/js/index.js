@@ -57,7 +57,7 @@ function showSlides() {
   if (slideIndex > slides.length) { slideIndex = 1 }
   slides[slideIndex - 1].style.display = "block";
   texas[slideIndex - 1].style.display = "flex";
-  setTimeout(showSlides, 600000); // Change image every 2 seconds
+  setTimeout(showSlides, 6000); // Change image every 6 seconds
 }
 async function newce() {
   await db.collection("news")
@@ -80,12 +80,11 @@ async function blosh() {
 
       })
       for (f = 0; f < 1; f++) {
-        console.log(bloggit)
         var car = document.createElement("div")
         car.classList.add("item")
         car.id = "c" + f
         var dat = document.createElement("h2")
-        dat.innerText = bloggit[f].date
+        dat.innerText = "Principal's Blog " + bloggit[f].date
         dat.classList.add("blogDate")
         var til = document.createElement("h2")
         til.innerText = bloggit[f].title2
