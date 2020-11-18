@@ -20,7 +20,7 @@ app.use(
     keys: ["hiiii"],
   })
 );
-
+var dir = __dirname + "/pages"
 const admin = require("firebase-admin");
 
 const serviceAccount = require("./s6c-website-firebase-adminsdk-58r86-6263a6723f.json");
@@ -44,7 +44,7 @@ app.post("/adminLogin", (req, res) => {
       let uid = decodedToken.uid;
       var idToken = req.body.idToken.toString();
       // Set session expiration to 5 days.
-      const expiresIn = 60 * 60 * 1000;
+      const expiresIn = 60 * 60 * 1000
       // Create the session cookie. This will also verify the ID token in the process.
       // The session cookie will have the same claims as the ID token.
       // To only allow session cookie setting on recent sign-in, auth_time in ID token
@@ -64,7 +64,7 @@ app.post("/adminLogin", (req, res) => {
             res.send(JSON.stringify({ status: "success" }));
           },
           (error) => {
-            res.sendFile(__dirname + "/adminLogin.html")
+            res.sendFile(dir + "/adminLogin.html")
           }
         );
     })
@@ -83,7 +83,7 @@ var pages = [
 app.get(pages, (req, res) => {
   var sessionCookie = req.cookies.session || " ";
   if (!req.cookies.session) {
-    res.sendFile(__dirname + "/adminLogin.html")
+    res.sendFile(dir + "/adminLogin.html")
     return;
   }
   // Verify the session cookie. In this case an additional check is added to detect
@@ -92,11 +92,11 @@ app.get(pages, (req, res) => {
     .auth()
     .verifySessionCookie(sessionCookie, true /** checkRevoked */)
     .then((decodedClaims) => {
-      res.sendFile(__dirname + req.url + ".html");
+      res.sendFile(dir + req.url + ".html");
     })
     .catch((error) => {
       // Session cookie is unavailable or invalid. Force user to login.
-      res.sendFile(__dirname + "/adminLogin.html")
+      res.sendFile(dir + "/adminLogin.html")
       console.log(error);
     });
 });
@@ -104,11 +104,11 @@ app.get(pages, (req, res) => {
 app.get("*", (req, res) => {
   req.url = req.url.toLowerCase();
   if (req.url == "/") {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(dir + "/index.html");
   } else if (req.url.split("?")[0] == "/information") {
-    res.sendFile(__dirname + "/information.html", req.url.split("?")[1]);
+    res.sendFile(dir + "/information.html", req.url.split("?")[1]);
   } else {
-    res.sendFile(__dirname + "/" + req.url.split(".")[0] + ".html");
+    res.sendFile(dir + "/" + req.url.split(".")[0] + ".html");
   }
 });
 
