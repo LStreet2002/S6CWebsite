@@ -46,9 +46,10 @@
 }
 
 .imgCar {
+  opacity: 0;
   position: relative;
   text-align: center;
-  color: #F6F7FB;
+  color: #f6f7fb;
   height: 49.3vw;
   overflow: hidden;
   display: -webkit-box;
@@ -77,7 +78,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #F6F7FB;
+  color: #f6f7fb;
   z-index: 4;
   position: relative;
 }
@@ -91,7 +92,7 @@
 
 @-webkit-keyframes fade {
   from {
-    opacity: .1;
+    opacity: 0.1;
   }
   to {
     opacity: 1;
@@ -100,7 +101,7 @@
 
 @keyframes fade {
   from {
-    opacity: .1;
+    opacity: 0.1;
   }
   to {
     opacity: 1;

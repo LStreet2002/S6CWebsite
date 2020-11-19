@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cookieSession = require("cookie-session");
 const cookieParser = require("cookie-parser");
+const admin = require("firebase-admin");
 const app = express();
 const port = 3000;
 
@@ -21,7 +22,6 @@ app.use(
   })
 );
 var dir = __dirname + "/pages"
-const admin = require("firebase-admin");
 
 const serviceAccount = require("./s6c-website-firebase-adminsdk-58r86-6263a6723f.json");
 
