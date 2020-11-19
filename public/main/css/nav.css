@@ -7,6 +7,9 @@
   body {
     opacity:0;
   }
+  nav input {
+    display:none;
+  }
   nav{
     position: fixed;
     z-index: 99;
@@ -54,6 +57,9 @@
     background: rgba(156, 152, 152, 0.466);
   }
   .nav-links .mobile-item{
+    display: none;
+  }
+  nav input{
     display: none;
   }
   .nav-links .drop-menu{
@@ -257,10 +263,11 @@
     .content .row header{
       font-size: 19px;
     }
+    nav input{
+      display: block;
+    }
   }
-  nav input{
-    display: none;
-  }
+  
    .body-text{
     position: absolute;
     top: 50%;
