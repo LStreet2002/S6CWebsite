@@ -158,4 +158,19 @@
   text-decoration: none;
   margin-bottom: 1rem;
 }
+
+.prinImg {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .blogMini {
+    margin-bottom: 2em;
+  }
+  .blogMini .prinImg {
+    width: 50%;
+    float: left;
+    padding: 0 1em 1em;
+  }
+}
 /*# sourceMappingURL=index.css.map */
