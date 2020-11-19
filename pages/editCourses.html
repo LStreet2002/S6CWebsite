@@ -32,13 +32,13 @@
       <hr>
       <div class="editcourse">
         <h1 type="text" class="pageNameInput"></h1>
-        <p class="editSubhead">Titleimage</p>
-        <form action="/action_page.php">
+        <p class="subhead">Titleimage</p>
+        <form>
           <input type="file" id="myFile" name="filename">
         </form>
 
         <div>
-          <p class="subhead">Type of qualification</p>
+          <p class="subhead qualificationInput">Type of qualification</p>
           <input type="radio" id="aLevel" name="qualification" value="aLevel">
           <label for="aLevel">A Level</label><br>
           <input type="radio" id="BTEC" name="qualification" value="BTEC">
@@ -50,7 +50,7 @@
         </div>
 
         <div>
-          <p class="subhead">Exam Board</p>
+          <p class="subhead examInput">Exam Board</p>
           <input type="radio" id="ocr" name="examBoard" value="ocr">
           <label for="ocr">OCR</label><br>
           <input type="radio" id="aqa" name="examBoard" value="aqa">
@@ -62,16 +62,16 @@
         </div>
 
         <p class="editSubhead">Entry Requirements</p>
-        <textarea class="inputBox"></textarea>
+        <textarea class="inputBox entryInput"></textarea>
 
         <p class="editSubhead">Assessments</p>
-        <textarea class="inputBox"></textarea>
+        <textarea class="inputBox assessmentInput"></textarea>
 
         <p class="editSubhead">Course Description</p>
-        <textarea class="inputBox"></textarea>
+        <textarea class="inputBox descriptionInput"></textarea>
 
         <div id="bluttons">
-          <button class="updateButton" onclick="updatePage()">Update</button>
+          <button class="saveButton" onclick="savePage()">Save</button>
           <button class="deleteButton" onclick="deletePage()">Delete</button>
         </div>
       </div>

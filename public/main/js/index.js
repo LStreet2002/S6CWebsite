@@ -2,6 +2,9 @@ var bloggit = []
 var hold = []
 var thecount = 0
 var slideIndex = 0;
+var slides = document.getElementsByClassName("carosimg");
+var texas = document.getElementsByClassName("cartext")
+var imgCar = document.getElementsByClassName("imgCar")[0]
 var cartext = [
   "ITS ALL ABOUT YOU",
   "ITS ALL ABOUT YOU",
@@ -16,7 +19,8 @@ window.addEventListener("DOMContentLoaded", async function () {
   showSlides();
   newce()
   blosh()
-  getPages() //this function must be called last
+  getPages()
+  imgCar.style.opacity = "100" //this function must be called last
 })
 async function carouses() {
   var storageRef = storage.ref('carousel');
@@ -47,8 +51,6 @@ async function carouses() {
 }
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("carosimg");
-  var texas = document.getElementsByClassName("cartext")
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     texas[i].style.display = "none"

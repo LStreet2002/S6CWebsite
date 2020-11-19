@@ -10,14 +10,17 @@
 
 .footer .topFooter .contact {
   margin-left: 1em;
+  padding-top: 1em;
 }
 
 .footer .topFooter .media {
   margin-left: 1em;
+  padding-top: 1em;
 }
 
 .footer .topFooter .links {
   margin-left: 1em;
+  padding-top: 1em;
 }
 
 .footer .bottomFooter {
@@ -27,6 +30,22 @@
 .footer .bottomFooter .copyright {
   margin-left: 1em;
   font-size: 75%;
+}
+
+@media only screen and (max-width: 500px) {
+  * {
+    font-family: "Ubuntu";
+    font-size: 10px;
+  }
+  * h1 {
+    font-size: 200%;
+  }
+  * h2 {
+    font-size: 160%;
+  }
+  * h3 {
+    font-size: 125%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
