@@ -3,7 +3,7 @@
   border: 0px;
   margin: 0px;
   font-family: "Ubuntu";
-  font-size: 18px;
+  font-size: 22px;
 }
 
 * h1 {
@@ -18,11 +18,33 @@
   font-size: 125%;
 }
 
+@media only screen and (max-width: 500px) {
+  * {
+    font-family: "Ubuntu";
+    font-size: 14px;
+  }
+  * h1 {
+    font-size: 200%;
+  }
+  * h2 {
+    font-size: 160%;
+  }
+  * h3 {
+    font-size: 125%;
+  }
+}
+
+.content {
+  margin-top: 70px;
+}
+
 .notice {
   background-color: #662483;
   color: white;
   padding-left: 3em;
   padding-right: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .aboutMini {
@@ -38,31 +60,45 @@
 .blogMini {
   margin-left: 3em;
   margin-right: 3em;
+  padding-bottom: 1rem;
 }
 
 .imgCar {
+  opacity: 0;
   position: relative;
   text-align: center;
-  color: #F6F7FB;
+  color: #f6f7fb;
   height: 49.3vw;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .carosimg {
   width: 100%;
   position: relative;
   z-index: 0;
+  position: absolute;
 }
 
 .cartext {
   font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  color: #F6F7FB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f6f7fb;
   z-index: 4;
+  position: relative;
 }
 
 .fade {
@@ -74,7 +110,7 @@
 
 @-webkit-keyframes fade {
   from {
-    opacity: .1;
+    opacity: 0.1;
   }
   to {
     opacity: 1;
@@ -83,7 +119,7 @@
 
 @keyframes fade {
   from {
-    opacity: .1;
+    opacity: 0.1;
   }
   to {
     opacity: 1;
@@ -96,5 +132,30 @@
   width: 100%;
   position: absolute;
   z-index: 3;
+}
+
+.blogDate {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.full {
+  margin-bottom: 1rem;
+}
+
+.full h3 {
+  font-weight: 100;
+  font-size: 110%;
+}
+
+.blogTitle {
+  margin-bottom: 1rem;
+}
+
+.moar {
+  color: #662483;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 1rem;
 }
 /*# sourceMappingURL=index.css.map */

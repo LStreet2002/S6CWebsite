@@ -1,0 +1,79 @@
+@import "./variables";
+.blogDate {
+    margin-top:2rem;
+    margin-bottom:1rem;
+  }
+  .full {
+    margin-bottom:1rem;
+    h3 {
+      font-weight:100;
+      font-size:110%;
+    }
+  }
+  .blogTitle {
+    margin-bottom:1rem;
+  }
+  .hero-image {
+    background-image: url("/main/images/sFirth.jpg");
+  
+    /* Set a specific height */
+    height: 75%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: $imageBanner;
+    width: 100%;
+  }
+  .main {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  .otherPosts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    h3 {
+      margin-bottom: 10%;
+    }
+    .next {
+      .nextPost {
+        color: $courseColour;
+        font-weight: bold;
+      }
+      .nextPost:hover {
+        cursor: pointer;
+      }
+    }
+    .last {
+      
+      .lastPost {
+        color: $courseColour;
+        font-weight: bold;
+      }
+      .lastPost:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  #c0 {
+    display: block;
+    .otherPosts{
+      float: right;
+    }
+  }
+  .item {
+    display: none;
+  }

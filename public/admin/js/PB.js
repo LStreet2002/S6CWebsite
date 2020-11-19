@@ -44,6 +44,10 @@ async function old() {
         brok.classList.add("breaker")
         brok.innerText = "Line drop"
         brok.setAttribute("onclick", "drolp(this)")
+        var lens = document.createElement("button")
+        lens.classList.add("linker")
+        lens.setAttribute("onclick", "linken(this)")
+        lens.innerText = "Link"
         var desc = document.createElement("textarea")
         desc.classList.add("postesc")
         desc.setAttribute("type", "text")
@@ -57,6 +61,7 @@ async function old() {
         hold.appendChild(bolt)
         hold.appendChild(head)
         hold.appendChild(brok)
+        hold.appendChild(lens)
         hold.appendChild(desc)
         hold.appendChild(hr)
 
@@ -75,6 +80,7 @@ function edit(e) {
         e.parentNode.querySelector(".bold").style.display = "inline"
         e.parentNode.querySelector(".header").style.display = "inline"
         e.parentNode.querySelector(".breaker").style.display = "inline"
+        e.parentNode.querySelector(".linker").style.display = "inline"
     }
     else {
         e.parentNode.querySelector(".postit").style.display = "none"
@@ -82,6 +88,7 @@ function edit(e) {
         e.parentNode.querySelector(".bold").style.display = "none"
         e.parentNode.querySelector(".header").style.display = "none"
         e.parentNode.querySelector(".breaker").style.display = "none"
+        e.parentNode.querySelector(".linker").style.display = "noness"
     }
 }
 
@@ -126,9 +133,12 @@ async function make() {
     brok.classList.add("breaker")
     brok.innerText = "Line drop"
     brok.setAttribute("onclick", "drolp(this)")
+    var lens = document.createElement("button")
+    lens.classList.add("linker")
+    lens.setAttribute("onclick", "linken(this)")
+    lens.innerText = "Link"
     var desc = document.createElement("textarea")
     desc.classList.add("postesc")
-    desc.setAttribute("onclick", "drolp(this)")
     desc.setAttribute("type", "text")
     desc.innerText = dec.value
     var hr = document.createElement("hr")
@@ -140,6 +150,7 @@ async function make() {
     hold.appendChild(bolt)
     hold.appendChild(head)
     hold.appendChild(brok)
+    hold.appendChild(lens)
     hold.appendChild(desc)
     hold.appendChild(hr)
 
@@ -157,6 +168,13 @@ async function save() {
             title2: blogs[i].querySelector(".postit").value,
             desc: blogs[i].querySelector(".postesc").value,
         })
+        var saver = document.querySelector("#save")
+        saver.style.backgroundColor = "green"
+        saver.innerHTML = "SAVED!"
+        setTimeout(() => {
+            saver.style.backgroundColor = "#663399"
+            saver.innerHTML = "Save changes"
+        }, 2500);
     }
 }
 function typeInTextarea(newText, el = document.activeElement) {
@@ -179,7 +197,11 @@ function bolden(y) {
 }
 function headen(y) {
     y.parentNode.querySelector(".postesc").focus()
-    typeInTextarea("<h2>Header here</h2>")
+    typeInTextarea("<h3>Header here</h3>")
+}
+function linken(y) {
+    y.parentNode.querySelector(".postesc").focus()
+    typeInTextarea("<a href=" + '"Link URL"' + ">Text to click</a>")
 }
 document.querySelector(".boldit").addEventListener("click", function () {
     document.querySelector("#addContent").focus()
@@ -187,9 +209,13 @@ document.querySelector(".boldit").addEventListener("click", function () {
 })
 document.querySelector(".headit").addEventListener("click", function () {
     document.querySelector("#addContent").focus()
-    typeInTextarea("<h2>Header text here</h2>")
+    typeInTextarea("<h3>Header text here</h3>")
 })
 document.querySelector(".breakit").addEventListener("click", function () {
     document.querySelector("#addContent").focus()
     typeInTextarea("<br>")
+})
+document.querySelector(".linkit").addEventListener("click", function () {
+    document.querySelector("#addContent").focus()
+    typeInTextarea("<a href=" + '"Link URL"' + ">Text to click</a>")
 })

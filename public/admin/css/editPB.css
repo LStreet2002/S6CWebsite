@@ -1,5 +1,5 @@
 * {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 #title {
@@ -125,6 +125,10 @@ textarea {
 }
 
 .breaker {
+  display: none;
+}
+
+.linker {
   display: none;
 }
 /*# sourceMappingURL=editPB.css.map */

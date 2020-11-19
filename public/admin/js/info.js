@@ -88,20 +88,23 @@ window.addEventListener("DOMContentLoaded", function () {
   for (i = 0; i < document.getElementsByClassName("buttons").length; i++) {
     document
       .getElementsByClassName("buttons")
-      [i].addEventListener("click", function () {
-        document.querySelector(".contentInput").focus();
-        switch (this.classList[1]) {
-          case "1":
-            typeInTextarea("<b></b>");
-            break;
-          case "2":
-            typeInTextarea("<br>\n");
-            break;
-          case "3":
-            typeInTextarea("<h2></h2>");
-            break;
-        }
-      });
+    [i].addEventListener("click", function () {
+      document.querySelector(".contentInput").focus();
+      switch (this.classList[1]) {
+        case "1":
+          typeInTextarea("<b></b>");
+          break;
+        case "2":
+          typeInTextarea("<br>\n");
+          break;
+        case "3":
+          typeInTextarea("<h3></h3>");
+          break;
+        case "4":
+          typeInTextarea("<a href=" + '"Link URL"' + ">Text to click</a>");
+          break;
+      }
+    });
   }
 });
 

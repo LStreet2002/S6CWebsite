@@ -155,11 +155,16 @@ document.querySelector(".boldit").addEventListener("click", function () {
 })
 document.querySelector(".headit").addEventListener("click", function () {
     document.querySelector("#editnews").focus()
-    typeInTextarea("<h2>Header text here</h2>")
+    typeInTextarea("<h3>Header text here</h3>")
     document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
 })
 document.querySelector(".breakit").addEventListener("click", function () {
     document.querySelector("#editnews").focus()
     typeInTextarea("<br>")
+    document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
+})
+document.querySelector(".linkit").addEventListener("click", function () {
+    document.querySelector("#editnews").focus()
+    typeInTextarea("<a href=" + '"Link URL"' + ">Text to click</a>")
     document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
 })

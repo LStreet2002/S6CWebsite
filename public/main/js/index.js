@@ -2,11 +2,14 @@ var bloggit = []
 var hold = []
 var thecount = 0
 var slideIndex = 0;
+var slides = document.getElementsByClassName("carosimg");
+var texas = document.getElementsByClassName("cartext")
+var imgCar = document.getElementsByClassName("imgCar")[0]
 var cartext = [
-  "ITS ALL ABOUT YOU", 
-  "ITS ALL ABOUT YOU", 
-  "ITS ALL ABOUT YOU", 
-  "ITS ALL ABOUT YOU", 
+  "ITS ALL ABOUT YOU",
+  "ITS ALL ABOUT YOU",
+  "ITS ALL ABOUT YOU",
+  "ITS ALL ABOUT YOU",
   "ITS ALL ABOUT YOU"
 ]
 
@@ -16,7 +19,8 @@ window.addEventListener("DOMContentLoaded", async function () {
   showSlides();
   newce()
   blosh()
-  getPages() //this function must be called last
+  getPages()
+  imgCar.style.opacity = "100" //this function must be called last
 })
 async function carouses() {
   var storageRef = storage.ref('carousel');
@@ -47,8 +51,6 @@ async function carouses() {
 }
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("carosimg");
-  var texas = document.getElementsByClassName("cartext")
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     texas[i].style.display = "none"
@@ -56,8 +58,8 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
   slides[slideIndex - 1].style.display = "block";
-  texas[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 6000); // Change image every 2 seconds
+  texas[slideIndex - 1].style.display = "flex";
+  setTimeout(showSlides, 6000); // Change image every 6 seconds
 }
 async function newce() {
   await db.collection("news")
@@ -80,12 +82,11 @@ async function blosh() {
 
       })
       for (f = 0; f < 1; f++) {
-        console.log(bloggit)
         var car = document.createElement("div")
         car.classList.add("item")
         car.id = "c" + f
         var dat = document.createElement("h2")
-        dat.innerText = bloggit[f].date
+        dat.innerText = "Principal's Blog " + bloggit[f].date
         dat.classList.add("blogDate")
         var til = document.createElement("h2")
         til.innerText = bloggit[f].title2
@@ -93,12 +94,17 @@ async function blosh() {
         var full = document.createElement("p")
         full.innerHTML = bloggit[f].desc
         full.classList.add("full")
+        var moar = document.createElement("a")
+        moar.href = "PBlog"
+        moar.classList.add("moar")
+        moar.innerHTML = "Read More"
 
 
 
         car.appendChild(dat)
         car.appendChild(til)
         car.appendChild(full)
+        car.appendChild(moar)
 
         document.querySelector(".blogMini").appendChild(car)
       }

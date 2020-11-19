@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="main/css/information.css" />
+  <link rel="stylesheet" type="text/css" href="main/css/footer.css" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <link rel="stylesheet" href="main/css/footer.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="main/css/nav.css" />
-  <link rel="stylesheet" href="main/css/index.css" />
-  <title>S6C</title>
+  <title></title>
 </head>
-<body style="opacity: 0";>
+
+<body>
   <nav>
     <div class="wrapper">
       <div class="logo"><a href="#">S6C</a></div>
@@ -19,16 +20,16 @@
       <input type="radio" name="slider" id="close-btn">
       <ul class="nav-links">
         <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li>
-          <a href="#" class="desktop-item">Information</a>
+          <a href="#" id="infoTabst" class="desktop-item">Information</a>
           <input type="checkbox" id="showDrop">
           <label for="showDrop" class="mobile-item">Information</label>
           <ul id="infoTabs" class="drop-menu"></ul>
         </li>
         <li><a href="courses">Courses</a></li>
         <li>
-          <a href="#" class="desktop-item">Study with us</a>
+          <a href="#" id="studyTabst" class="desktop-item">Study with us</a>
           <input type="checkbox" id="showDrop">
           <label for="showDrop" class="mobile-item">Study with us</label>
           <ul id="studyTabs" class="drop-menu"></ul>
@@ -36,17 +37,15 @@
         <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
     </div>
   </nav>
-  <div class="imgCar">
-    <div class="darken"></div>
+  <div id="topper">
+    <div class="banner">ABOUT US</div>
   </div>
-  <div class="notice">Hi</div>
-  <br>
-  <div class="aboutMini">We firmly believe that S6C offers you the ideal college environment to embark on the next stage
-    of your education. With a vibrant and friendly atmosphere, where positive relationships are promoted at all times,
-    you will find that S6C is an exciting place to develop and one in which you will thrive both academically and
-    socially.<br><a href="information">Read more</a></div>
-  <div class="findCourse">Course search</div>
-  <div class="blogMini"></div>
+
+  <form style="display: none" action="information.html" method="GET">
+    <input type="text" id="page" name="page" />
+  </form>
+
+  <div class="block"></div>
 
   <footer class="footer">
     <div class="topFooter">
@@ -83,18 +82,18 @@
       </p>
     </div>
   </footer>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
- https://firebase.google.com/docs/web/setup#available-libraries -->
+   https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+  <script src="main/js/nav.js"></script>
+  <script src="main/js/info.js"></script>
   <script src="admin/js/firebase.js"></script>
   <script src="main/js/footer.js"></script>
-  <script src="main/js/index.js"></script>
-  <script src="main/js/nav.js"></script>
 </body>
 
 </html>
