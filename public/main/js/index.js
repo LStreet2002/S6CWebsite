@@ -14,15 +14,13 @@ var cartext = [
   "IT'S ALL ABOUT YOU",
   "IT'S ALL ABOUT YOU",
 ];
-
-closeButton.addEventListener("click", function () {
+function newsclose() {
   noticeBoxChildren = [].slice.call(noticeBox.children);
   noticeBoxChildren.forEach(function (elem) {
     elem.style.display = "none";
   });
   noticeBox.style.display = "none";
-  closeButton.style.display = "none";
-});
+};
 
 window.addEventListener("DOMContentLoaded", async function () {
   await carouses();
@@ -82,7 +80,14 @@ async function newce() {
     .then(async function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
         // doc.data() is never undefined for query doc snapshots
-        document.querySelector(".notice").innerHTML += doc.data().name;
+        var closs = document.createElement("div")
+        closs.innerHTML = "X"
+        closs.id = "closeNotice"
+        closs.setAttribute("onclick", "newsclose()")
+        var nees = document.createElement("p")
+        nees.innerHTML = doc.data().name;
+        document.querySelector(".notice").appendChild(closs)
+        document.querySelector(".notice").appendChild(nees)
       });
     });
 }
