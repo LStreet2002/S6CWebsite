@@ -8,8 +8,8 @@ var descriptionInput = document.getElementsByClassName("examInput")[0];
 var saveButton = document.getElementsByClassName("saveButton")[0];
 var page = document.getElementsByTagName("title")[0].className;
 
-/* getting files  async function () {
-    await db.collection("collection name")
+async function getFiles() {
+    await db.collection("courses")
         .get()
         .then(async function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
@@ -18,8 +18,8 @@ var page = document.getElementsByTagName("title")[0].className;
 
             })
         })
-    }*/
+}
 
-/* saving files db.collection("collection").doc("document").update({
+db.collection("courses").doc("biology").update({
     name: document.querySelector("#editnews").value
-})*/
+})
