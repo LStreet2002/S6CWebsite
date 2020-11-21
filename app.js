@@ -14,14 +14,14 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.set('trust proxy', 1)
+app.set("trust proxy", 1);
 app.use(
   cookieSession({
     name: "session",
     keys: ["hiiii"],
   })
 );
-var dir = __dirname + "/pages"
+var dir = __dirname + "/pages";
 
 const serviceAccount = require("./s6c-website-firebase-adminsdk-58r86-6263a6723f.json");
 
@@ -32,8 +32,8 @@ admin.initializeApp({
 const db = admin.firestore();
 
 app.get("/logout", (req, res) => {
-  res.clearCookie("session")
-  res.redirect("/")
+  res.clearCookie("session");
+  res.redirect("/");
 });
 app.post("/adminLogin", (req, res) => {
   var idToken = req.body.idToken;
@@ -44,7 +44,7 @@ app.post("/adminLogin", (req, res) => {
       let uid = decodedToken.uid;
       var idToken = req.body.idToken.toString();
       // Set session expiration to 5 days.
-      const expiresIn = 60 * 60 * 1000
+      const expiresIn = 60 * 60 * 1000;
       // Create the session cookie. This will also verify the ID token in the process.
       // The session cookie will have the same claims as the ID token.
       // To only allow session cookie setting on recent sign-in, auth_time in ID token
@@ -64,7 +64,7 @@ app.post("/adminLogin", (req, res) => {
             res.send(JSON.stringify({ status: "success" }));
           },
           (error) => {
-            res.sendFile(dir + "/adminLogin.html")
+            res.sendFile(dir + "/adminLogin.html");
           }
         );
     })
@@ -83,7 +83,7 @@ var pages = [
 app.get(pages, (req, res) => {
   var sessionCookie = req.cookies.session || " ";
   if (!req.cookies.session) {
-    res.sendFile(dir + "/adminLogin.html")
+    res.sendFile(dir + "/adminLogin.html");
     return;
   }
   // Verify the session cookie. In this case an additional check is added to detect
@@ -96,7 +96,7 @@ app.get(pages, (req, res) => {
     })
     .catch((error) => {
       // Session cookie is unavailable or invalid. Force user to login.
-      res.sendFile(dir + "/adminLogin.html")
+      res.sendFile(dir + "/adminLogin.html");
       console.log(error);
     });
 });
@@ -107,6 +107,8 @@ app.get("*", (req, res) => {
     res.sendFile(dir + "/index.html");
   } else if (req.url.split("?")[0] == "/information") {
     res.sendFile(dir + "/information.html", req.url.split("?")[1]);
+  } else if (req.url.split("?")[0] == "/course") {
+    res.sendFile(dir + "/course.html", req.url.split("?")[1]);
   } else {
     res.sendFile(dir + "/" + req.url.split(".")[0] + ".html");
   }

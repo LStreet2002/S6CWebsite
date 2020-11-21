@@ -17,4 +17,41 @@
 * h3 {
   font-size: 125%;
 }
+
+* .banner {
+  text-align: center;
+  background-color: rgba(102, 51, 153, 0.4);
+  color: white;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: mid;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(102, 36, 131, 0.5);
+  color: white;
+  width: 100%;
+  font-weight: bold;
+}
+
+* #topper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 3fr 1fr 3fr;
+      grid-template-rows: 3fr 1fr 3fr;
+      grid-template-areas: "." "mid" ".";
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  margin: 0px;
+  padding: 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /*# sourceMappingURL=course.css.map */

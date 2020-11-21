@@ -115,6 +115,7 @@ async function updatePage() {
               examBoard: examBoard,
               entry: entryInput.value,
               assessment: assessmentInput.value,
+              description: descriptionInput.value,
             });
           location.reload();
         });

@@ -1,7 +1,7 @@
 var tabs = ["infoTabs", "studyTabs"];
 async function getPages() {
   pages = [];
-  for (i = 0; i < 2; i++) {
+  for (var i = 0; i < 2; i++) {
     const collection = db.collection(tabs[i]);
     const snapshot = await collection.get();
     snapshot.forEach((doc) => {
