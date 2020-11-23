@@ -1,13 +1,14 @@
 var carouse = []
 var lonk = []
 var newt = []
+var nstatus =
 
-document.addEventListener("DOMContentLoaded", async function init() {
-    carousels()
-    links()
-    news()
-}
-)
+    document.addEventListener("DOMContentLoaded", async function init() {
+        carousels()
+        links()
+        news()
+    }
+    )
 
 
 async function carousels() {
@@ -69,6 +70,12 @@ async function news() {
             querySnapshot.forEach(function (doc) {
                 // doc.data() is never undefined for query doc snapshots
                 newt.push(doc.data())
+                if (newt[0].status == "off") {
+                    document.querySelector("#activi").style.backgroundColor = "grey"
+                }
+                else {
+                    document.querySelector("#activi").style.backgroundColor = "purple"
+                }
 
             })
             document.querySelector("#editnews").value = newt[0].name
