@@ -11,84 +11,82 @@
 </head>
 
 <body>
-
-  <body onload="getFiles">
-    <div id="layout">
-      <div id="title">
-        <a href="menu"><span id="back" class="material-icons">
-            keyboard_arrow_left
-          </span></a>
-        <p id="mtitle">Courses Page</p>
-      </div>
-      <h2>Add New Course</h2>
-      <div id="newCourse">
-        <input class="addCourseInput" type="text"></input>
-        <button class="add" onclick="addCourse()">Add</button>
-      </div>
-      <br>
-      <br>
-      <div class="courselist" id="courselist">
-      </div>
-      <hr>
-      <!--Edit course-->
-      <div class="editcourse">
-        <h1 type="text" class="pageNameInput"></h1>
-        <p class="subhead">Titleimage</p>
-        <form>
-          <input type="file" id="myFile" name="filename">
-        </form>
-
-        <div>
-          <p class="subhead qualificationInput">Type of qualification</p>
-          <input type="radio" id="aLevel" name="qualification" value="aLevel">
-          <label for="aLevel">A Level</label><br>
-          <input type="radio" id="BTEC" name="qualification" value="BTEC">
-          <label for="BTEC">BTEC</label><br>
-          <input type="radio" id="CTEC" name="qualification" value="CTEC">
-          <label for="CTEC">CTEC</label><br>
-          <input type="radio" id="level3" name="qualification" value="level3">
-          <label for="level3">Level 3</label><br>
-        </div>
-
-        <div>
-          <p class="subhead examInput">Exam Board</p>
-          <input type="radio" id="ocr" name="examBoard" value="ocr">
-          <label for="ocr">OCR</label><br>
-          <input type="radio" id="aqa" name="examBoard" value="aqa">
-          <label for="aqa">AQA</label><br>
-          <input type="radio" id="edexcel" name="examBoard" value="edexcel">
-          <label for="edexcel">Edexcel</label><br>
-          <input type="radio" id="pearson" name="examBoard" value="pearson">
-          <label for="pearson">Pearson</label><br>
-        </div>
-
-        <p class="editSubhead">Entry Requirements</p>
-        <textarea class="inputBox entryInput"></textarea>
-
-        <p class="editSubhead">Assessments</p>
-        <textarea class="inputBox assessmentInput"></textarea>
-
-        <p class="editSubhead">Course Description</p>
-        <textarea class="inputBox descriptionInput"></textarea>
-
-        <div id="bluttons">
-          <button class="saveButton" onclick="savePage()">Save</button>
-          <button class="deleteButton" onclick="deletePage()">Delete</button>
-        </div>
-      </div>
-
+  <div id="layout">
+    <div id="title">
+      <a href="menu"><span id="back" class="material-icons">
+          keyboard_arrow_left
+        </span></a>
+      <p id="mtitle">Courses Page</p>
     </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <h2>Add New Course</h2>
+    <div id="newCourse">
+      <input class="addCourseInput" type="text"></input>
+      <button class="add" onclick="addCourse()">Add</button>
+    </div>
+    <br>
+    <br>
+    <div class="courselist" id="courselist">
+    </div>
+    <hr>
+    <!--Edit course-->
+    <div class="editcourse">
+      <h1 type="text" class="pageNameInput"></h1>
+      <p class="subhead">Titleimage</p>
+      <img width="100" height="100" class="courseImage">
+      <p class="loading"></p>
+      <input type="file" id="myFile" name="filename" class="file">
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+      <div>
+        <p class="subhead qualificationInput">Type of qualification</p>
+        <input type="radio" id="aLevel" name="qualification" class="qualification" value="aLevel">
+        <label for="aLevel">A Level</label><br>
+        <input type="radio" id="BTEC" name="qualification" class="qualification" value="BTEC">
+        <label for="BTEC">BTEC</label><br>
+        <input type="radio" id="CTEC" name="qualification" class="qualification" value="CTEC">
+        <label for="CTEC">CTEC</label><br>
+        <input type="radio" id="level3" name="qualification" class="qualification" value="level3">
+        <label for="level3">Level 3</label><br>
+      </div>
+
+      <div>
+        <p class="subhead examInput">Exam Board</p>
+        <input type="radio" id="ocr" name="examBoard" class="examBoard" value="OCR">
+        <label for="ocr">OCR</label><br>
+        <input type="radio" id="aqa" name="examBoard" class="examBoard" value="AQA">
+        <label for="aqa">AQA</label><br>
+        <input type="radio" id="edexcel" name="examBoard" class="examBoard" value="Edexcel">
+        <label for="edexcel">Edexcel</label><br>
+        <input type="radio" id="pearson" name="examBoard" class="examBoard" value="Pearson">
+        <label for="pearson">Pearson</label><br>
+      </div>
+
+      <p class="editSubhead">Entry Requirements</p>
+      <textarea class="inputBox entryInput"></textarea>
+
+      <p class="editSubhead">Assessments</p>
+      <textarea class="inputBox assessmentInput"></textarea>
+
+      <p class="editSubhead">Course Description</p>
+      <textarea class="inputBox descriptionInput"></textarea>
+
+      <div id="bluttons">
+        <button class="saveButton" onclick="updatePage()">Save</button>
+        <button class="deleteButton" onclick="deletePage()">Delete</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
 
-    <script src="admin/js/fireBase.js"></script>
-    <script src="admin/js/courses.js"></script>
-  </body>
+  <script src="admin/js/firebase.js"></script>
+  <script src="admin/js/courses.js"></script>
+</body>
 
 </html>

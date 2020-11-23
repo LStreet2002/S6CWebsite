@@ -1,5 +1,3 @@
-var newt = [];
-
 const queryString = window.location.search;
 console.log(queryString);
 const urlParams = new URLSearchParams(queryString);
@@ -8,7 +6,7 @@ const collection = urlParams.get("collection");
 console.log(product, collection);
 
 window.addEventListener("DOMContentLoaded", function () {
-  getDatabase()
+  getDatabase();
   getPages();
 });
 async function getDatabase() {
@@ -23,8 +21,7 @@ async function getDatabase() {
   tex.classList.add("subext");
 
   document.querySelector(".block").appendChild(tex);
-  document.getElementsByTagName("TITLE")[0].innerText = doc.pageName
-  document.querySelector("#" + collection + "t").classList.add("active")
+  document.getElementsByTagName("TITLE")[0].innerText = doc.pageName;
 }
 async function getDoc(url) {
   const docRef = db.collection(collection).doc(url);

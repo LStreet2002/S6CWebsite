@@ -8,11 +8,11 @@ var imgCar = document.getElementsByClassName("imgCar")[0];
 var noticeBox = document.getElementsByClassName("notice")[0];
 var closeButton = document.getElementById("closeNotice");
 var cartext = [
-  "ITS ALL ABOUT YOU",
-  "ITS ALL ABOUT YOU",
-  "ITS ALL ABOUT YOU",
-  "ITS ALL ABOUT YOU",
-  "ITS ALL ABOUT YOU",
+  "IT'S ALL ABOUT YOU",
+  "IT'S ALL ABOUT YOU",
+  "IT'S ALL ABOUT YOU",
+  "IT'S ALL ABOUT YOU",
+  "IT'S ALL ABOUT YOU",
 ];
 function newsclose() {
   noticeBoxChildren = [].slice.call(noticeBox.children);
