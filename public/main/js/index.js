@@ -80,14 +80,19 @@ async function newce() {
     .then(async function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
         // doc.data() is never undefined for query doc snapshots
-        var closs = document.createElement("div")
-        closs.innerHTML = "X"
-        closs.id = "closeNotice"
-        closs.setAttribute("onclick", "newsclose()")
-        var nees = document.createElement("p")
-        nees.innerHTML = doc.data().name;
-        document.querySelector(".notice").appendChild(closs)
-        document.querySelector(".notice").appendChild(nees)
+        if (doc.data().status == "on") {
+          var closs = document.createElement("div")
+          closs.innerHTML = "X"
+          closs.id = "closeNotice"
+          closs.setAttribute("onclick", "newsclose()")
+          var nees = document.createElement("p")
+          nees.innerHTML = doc.data().name;
+          document.querySelector(".notice").appendChild(closs)
+          document.querySelector(".notice").appendChild(nees)
+        }
+        else {
+          document.querySelector(".notice").style.display = "none"
+        }
       });
     });
 }

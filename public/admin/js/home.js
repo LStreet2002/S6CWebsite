@@ -72,13 +72,16 @@ async function news() {
                 newt.push(doc.data())
                 if (newt[0].status == "off") {
                     document.querySelector("#activi").style.backgroundColor = "grey"
+                    document.querySelector("#activi").innerHTML = "NEWS INACTIVE"
                 }
                 else {
-                    document.querySelector("#activi").style.backgroundColor = "purple"
+                    document.querySelector("#activi").style.backgroundColor = "rgb(102, 51, 153)"
+                    document.querySelector("#activi").innerHTML = "NEWS ACTIVE"
                 }
 
             })
             document.querySelector("#editnews").value = newt[0].name
+            nstatus = newt[0].status
             document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters"
         }
         )
@@ -90,7 +93,8 @@ async function save() {
     // Create a storage reference from our storage service
     var storageRef = storage.ref();
     db.collection("news").doc("current").update({
-        name: document.querySelector("#editnews").value
+        name: document.querySelector("#editnews").value,
+        status: nstatus
     })
     db.collection("links").doc("facebook").update({
         name: document.querySelector("#flink").value
@@ -175,3 +179,15 @@ document.querySelector(".linkit").addEventListener("click", function () {
     typeInTextarea("<a href=" + '"Link URL"' + ">Text to click</a>")
     document.getElementById('characters').innerHTML = document.getElementById('editnews').value.length + " Characters";
 })
+function status() {
+    if (nstatus == "off") {
+        nstatus = "on"
+        document.querySelector("#activi").style.backgroundColor = "rgb(102, 51, 153)"
+        document.querySelector("#activi").innerHTML = "NEWS ACTIVE"
+    }
+    else {
+        nstatus = "off"
+        document.querySelector("#activi").style.backgroundColor = "grey"
+        document.querySelector("#activi").innerHTML = "NEWS INACTIVE"
+    }
+}
