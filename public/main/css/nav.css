@@ -78,6 +78,10 @@ nav input{
   opacity: 1;
   visibility: visible;
 }
+.drop-menu li {
+  color: white;
+  text-transform: uppercase;
+}
 .drop-menu li a{
   width: 100%;
   display: block;
@@ -95,6 +99,18 @@ nav input{
   color: white;
   font-size: 20px;
   font-weight: 500;
+}
+.wrapper .apply-btn{
+  background: #0E71B8;
+  color: white;
+  text-decoration: none;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+.wrapper .apply-btn:hover{
+  background: #662483;
 }
 .wrapper .btn{
   color: #662483;
@@ -197,7 +213,7 @@ nav input{
   .content .row header{
     font-size: 19px;
   }
-@media (min-width: 500px) {
+@media (min-width: 100px) {
   .nav-links li a {
     color: white;
   }
