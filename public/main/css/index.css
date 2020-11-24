@@ -52,6 +52,19 @@
   margin-right: 3em;
 }
 
+#searchblob {
+  position: absolute;
+  top: 60%;
+  display: none;
+  list-style-type: none;
+  background-color: white;
+}
+
+#searchblob a {
+  text-decoration: none;
+  color: black;
+}
+
 .findCourse {
   padding-left: 3em;
   padding-right: 3em;

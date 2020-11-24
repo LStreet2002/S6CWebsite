@@ -104,6 +104,9 @@ nav input{
   font-size: 20px;
   font-weight: 500;
 }
+a {
+  text-decoration: none;
+}
 .wrapper .apply-btn{
   background: #0E71B8;
   color: white;

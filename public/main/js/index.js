@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", async function () {
   showSlides();
   newce();
   blosh();
+  listadd()
   getPages();
   imgCar.style.opacity = "100"; //this function must be called last
 });
@@ -96,6 +97,19 @@ async function newce() {
       });
     });
 }
+async function listadd() {
+  const ref = db.collection("courses");
+  const snapshot = await ref.get();
+  snapshot.forEach((doc) => {
+    //Course title
+    var courseId = document.createElement("a");
+    courseId.innerHTML = doc.data().pageName;
+    courseId.href = ""
+
+    //Add course div to page
+    document.getElementById("searchblob").appendChild(courseId);
+  });
+}
 async function blosh() {
   await db
     .collection("Firth")
@@ -132,4 +146,27 @@ async function blosh() {
         document.querySelector(".blogMini").appendChild(car);
       }
     });
+}
+function elemFocused(t) {
+  document.querySelector("#searchblob").style.display = "block"
+  t.addEventListener("keyup", function () {
+    //SEARCH FUNCTION
+    var input = document.querySelector(".search");
+    var filter = input.value.toUpperCase();
+    var ul = document.getElementById("searchblob");
+    var li = ul.getElementsByTagName('a');
+
+    for (i = 0; i < li.length; i++) {//LOOPS THROUGH ALL TEXT VALUES
+      var txtValue = li[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  })
+}
+function elemBlurred(t) {
+  document.querySelector("#searchblob").style.display = "none"
+  t.value = ""
 }

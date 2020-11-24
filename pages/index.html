@@ -16,7 +16,7 @@
   <nav>
     <div class="wrapper">
       <div class="logo"><a href="index.html">S6C</a></div>
-      <button class="apply-btn">Apply Now</button>
+      <a href="https://salisbury6c.applicaa.com/3?skip_modal=true"><button class="apply-btn">Apply Now</button></a>
       <input type="radio" name="slider" id="menu-btn">
       <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
       <input type="radio" name="slider" id="close-btn">
@@ -52,7 +52,10 @@
       you will find that S6C is an exciting place to develop and one in which you will thrive both academically and
       socially.<br><a href="information">Read more</a></div>
     <div class="findCourse">
-      <form class="searchForm" action=""><input class="search" type="text" placeholder="Search Courses..."></form>
+      <input class="search" onfocus="elemFocused(this)" onblur="elemBlurred(this)" type="text"
+        placeholder="Search Courses...">
+      <ul id="searchblob">
+      </ul>
     </div>
     <div class="blogMini">
       <img src="main/images/sFirth.jpg" alt="Image of the Principal." class="prinImg">
