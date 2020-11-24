@@ -38,6 +38,10 @@
   margin-top: 70px;
 }
 
+#closeNotice {
+  cursor: pointer;
+}
+
 .notice {
   background-color: #662483;
   color: white;
