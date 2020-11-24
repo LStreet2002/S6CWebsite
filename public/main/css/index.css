@@ -239,12 +239,6 @@
   to {
     top: 60%;
   }
-  from {
-    display: none;
-  }
-  to {
-    display: block;
-  }
 }
 
 @keyframes example {
@@ -259,12 +253,6 @@
   }
   to {
     top: 60%;
-  }
-  from {
-    display: none;
-  }
-  to {
-    display: block;
   }
 }
 
@@ -281,12 +269,6 @@
   to {
     top: 120%;
   }
-  from {
-    display: block;
-  }
-  to {
-    display: none;
-  }
 }
 
 @keyframes unexample {
@@ -302,12 +284,6 @@
   to {
     top: 120%;
   }
-  from {
-    display: block;
-  }
-  to {
-    display: none;
-  }
 }
 
 /* The element to apply the animation to */
@@ -316,8 +292,6 @@
           animation-name: example;
   -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
 }
 
 .search:not(:focus) ~ #searchblob {
