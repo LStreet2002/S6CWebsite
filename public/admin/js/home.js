@@ -1,14 +1,16 @@
 var carouse = []
 var lonk = []
 var newt = []
-var nstatus =
+var nstatus = ""
+var astatus = ""
 
-    document.addEventListener("DOMContentLoaded", async function init() {
-        carousels()
-        links()
-        news()
-    }
-    )
+document.addEventListener("DOMContentLoaded", async function init() {
+    carousels()
+    links()
+    news()
+    applys()
+}
+)
 
 
 async function carousels() {
@@ -86,6 +88,24 @@ async function news() {
         }
         )
 }
+async function applys() {
+    await db.collection("apply").doc("appli").get().then(function (doc) {
+        if (doc.exists) {
+            if (doc.data().status == "off") {
+                document.querySelector("#activi2").style.backgroundColor = "grey"
+                document.querySelector("#activi2").innerHTML = "APPLICATIONS INACTIVE"
+            }
+            else {
+                document.querySelector("#activi2").style.backgroundColor = "rgb(102, 51, 153)"
+                document.querySelector("#activi2").innerHTML = "APPLICATIONS ACTIVE"
+            }
+
+
+            astatus = doc.data().status
+        }
+    })
+}
+
 
 async function save() {
     var storage = await firebase.storage();
@@ -95,6 +115,9 @@ async function save() {
     db.collection("news").doc("current").update({
         name: document.querySelector("#editnews").value,
         status: nstatus
+    })
+    db.collection("apply").doc("appli").update({
+        status: astatus
     })
     db.collection("links").doc("facebook").update({
         name: document.querySelector("#flink").value
@@ -189,5 +212,17 @@ function status() {
         nstatus = "off"
         document.querySelector("#activi").style.backgroundColor = "grey"
         document.querySelector("#activi").innerHTML = "NEWS INACTIVE"
+    }
+}
+function status2() {
+    if (astatus == "off") {
+        astatus = "on"
+        document.querySelector("#activi2").style.backgroundColor = "rgb(102, 51, 153)"
+        document.querySelector("#activi2").innerHTML = "APPLICATIONS ACTIVE"
+    }
+    else {
+        astatus = "off"
+        document.querySelector("#activi2").style.backgroundColor = "grey"
+        document.querySelector("#activi2").innerHTML = "APPLICATIONS INACTIVE"
     }
 }
