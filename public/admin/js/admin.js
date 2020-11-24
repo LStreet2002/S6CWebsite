@@ -12,8 +12,6 @@ firebase
         .auth()
         .signInWithEmailAndPassword(email, password)
         .then(() => {
-          document.querySelector("#login-email").style.border =
-            "solid 1px green";
           return firebase
             .auth()
             .currentUser.getIdToken()
@@ -25,9 +23,12 @@ firebase
           // Handle Errors here.
           var errorCode = error.code;
           var errorMessage = error.message;
-          document.querySelector("#login-password").style.border =
-            "solid 1px red";
-          document.querySelector("#login-email").style.border = "solid 1px red";
+          document.querySelector("#Login").style.backgroundColor =
+            "#b12e2e";
+          setTimeout(() => {
+            document.querySelector("#Login").style.backgroundColor =
+              "#662483";
+          }, 2500);
         });
     });
   });

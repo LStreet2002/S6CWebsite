@@ -103,7 +103,7 @@ async function listadd() {
   snapshot.forEach((doc) => {
     //Course title
     var courseId = document.createElement("a");
-    courseId.innerHTML = doc.data().pageName;
+    courseId.innerHTML = doc.data().pageName + "<br>";
     courseId.href = ""
 
     //Add course div to page
@@ -167,6 +167,8 @@ function elemFocused(t) {
   })
 }
 function elemBlurred(t) {
-  document.querySelector("#searchblob").style.display = "none"
+  setTimeout(() => {
+    document.querySelector("#searchblob").style.display = "none"
+  }, 700);
   t.value = ""
 }

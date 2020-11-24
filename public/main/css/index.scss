@@ -180,3 +180,32 @@
 		}
 	}
 }
+
+@keyframes example {
+  from {opacity : 0.0}
+  to {opacity: 1;}
+  from {top:120%}
+  to {top:60%;}
+  from {display:none;}
+  to{display:block;}
+}
+@keyframes unexample {
+  from {opacity : 1}
+  to {opacity: 0;}
+  from {top:60%}
+  to {top:120%;}
+  from {display:block;}
+  to{display:none;}
+}
+
+
+/* The element to apply the animation to */
+ .search:focus ~ #searchblob {
+  animation-name: example;
+  animation-duration: 0.7s;
+  animation-direction: alternate;
+}
+.search:not(:focus) ~ #searchblob {
+  animation-name: unexample;
+  animation-duration: 0.7s;
+}

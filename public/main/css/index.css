@@ -225,4 +225,105 @@
     padding: 0 1em 1em;
   }
 }
+
+@-webkit-keyframes example {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1;
+  }
+  from {
+    top: 120%;
+  }
+  to {
+    top: 60%;
+  }
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
+@keyframes example {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1;
+  }
+  from {
+    top: 120%;
+  }
+  to {
+    top: 60%;
+  }
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}
+
+@-webkit-keyframes unexample {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+  from {
+    top: 60%;
+  }
+  to {
+    top: 120%;
+  }
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
+
+@keyframes unexample {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+  from {
+    top: 60%;
+  }
+  to {
+    top: 120%;
+  }
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
+
+/* The element to apply the animation to */
+.search:focus ~ #searchblob {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.search:not(:focus) ~ #searchblob {
+  -webkit-animation-name: unexample;
+          animation-name: unexample;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
 /*# sourceMappingURL=index.css.map */
