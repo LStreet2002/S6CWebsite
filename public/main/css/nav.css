@@ -10,6 +10,10 @@ body {
 nav input {
   display:none;
 }
+.drop-menu li {
+  color:white;
+  margin-left:5%;
+    }
 nav{
   position: fixed;
   z-index: 99;
@@ -198,6 +202,9 @@ nav input{
     font-size: 18px;
     color: white;
   }
+ .drop-menu li {
+font-size:0.9rem;
+  }
   .content .row header{
     font-size: 19px;
   }
@@ -230,4 +237,5 @@ nav input{
   font-size: 45px;
   font-weight: 600;
 }
+
 }
