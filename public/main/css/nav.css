@@ -186,6 +186,10 @@ nav input{
   #showMega:checked ~ .mega-box{
     max-height: 100%;
   }
+  #showDrop2:checked ~ .drop-menu,
+  #showMega2:checked ~ .mega-box{
+    max-height: 100%;
+  }
   .nav-links .desktop-item{
     display: none;
   }
@@ -241,4 +245,5 @@ nav input{
 .body-text div{
   font-size: 45px;
   font-weight: 600;
+}
 }
