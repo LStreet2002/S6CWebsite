@@ -104,8 +104,7 @@ async function listadd() {
     //Course title
     var courseId = document.createElement("a");
     courseId.innerHTML = doc.data().pageName + "<br>";
-    courseId.href = "";
-
+    courseId.href = "/course?page=" + doc.data().pageName.toLowerCase();
     //Add course div to page
     document.getElementById("searchblob").appendChild(courseId);
   });
