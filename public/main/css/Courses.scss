@@ -43,3 +43,32 @@
     z-index: 2;
     }
 }
+@media only screen and (min-width: 600px) {
+  #courses{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 2em;
+    .course{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      a{
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 200%;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        z-index: 4;
+        margin-top: 65%;
+      }
+      img{
+        width: 100%;
+        height: 50vw;
+        filter: brightness(0.5);
+        z-index: 2;
+        }
+    }
+  }
+}	
