@@ -1,4 +1,3 @@
-var courses = [];
 window.addEventListener("DOMContentLoaded", function () {
 	getDatabase();
 	getPages();
@@ -7,6 +6,7 @@ async function getDatabase() {
 	const ref = db.collection("courses");
 	const snapshot = await ref.get();
 	snapshot.forEach((doc) => {
+		var courses = [];
 		console.log(doc.data().pageName, doc.data().courseImage);
 		//Course title
 		courseName = document.createElement("a");
