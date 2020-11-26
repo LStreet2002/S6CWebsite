@@ -105,8 +105,14 @@ async function applys() {
             }
         });
 }
+var saver = document.querySelector("#save")
+saver.addEventListener("click", function () {
+    saver.style.backgroundColor = "green",
+    saver.innerHTML = "SAVING..."
+})
 
 async function save() {
+
     var storage = await firebase.storage();
 
     // Create a storage reference from our storage service
@@ -156,13 +162,12 @@ async function save() {
                     file: newfile.innerHTML,
                 });
         }
-        var saver = document.querySelector("#save");
-        saver.style.backgroundColor = "green";
-        saver.innerHTML = "SAVED!";
+
         setTimeout(() => {
-            saver.style.backgroundColor = "#663399";
-            saver.innerHTML = "Save changes";
-        }, 2500);
+
+        }, 2500)
+        location.reload();
+
     }
 }
 function getting(x) {
