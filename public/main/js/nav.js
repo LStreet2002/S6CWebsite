@@ -20,6 +20,18 @@ async function getPages() {
       newListItem.style.cursor = "pointer";
       document.getElementById(tabs[i]).appendChild(newListItem);
     });
+    await db.collection("apply").doc("appli").get().then(function (doc) {
+      if (doc.exists) {
+        if (doc.data().status == "off") {
+          document.querySelector(".apply-btn").style.display = "none"
+        }
+        else {
+          document.querySelector(".apply-btn").style.display = "block"
+        }
+      }
+    })
   }
   document.body.style.opacity = "100";
 }
+
+

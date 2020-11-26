@@ -163,4 +163,18 @@ textarea {
 #activi:hover {
   cursor: pointer;
 }
+
+#activi2 {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: white;
+  font-size: 120%;
+}
+
+#activi2:hover {
+  cursor: pointer;
+}
 /*# sourceMappingURL=edithome.css.map */

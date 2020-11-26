@@ -21,6 +21,8 @@ async function getDatabase() {
   tex.classList.add("subext");
 
   document.querySelector(".block").appendChild(tex);
+  document.querySelectorAll("." + collection + "t")[0].classList.add("active");
+  document.querySelectorAll("." + collection + "t")[1].classList.add("active");
   document.getElementsByTagName("TITLE")[0].innerText = doc.pageName;
 }
 async function getDoc(url) {

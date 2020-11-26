@@ -104,6 +104,9 @@ nav input{
   font-size: 20px;
   font-weight: 500;
 }
+a {
+  text-decoration: none;
+}
 .wrapper .apply-btn{
   background: #0E71B8;
   color: white;
@@ -111,6 +114,7 @@ nav input{
   padding: 9px 15px;
   border-radius: 5px;
   cursor: pointer;
+  border:none;
   align-items: center;
 }
 .wrapper .apply-btn:hover{
