@@ -9,7 +9,11 @@ async function getDatabase() {
 	snapshot.forEach((doc) => {
 		console.log(doc.data().pageName, doc.data().courseImage);
 		//Course title
-		courseName = document.createElement("h1");
+		courseName = document.createElement("a");
+		courseName.setAttribute(
+			"href",
+			"course?page=" + doc.data().pageName.toLowerCase()
+		);
 		courseName.innerHTML = doc.data().pageName;
 		//Course image
 		courseImage = document.createElement("img");
