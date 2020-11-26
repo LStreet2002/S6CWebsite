@@ -34,6 +34,7 @@ async function carousels() {
         upl.setAttribute("onclick", "getting(this)");
         var image = document.createElement("input");
         image.classList.add("unknown");
+        image.classList.add("imglink" + (i + 1));
         image.style.display = "none";
         image.type = "file";
         image.accept = ".png,.jpg,.gif,.tif,.webp";
@@ -113,7 +114,6 @@ async function save() {
   var storage = await firebase.storage();
 
   // Create a storage reference from our storage service
-  var storageRef = storage.ref();
   db.collection("news")
     .doc("current")
     .update({
@@ -138,35 +138,64 @@ async function save() {
     .update({
       name: document.querySelector("#ilink").value,
     });
-  for (i = 1; i < 6; i++) {
+  await yes();
+}
+async function yes() {
+  var storageRef = storage.ref();
+  for (let i = 1; i < 7; i++) {
     var newfile = document.querySelector("#link" + i);
-
+    console.log(i);
     if (newfile.innerHTML == newfile.getAttribute("value")) {
     } else {
       try {
-        await storageRef
-          .child("carousel/" + newfile.getAttribute("value"))
-          .delete();
+        storageRef.child("carousel/" + newfile.innerHTML).delete();
       } catch (error) {
         console.log(error);
       }
-      var filt = newfile.parentNode.querySelector(".unknown").files[0];
-
-      var storagechange = firebase
+      var filt = document.getElementsByClassName("imglink" + i)[0].files[0];
+      console.log(filt);
+      var uploadTask = firebase
         .storage()
-        .ref("carousel/" + newfile.innerHTML);
-      // Upload file
-      var task = await storagechange.put(filt);
-
-      db.collection("carousels")
-        .doc("link" + i)
-        .update({
-          file: newfile.innerHTML,
-        });
+        .ref("carousel/" + newfile.innerHTML)
+        .put(filt);
+      uploadTask.on(
+        "state_changed",
+        function (snapshot) {
+          // Observe state change events such as progress, pause, and resume
+          // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+          var progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          console.log("Upload is " + progress + "% done");
+          switch (snapshot.state) {
+            case firebase.storage.TaskState.PAUSED: // or 'paused'
+              console.log("Upload is paused");
+              break;
+            case firebase.storage.TaskState.RUNNING: // or 'running'
+              console.log("Upload is running");
+              break;
+          }
+        },
+        function (error) {
+          // Handle unsuccessful uploads
+        },
+        async function () {
+          // Handle successful uploads on complete
+          // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+          await uploadTask.snapshot.ref
+            .getDownloadURL()
+            .then(async function (downloadURL) {
+              console.log("File available at", downloadURL, i);
+              await db
+                .collection("carousels")
+                .doc("link" + i)
+                .set({
+                  file: document.getElementById("link" + i).innerText,
+                  link: downloadURL,
+                });
+            });
+        }
+      );
     }
-
-    setTimeout(() => {}, 2500);
-    location.reload();
   }
 }
 function getting(x) {

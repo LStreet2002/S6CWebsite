@@ -33,34 +33,29 @@ window.addEventListener("DOMContentLoaded", async function () {
   imgCar.style.opacity = "100"; //this function must be called last
 });
 async function carouses() {
-  var storageRef = storage.ref("carousel");
   await db
     .collection("carousels")
     .get()
     .then(async function (querySnapshot) {
+      var counter = 0;
       querySnapshot.forEach(function (doc) {
         // doc.data() is never undefined for query doc snapshots
-        hold.push(doc.data());
-      });
-    });
-  for (y = 0; y < 5; y++) {
-    // doc.data() is never undefined for query doc snapshots
-    await storageRef
-      .child("/" + hold[y].file)
-      .getDownloadURL()
-      .then(function (url) {
         var item = document.createElement("img");
-        item.src = url;
-        item.id = ["c" + y];
+        item.src = doc.data().link;
+        console.log(doc.data());
+        item.id = ["c" + counter];
         item.classList.add("carosimg", "fade");
         var texlc = document.createElement("h3");
-        texlc.innerText = cartext[y];
+        texlc.innerText = cartext[counter];
         texlc.classList.add("cartext", "fade");
         document.querySelector(".imgCar").appendChild(item);
         document.querySelector(".imgCar").appendChild(texlc);
+        counter += 1;
+        hold.push(doc.data());
       });
-  }
+    });
 }
+
 function showSlides() {
   var i;
   for (i = 0; i < slides.length; i++) {
