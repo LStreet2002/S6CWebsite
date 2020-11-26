@@ -119,6 +119,7 @@ a {
 }
 .wrapper .apply-btn:hover{
   background: #662483;
+  transition: ease 0.5s;
 }
 .wrapper .btn{
   color: #662483;
