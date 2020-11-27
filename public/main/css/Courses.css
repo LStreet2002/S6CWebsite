@@ -64,6 +64,7 @@
     -ms-grid-columns: auto auto auto;
         grid-template-columns: auto auto auto;
     margin-bottom: 2em;
+    margin-top: 70px;
   }
   #courses .course {
     position: relative;
