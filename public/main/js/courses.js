@@ -8,12 +8,13 @@ async function getDatabase() {
 	snapshot.forEach((doc) => {
 		var courses = [];
 		console.log(doc.data().pageName, doc.data().courseImage);
-		//Course title
-		courseName = document.createElement("a");
-		courseName.setAttribute(
+		var a = document.createElement("a");
+		a.setAttribute(
 			"href",
 			"course?page=" + doc.data().pageName.toLowerCase()
 		);
+		//Course title
+		courseName = document.createElement("a");
 		courseName.innerHTML = doc.data().pageName;
 		//Course image
 		courseImage = document.createElement("img");
@@ -28,7 +29,8 @@ async function getDatabase() {
 		courses.forEach((element) => {
 			courseDiv.appendChild(element);
 		});
+		a.appendChild(courseDiv);
 		//Add course div to page
-		document.getElementById("courses").appendChild(courseDiv);
+		document.getElementById("courses").appendChild(a);
 	});
 }
