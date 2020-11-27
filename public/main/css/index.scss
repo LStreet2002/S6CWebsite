@@ -1,169 +1,212 @@
 @import "./variables";
 * {
-  padding: 0px;
-  border: 0px;
-  margin: 0px;
-  font-family: "Ubuntu";
-  font-size: 22px;
-  h1 {
-    font-size: 200%;
-  }
-  h2 {
-    font-size: 160%;
-  }
-  h3 {
-    font-size: 125%;
-  }
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	font-family: "Ubuntu";
+	font-size: 22px;
+	h1 {
+		font-size: 200%;
+	}
+	h2 {
+		font-size: 160%;
+	}
+	h3 {
+		font-size: 125%;
+	}
 }
 @media only screen and (max-width: 500px) {
-  * {
-    font-family: "Ubuntu";
-    font-size: 14px;
-    h1 {
-      font-size: 200%;
-    }
-    h2 {
-      font-size: 160%;
-    }
-    h3 {
-      font-size: 125%;
-    }
-  }
+	* {
+		font-family: "Ubuntu";
+		font-size: 14px;
+		h1 {
+			font-size: 200%;
+		}
+		h2 {
+			font-size: 160%;
+		}
+		h3 {
+			font-size: 125%;
+		}
+	}
 }
 .content {
-  margin-top: 70px;
+	margin-top: 70px;
+}
+#closeNotice {
+	cursor: pointer;
 }
 .notice {
-  background-color: $news;
-  color: white;
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+	background-color: $news;
+	color: white;
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 .aboutMini {
-  margin-left: 3em;
-  margin-right: 3em;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+#searchblob {
+	position: absolute;
+    top: 60%;
+    display: none;
+    list-style-type: none;
+    background-color: rgb(113, 159, 230);
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 90%;
+    margin: auto;
+}
+#searchblob a {
+  text-decoration:none;
+  color:black;
 }
 .findCourse {
-  padding-left: 3em;
-  padding-right: 3em;
-  background-image: url("/main/images/books.jpg");
-  width: 100%;
-  height: 10em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  .searchForm{
-    position: relative;
-    width: 100%;
-    display: flex;
-  }
-  .search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-    margin: auto;
-    border: 1px solid black;
-     }
+	padding-left: 3em;
+	padding-right: 3em;
+	background-image: url("/main/images/books.jpg");
+	width: 100%;
+	height: 10em;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	justify-content: center;
+	.searchForm {
+		position: relative;
+		width: 100%;
+		display: flex;
+	}
+	.search {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 6px;
+		margin: auto;
+		border: 1px solid black;
+	}
 }
 .blogMini {
-  margin-left: 3em;
-  margin-right: 3em;
-  padding-bottom: 1rem;
+	margin-left: 3em;
+	margin-right: 3em;
+	padding-bottom: 1rem;
 }
 .imgCar {
-  opacity: 0;
-  position: relative;
-  text-align: center;
-  color: #f6f7fb;
-  height: 49.3vw;
-  overflow: hidden;
-  display: flex;
-  align-content: center;
-  justify-content: center;
+	opacity: 0;
+	position: relative;
+	text-align: center;
+	color: #f6f7fb;
+	height: 49.3vw;
+	overflow: hidden;
+	display: flex;
+	align-content: center;
+	justify-content: center;
 }
 .carosimg {
-  width: 100%;
-  position: relative;
-  z-index: 0;
-  position: absolute;
+	width: 100%;
+	position: relative;
+	z-index: 0;
+	position: absolute;
 }
 .cartext {
-  font-weight: bold;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  color: #f6f7fb;
-  z-index: 4;
-  position: relative;
+	font-weight: bold;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	color: #f6f7fb;
+	z-index: 4;
+	position: relative;
 }
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 5s;
-  animation-name: fade;
-  animation-duration: 5s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 5s;
+	animation-name: fade;
+	animation-duration: 5s;
 }
 @-webkit-keyframes fade {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0.1;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fade {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0.1;
+	}
+	to {
+		opacity: 1;
+	}
 }
 .darken {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 49.3vw;
-  width: 100%;
-  position: absolute;
-  z-index: 3;
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 49.3vw;
+	width: 100%;
+	position: absolute;
+	z-index: 3;
 }
 .blogDate {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 }
 .full {
-  margin-bottom: 1rem;
-  h3 {
-    font-weight: 100;
-    font-size: 110%;
-  }
+	margin-bottom: 1rem;
+	h3 {
+		font-weight: 100;
+		font-size: 110%;
+	}
 }
 .blogTitle {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 .moar {
-  color: #662483;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 1rem;
+	color: #662483;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 1rem;
 }
-.prinImg{
-  width: 100%;
+.prinImg {
+	width: 100%;
 }
 @media only screen and (min-width: 600px) {
-  .blogMini{
-    margin-bottom: 2em;
-    .prinImg{
-    width: 50%;
-    float: left;
-    padding: 0 1em 1em;
-  }
-  }
-  
+	.blogMini {
+		margin-bottom: 2em;
+		.prinImg {
+			width: 50%;
+			float: left;
+			padding: 0 1em 1em;
+		}
+	}
+}
+
+@keyframes example {
+  from {opacity : 0.0}
+  to {opacity: 1;}
+  from {top:120%}
+  to {top:60%;}
+}
+@keyframes unexample {
+  from {opacity : 1}
+  to {opacity: 0;}
+  from {top:60%}
+  to {top:120%;}
+}
+
+
+/* The element to apply the animation to */
+ .search:focus ~ #searchblob {
+  animation-name: example;
+  animation-duration: 0.7s;
+}
+.search:not(:focus) ~ #searchblob {
+  animation-name: unexample;
+  animation-duration: 0.7s;
 }

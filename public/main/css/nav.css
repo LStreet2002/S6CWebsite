@@ -10,6 +10,10 @@ body {
 nav input {
   display:none;
 }
+.drop-menu li {
+  color:white;
+  margin-left:5%;
+    }
 nav{
   position: fixed;
   z-index: 99;
@@ -44,7 +48,7 @@ nav .wrapper{
   list-style: none;
 }
 .nav-links li a{
-  color: purple;
+  color: #662483;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 18px;
@@ -72,18 +76,22 @@ nav input{
   visibility: hidden;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
-.nav-links li:hover .drop-menu,
-.nav-links li:hover .mega-box{
+.nav-links li:hover .drop-menu{
   transition: all 0.3s ease;
   top: 70px;
   opacity: 1;
   visibility: visible;
+}
+.drop-menu li {
+  color: white;
+  text-transform: uppercase;
 }
 .drop-menu li a{
   width: 100%;
   display: block;
   padding: 0 0 0 15px;
   font-weight: 400;
+  text-transform: uppercase;
   border-radius: 0px;
 }
 .content .row img{
@@ -96,26 +104,28 @@ nav input{
   font-size: 20px;
   font-weight: 500;
 }
-.content .row .mega-links{
-  margin-left: -40px;
-  border-left: 1px solid rgba(255,255,255,0.09);
+a {
+  text-decoration: none;
 }
-.row .mega-links li{
-  padding: 0 20px;
-}
-.row .mega-links li a{
-  padding: 0px;
-  padding: 0 20px;
+.wrapper .apply-btn{
+  background: #0E71B8;
   color: white;
-  font-size: 17px;
-  display: block;
+  text-decoration: none;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border:none;
+  align-items: center;
+  float: left;
 }
-.row .mega-links li a:hover{
-  color:  rgba(156, 152, 152, 0.466);
+.wrapper .apply-btn:hover{
+  background: #662483;
+  transition: ease 0.5s;
 }
 .wrapper .btn{
   color: #662483;
   font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
   display: none;
 }
@@ -128,14 +138,10 @@ nav input{
   .wrapper .btn{
     display: block;
   }
-  nav li a {
-    color: white;
-  }
   .wrapper .nav-links{
     position: fixed;
     height: 100vh;
     width: 100%;
-    color: white;
     max-width: 350px;
     top: 0;
     left: -100%;
@@ -146,9 +152,6 @@ nav input{
     overflow-y: auto;
     box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
     transition: all 0.3s ease;
-  }
-  .desktop-item {
-    color: white;
   }
   ::-webkit-scrollbar {
     width: 10px;
@@ -193,6 +196,10 @@ nav input{
   #showMega:checked ~ .mega-box{
     max-height: 100%;
   }
+  #showDrop2:checked ~ .drop-menu,
+  #showMega2:checked ~ .mega-box{
+    max-height: 100%;
+  }
   .nav-links .desktop-item{
     display: none;
   }
@@ -200,7 +207,7 @@ nav input{
     display: block;
     color: #f2f2f2;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: bold;
     padding-left: 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -215,12 +222,30 @@ nav input{
   .drop-menu li a{
     border-radius: 5px;
     font-size: 18px;
+    color: white;
+  }
+ .drop-menu li {
+font-size:0.9rem;
   }
   .content .row header{
     font-size: 19px;
   }
+@media (min-width: 100px) {
+  .nav-links li a {
+    color: white;
+  }
+  .mobile-item {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .drop-menu {
+    text-transform: uppercase;
+  }
+  .wrapper .close-btn {
+    color: white;
+  }
 }
-
  .body-text{
   position: absolute;
   top: 50%;
@@ -233,4 +258,6 @@ nav input{
 .body-text div{
   font-size: 45px;
   font-weight: 600;
+}
+
 }
