@@ -154,9 +154,6 @@ input[type="file"] {
 }
 
 .listItem {
-    display: inline;
-    margin-bottom:2rem;
-}
-.lineti {
-    display:inline;
+    display: flex;
+    justify-content: space-between;
 }

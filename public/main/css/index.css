@@ -71,13 +71,7 @@
 
 #searchblob a {
   text-decoration: none;
-  margin-left: 0.5rem;
   color: black;
-}
-
-#searchblob a:hover {
-  color: white;
-  transition: all ease 0.3s;
 }
 
 .findCourse {
