@@ -24,8 +24,8 @@ function newsclose() {
 }
 
 window.addEventListener("DOMContentLoaded", async function () {
-  await carouses();
-  showSlides();
+  //await carouses();
+  //showSlides();
   newce();
   blosh();
   listadd();
