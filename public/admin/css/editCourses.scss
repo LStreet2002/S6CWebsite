@@ -46,13 +46,14 @@ textarea {
     justify-content: space-between;
     align-items: stretch;
     height: 2.2vw;
-        #addCourse {
-        width: 80vw;
+    width: 100%;
+        .addCourseInput {
+        width: 82vw;
         font-size: 1.5vw;
         padding: 0.5vw;
     }
     
-      #button {
+      .add {
         width: 15vw;
         font-size: 1.4vw;
         text-align: center;
@@ -62,21 +63,14 @@ textarea {
     }
 }
 
+
 #courselist {
     display: flex;
     flex-direction: column;
 
-    #course {
+    .listItem {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        #edit {
-            font-size: 2.5vw;
-        }
-        #delete {
-            font-size: 2.5vw;
-        }
+        flex-direction: column;
     }
 }
 
@@ -96,3 +90,74 @@ textarea {
     cursor:pointer;
 }
 
+.editcourse {
+    display: none;
+}
+
+.subhead {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.custom-file-upload {
+    width: 40vw;
+    font-size: 1.2vw;
+    text-align: center;
+    color: white;
+    background-color: #663399;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.multiple-choice {
+    font-size: 1.3em;
+    padding-left: 20px;
+}
+
+.inputBox {
+    width: 86vw;
+    height: 6vw;
+    font-size: 1.3em;
+    padding: 10px
+}
+
+.save-delete-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.saveButton {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    background-color: rebeccapurple;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    font-size: 120%;
+    border: none;
+    border-radius: 4px;
+}
+
+.deleteButton {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    background-color: #b12e2e;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    font-size: 120%;
+    border: none;
+    border-radius: 4px;
+}
+
+.listItem {
+    display: inline;
+}

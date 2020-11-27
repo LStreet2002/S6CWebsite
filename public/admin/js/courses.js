@@ -52,6 +52,7 @@ async function getDatabase() {
           assessmentInput.value = doc.assessments;
           descriptionInput.value = doc.description;
           saveButton.innerHTML = "Save:" + doc.pageName;
+          document.querySelector(".editcourse").style.display = "block";
         });
         // Add to div
         child.appendChild(listItem);
