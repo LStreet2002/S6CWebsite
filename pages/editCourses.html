@@ -32,44 +32,47 @@
     <div class="editcourse">
       <h1 type="text" class="pageNameInput"></h1>
       <p class="subhead">Titleimage</p>
-      <img width="100" height="100" class="courseImage">
+      <img width="400" height="300" class="courseImage">
       <p class="loading"></p>
+      <label for="myFile" class="custom-file-upload">
+        Select Image
+      </label>
       <input type="file" id="myFile" name="filename" class="file">
 
       <div>
         <p class="subhead qualificationInput">Type of qualification</p>
         <input type="radio" id="aLevel" name="qualification" class="qualification" value="aLevel">
-        <label for="aLevel">A Level</label><br>
+        <label for="aLevel" class="multiple-choice">A Level</label><br>
         <input type="radio" id="BTEC" name="qualification" class="qualification" value="BTEC">
-        <label for="BTEC">BTEC</label><br>
+        <label for="BTEC" class="multiple-choice">BTEC</label><br>
         <input type="radio" id="CTEC" name="qualification" class="qualification" value="CTEC">
-        <label for="CTEC">CTEC</label><br>
+        <label for="CTEC" class="multiple-choice">CTEC</label><br>
         <input type="radio" id="level3" name="qualification" class="qualification" value="level3">
-        <label for="level3">Level 3</label><br>
+        <label for="level3" class="multiple-choice">Level 3</label><br>
       </div>
 
       <div>
         <p class="subhead examInput">Exam Board</p>
         <input type="radio" id="ocr" name="examBoard" class="examBoard" value="OCR">
-        <label for="ocr">OCR</label><br>
+        <label for="ocr" class="multiple-choice">OCR</label><br>
         <input type="radio" id="aqa" name="examBoard" class="examBoard" value="AQA">
-        <label for="aqa">AQA</label><br>
+        <label for="aqa" class="multiple-choice">AQA</label><br>
         <input type="radio" id="edexcel" name="examBoard" class="examBoard" value="Edexcel">
-        <label for="edexcel">Edexcel</label><br>
+        <label for="edexcel" class="multiple-choice">Edexcel</label><br>
         <input type="radio" id="pearson" name="examBoard" class="examBoard" value="Pearson">
-        <label for="pearson">Pearson</label><br>
+        <label for="pearson" class="multiple-choice">Pearson</label><br>
       </div>
 
-      <p class="editSubhead">Entry Requirements</p>
+      <p class="subhead">Entry Requirements</p>
       <textarea class="inputBox entryInput"></textarea>
 
-      <p class="editSubhead">Assessments</p>
+      <p class="subhead">Assessments</p>
       <textarea class="inputBox assessmentInput"></textarea>
 
-      <p class="editSubhead">Course Description</p>
+      <p class="subhead">Course Description</p>
       <textarea class="inputBox descriptionInput"></textarea>
 
-      <div id="bluttons">
+      <div id="bluttons" class="save-delete-buttons">
         <button class="saveButton" onclick="updatePage()">Save</button>
         <button class="deleteButton" onclick="deletePage()">Delete</button>
       </div>
