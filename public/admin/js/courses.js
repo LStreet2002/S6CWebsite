@@ -28,6 +28,7 @@ async function getDatabase() {
         // List item
         var listItem = document.createElement("h2");
         listItem.innerHTML = newt[i]["pageName"];
+        listItem.classList.add("lineti")
         // div
         var child = document.createElement("div");
         child.className = "listItem";

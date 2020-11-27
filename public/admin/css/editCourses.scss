@@ -67,11 +67,6 @@ textarea {
 #courselist {
     display: flex;
     flex-direction: column;
-
-    .listItem {
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 
@@ -160,4 +155,8 @@ input[type="file"] {
 
 .listItem {
     display: inline;
+    margin-bottom:2rem;
+}
+.lineti {
+    display:inline;
 }
