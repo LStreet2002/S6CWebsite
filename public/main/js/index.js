@@ -30,7 +30,6 @@ window.addEventListener("load", async function () {
 	newce();
 	blosh();
 	listadd();
-	getPages();
 });
 
 async function carouses() {
