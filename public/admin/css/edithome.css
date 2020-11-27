@@ -88,7 +88,16 @@ textarea {
   grid-area: upload;
   background-color: #663399;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 2%;
   padding-bottom: 2%;
 }
