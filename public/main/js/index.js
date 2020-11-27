@@ -42,7 +42,6 @@ async function carouses() {
         // doc.data() is never undefined for query doc snapshots
         var item = document.createElement("img");
         item.src = doc.data().link;
-        console.log(doc.data());
         item.id = ["c" + counter];
         item.classList.add("carosimg", "fade");
         var texlc = document.createElement("h3");
@@ -167,7 +166,7 @@ events.forEach((event) => {
         setTimeout(() => {
           document.querySelector("#searchblob").style.display =
             "none";
-        }, 700);
+        }, 600);
         searchBox.value = "";
       });
     case "focus":
