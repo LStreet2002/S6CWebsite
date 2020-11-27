@@ -24,6 +24,7 @@ async function carousels() {
 				var box = document.createElement("div");
 				box.classList.add("caropic");
 				var name = document.createElement("p");
+				console.log(carouse[i]);
 				name.innerText = carouse[i].file;
 				name.setAttribute("value", carouse[i].file);
 				name.classList.add("file");
@@ -143,47 +144,54 @@ async function save() {
 		.update({
 			name: document.querySelector("#ilink").value,
 		});
-	await yes();
-}
-async function yes() {
-	var storageRef = storage.ref();
-	for (let i = 1; i < 6; i++) {
-		var newfile = document.querySelector("#link" + i);
-		if (newfile.innerHTML == newfile.getAttribute("value")) {
-		} else {
-			try {
-				let test = storageRef.child(
-					"carousel/" + newfile.getAttribute("value")
-				);
-				test.delete();
-			} catch (error) {
-				console.log(error);
-			}
-			var filt = document.getElementsByClassName("imglink" + i)[0]
-				.files[0];
-			console.log(filt);
-			let uploadTask = firebase.storage().ref("carousel/" + Date.now());
+	var promise = new Promise((resolve, reject) => {
+		var counter = 1;
+		var storageRef = storage.ref();
+		for (let i = 1; i < 6; i++) {
+			var newfile = document.querySelector("#link" + i);
+			if (newfile.innerHTML == newfile.getAttribute("value")) {
+				if (counter == 5) {
+					resolve();
+				}
+				counter += 1;
+			} else {
+				try {
+					let test = storageRef.child("carousel/" + newfile.id);
+					test.delete();
+				} catch (error) {
+					console.log(error);
+				}
+				var filt = document.getElementsByClassName("imglink" + i)[0]
+					.files[0];
+				console.log(filt);
+				let uploadTask = firebase.storage().ref("carousel/link" + i);
 
-			uploadTask.put(filt).then(async function (snapshot) {
-				// Handle successful uploads on complete
-				// For instance, get the download URL: https://firebasestorage.googleapis.com/...
-				await snapshot.ref
-					.getDownloadURL()
-					.then(async function (downloadURL) {
-						console.log("File available at", downloadURL, i);
-						await db
-							.collection("carousels")
-							.doc("link" + i)
-							.set({
-								file: document.getElementById("link" + i)
-									.innerText,
-								link: downloadURL,
-							});
-					});
-			});
+				uploadTask.put(filt).then(async function (snapshot) {
+					// Handle successful uploads on complete
+					// For instance, get the download URL: https://firebasestorage.googleapis.com/...
+					await snapshot.ref
+						.getDownloadURL()
+						.then(async function (downloadURL) {
+							console.log("File available at", downloadURL, i);
+							await db
+								.collection("carousels")
+								.doc("link" + i)
+								.set({
+									file: document.getElementById("link" + i)
+										.innerText,
+									link: downloadURL,
+								});
+						});
+					resolve();
+				});
+			}
 		}
-	}
+	});
+	promise.then(() => {
+		location.reload();
+	});
 }
+
 function getting(x) {
 	var choicer = x.parentNode.querySelector(".unknown");
 	choicer.click();
