@@ -62,11 +62,33 @@
   display: none;
   list-style-type: none;
   background-color: white;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 1150px;
+}
+
+#searchblob a:hover {
+  background-color: #662483;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 #searchblob a {
   text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  align-content: center;
+  padding: 4px;
+  margin-left: 10px;
+  margin-bottom: 30px;
   color: black;
+}
+
+@media screen and (max-width: 970px) {
+  #searchblob {
+    display: block;
+  }
 }
 
 .findCourse {
