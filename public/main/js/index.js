@@ -22,16 +22,17 @@ function newsclose() {
 	});
 	noticeBox.style.display = "none";
 }
-
-window.addEventListener("DOMContentLoaded", async function () {
+window.addEventListener("load", async function () {
+	getPages();
 	await carouses();
+	imgCar.style.opacity = "100";
 	showSlides();
 	newce();
 	blosh();
 	listadd();
 	getPages();
-	imgCar.style.opacity = "100"; //this function must be called last
 });
+
 async function carouses() {
 	await db
 		.collection("carousels")
