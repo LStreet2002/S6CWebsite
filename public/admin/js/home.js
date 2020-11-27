@@ -147,22 +147,22 @@ async function save() {
 }
 async function yes() {
 	var storageRef = storage.ref();
-	for (let i = 1; i < 7; i++) {
+	for (let i = 1; i < 6; i++) {
 		var newfile = document.querySelector("#link" + i);
-		console.log(i);
 		if (newfile.innerHTML == newfile.getAttribute("value")) {
 		} else {
 			try {
-				storageRef.child("carousel/" + newfile.innerHTML).delete();
+				let test = storageRef.child(
+					"carousel/" + newfile.getAttribute("value")
+				);
+				test.delete();
 			} catch (error) {
 				console.log(error);
 			}
 			var filt = document.getElementsByClassName("imglink" + i)[0]
 				.files[0];
 			console.log(filt);
-			var uploadTask = firebase
-				.storage()
-				.ref("carousel/" + newfile.innerHTML);
+			let uploadTask = firebase.storage().ref("carousel/" + Date.now());
 
 			uploadTask.put(filt).then(async function (snapshot) {
 				// Handle successful uploads on complete
