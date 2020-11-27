@@ -61,34 +61,17 @@
   top: 60%;
   display: none;
   list-style-type: none;
-  background-color: white;
+  background-color: #719fe6;
   border-radius: 5px;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 1150px;
-}
-
-#searchblob a:hover {
-  background-color: #662483;
-  color: white;
-  transition: all 0.3s ease;
+  width: 90%;
+  margin: auto;
 }
 
 #searchblob a {
   text-decoration: none;
-  cursor: pointer;
-  border-radius: 5px;
-  align-content: center;
-  padding: 4px;
-  margin-left: 10px;
-  margin-bottom: 30px;
   color: black;
-}
-
-@media screen and (max-width: 970px) {
-  #searchblob {
-    display: block;
-  }
 }
 
 .findCourse {
@@ -106,6 +89,9 @@
   display: flex;
   margin-top: 1em;
   margin-bottom: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .findCourse .searchForm {
