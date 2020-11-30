@@ -22,7 +22,7 @@ function newsclose() {
   });
   noticeBox.style.display = "none";
 }
-window.addEventListener("load", async function () {
+(async function () {
   getPages();
   await carouses();
   imgCar.style.opacity = "100";
@@ -30,7 +30,7 @@ window.addEventListener("load", async function () {
   newce();
   blosh();
   listadd();
-});
+})();
 
 async function carouses() {
   await db
@@ -164,8 +164,7 @@ events.forEach((event) => {
     case "blur":
       searchBox.addEventListener("blur", function () {
         setTimeout(() => {
-          document.querySelector("#searchblob").style.display =
-            "none";
+          document.querySelector("#searchblob").style.display = "none";
         }, 600);
         searchBox.value = "";
       });
