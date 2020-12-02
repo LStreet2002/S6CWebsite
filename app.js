@@ -21,7 +21,7 @@ app.use(
     keys: ["hiiii"],
   })
 );
-var dir = __dirname + "/docs";
+var dir = __dirname + "/pages";
 
 const serviceAccount = require("./s6c-website-firebase-adminsdk-58r86-6263a6723f.json");
 
