@@ -1,1 +1,1 @@
-call cmd.exe /k "cls & node app.js & if errorlevel 1 (cls & npm install express firebase-admin cookie-session cookie-parser & cls & node app.js)"
+call cmd.exe /k "cls & node app.js & if errorlevel 1 (npm install & cls & node app.js)"
