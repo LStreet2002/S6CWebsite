@@ -102,7 +102,6 @@ app.get(pages, (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  req.url = req.url.toLowerCase();
   if (req.url == "/") {
     res.sendFile(dir + "/index.html");
   } else if (req.url.split("?")[0] == "/information") {
