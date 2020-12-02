@@ -127,7 +127,7 @@ async function blosh() {
         full.innerHTML = bloggit[f].desc;
         full.classList.add("full");
         var moar = document.createElement("a");
-        moar.href = "PBlog";
+        moar.href = "principalBlog";
         moar.classList.add("moar");
         moar.innerHTML = "Read More";
 
