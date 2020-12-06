@@ -147,4 +147,79 @@
   margin: auto;
   border: 1px solid black;
 }
+
+@-webkit-keyframes example {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1;
+  }
+  from {
+    top: 120%;
+  }
+  to {
+    top: 60%;
+  }
+}
+
+@keyframes example {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1;
+  }
+  from {
+    top: 120%;
+  }
+  to {
+    top: 60%;
+  }
+}
+
+@-webkit-keyframes unexample {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+  from {
+    top: 60%;
+  }
+  to {
+    top: 120%;
+  }
+}
+
+@keyframes unexample {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+  from {
+    top: 60%;
+  }
+  to {
+    top: 120%;
+  }
+}
+
+/* The element to apply the animation to */
+.search:focus ~ #searchblob {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+
+.search:not(:focus) ~ #searchblob {
+  -webkit-animation-name: unexample;
+          animation-name: unexample;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
 /*# sourceMappingURL=Courses.css.map */
