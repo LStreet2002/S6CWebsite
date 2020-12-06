@@ -34,11 +34,6 @@
   }
 }
 
-a:hover {
-  color: #0E71B8;
-  transition: all ease 0.3s;
-}
-
 .content {
   margin-top: 70px;
 }
