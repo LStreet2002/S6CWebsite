@@ -146,6 +146,7 @@
   animation-duration: 0.7s;
 }
 .search:not(:focus) ~ #searchblob {
+animation-delay:1s;
   animation-name: unexample;
   animation-duration: 0.7s;
 }

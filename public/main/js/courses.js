@@ -73,7 +73,7 @@ events.forEach((event) => {
 			searchBox.addEventListener("blur", function () {
 				setTimeout(() => {
 					document.querySelector("#searchblob").style.display = "none";
-				}, 600);
+				}, 1600);
 				searchBox.value = "";
 			});
 		case "focus":

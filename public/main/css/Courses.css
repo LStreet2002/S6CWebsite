@@ -217,6 +217,8 @@
 }
 
 .search:not(:focus) ~ #searchblob {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-name: unexample;
           animation-name: unexample;
   -webkit-animation-duration: 0.7s;
